@@ -15,7 +15,8 @@ import {
   faTiktok,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import Logo from "../../assets/logos/logo_white.png";
+
+import logo_colorato_sapienzau from "../../assets/logos/logo_colorato_sapienzau.svg";
 
 export default function Footer() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);

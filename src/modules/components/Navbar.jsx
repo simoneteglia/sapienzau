@@ -13,7 +13,8 @@ import "../../resources/styles/navbar.css";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 //MEDIA
-import Logo from "../../assets/logos/logo_white.png";
+import logo_nero_sapienzau from "../../assets/logos/logo_nero_sapienzau.svg";
+import logo_colorato_sapienzau from "../../assets/logos/logo_colorato_sapienzau.svg";
 
 // Navbar component
 // This component is responsible for rendering the navigation bar of the application
@@ -54,7 +55,11 @@ export default function Navbar() {
     >
       <div className="relative hidden w-full xl:w-[85%] h-[75%] md:flex justify-between items-center p-[12px] rounded-[1rem] ">
         <Link to="/" onClick={() => setCurrentPage("homepage")}>
-          <img src={Logo} alt="LogoTedx" className="w-[200px]" />
+          <img
+            src={logo_colorato_sapienzau}
+            alt="Logo SapienzaU"
+            className="w-[200px]"
+          />
         </Link>
         <section
           id="middle-section"
