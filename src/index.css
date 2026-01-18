@@ -1,0 +1,66 @@
+@font-face {
+  font-family: ObjectSans;
+  src: url("./assets/fonts/ObjectSans-Regular.otf");
+}
+
+@font-face {
+  font-family: ObjectSansHeavy;
+  src: url("./assets/fonts/ObjectSans-Heavy.otf");
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-objectsans: "ObjectSans", sans-serif;
+  --font-objectsans-heavy: "ObjectSansHeavy", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #231f20;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Fira Sans Extra Condensed", "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.primary-button {
+  background-color: rgb(235, 0, 40);
+  border-color: red;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  width: 100px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  border: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.primary-button:hover {
+  background-color: #750014;
+}
+
+.bento-box {
+  background-color: #ffffff1a;
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.glass-card-darker {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
