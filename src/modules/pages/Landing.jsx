@@ -8,9 +8,11 @@ import marchio_colorato_base_bianca from "../../assets/logos/marchio_colorato_ba
 
 // COMPONENTS
 import BentoBox from "../components/BentoBox";
+import HorizontalScroll from "../components/HorizontalScroll"
 
 export default function Landing() {
   return (
+    <div>
     <div
       className="w-full p-[40px] flex items-end text-white uppercase relative overflow-hidden"
       style={{
@@ -24,6 +26,10 @@ export default function Landing() {
         alt="Marchio Colorato" 
         className="absolute w-[450px] right-[40px] top-[50px]"
       />
+    </div>
+    <div>
+    <HorizontalScroll/>
+    </div>
     </div>
   );
 }
