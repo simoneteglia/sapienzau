@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 // RESOURCES
 import global from "../../resources/global.json";
 import fotoAbbraccio from "../../assets/images/volunteers.webp";
+import marchio_colorato_base_bianca from "../../assets/logos/marchio_colorato_base_bianca.svg";
 
 // COMPONENTS
 import BentoBox from "../components/BentoBox";
@@ -11,17 +12,18 @@ import BentoBox from "../components/BentoBox";
 export default function Landing() {
   return (
     <div
-      className="w-full flex items-center justify-center text-white font-objectsans"
+      className="w-full p-[40px] flex items-end text-white uppercase relative overflow-hidden"
       style={{
         height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
         marginTop: global.UTILS.NAV_HEIGHT,
-        padding: global.UTILS.BENTO_BOX_PADDING,
       }}
     >
-      <BentoBox
-        className="w-full h-full bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${fotoAbbraccio})` }}
-      ></BentoBox>
+      <h1 className="text-[120px] leading-none font-gotham-ultra overflow-hidden ">Frase <br /> d'effetto <br /> con animazione</h1>
+      <img 
+        src={marchio_colorato_base_bianca} 
+        alt="Marchio Colorato" 
+        className="absolute w-[450px] right-[40px] top-[50px]"
+      />
     </div>
   );
 }

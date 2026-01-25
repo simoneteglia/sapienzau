@@ -8,16 +8,30 @@
   src: url("./assets/fonts/ObjectSans-Heavy.otf");
 }
 
+@font-face {
+  font-family: GothamBold;
+  src: url("./assets/fonts/Gotham-Bold.otf");
+}
+
+@font-face {
+  font-family: GothamUltra;
+  src: url("./assets/fonts/Gotham-Ultra.otf");
+}
+
+
 @import "tailwindcss";
 
 @theme {
   --font-objectsans: "ObjectSans", sans-serif;
   --font-objectsans-heavy: "ObjectSansHeavy", sans-serif;
+  --font-gotham-bold: "GothamBold", sans-serif;
+  --font-gotham-ultra: "GothamUltra", sans-serif;
 }
 
 body {
   margin: 0;
-  background-color: #231f20;
+  /* background-color: #231f20; */
+  background-color: black;
   font-family:
     -apple-system, BlinkMacSystemFont, "Fira Sans Extra Condensed", "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",

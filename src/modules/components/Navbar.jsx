@@ -15,6 +15,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 //MEDIA
 import logo_nero_sapienzau from "../../assets/logos/logo_nero_sapienzau.svg";
 import logo_colorato_sapienzau from "../../assets/logos/logo_colorato_sapienzau.svg";
+import logo_colorato_base_bianca from "../../assets/logos/logo_colorato_base_bianca_sapienzau.svg";
 
 // Navbar component
 // This component is responsible for rendering the navigation bar of the application
@@ -34,11 +35,6 @@ export default function Navbar() {
       href: "/club",
       current: currentPage === "club",
     },
-    {
-      name: "Sponsors",
-      href: "/sponsors",
-      current: currentPage === "sponsors",
-    },
   ];
 
   function classNames(...classes) {
@@ -48,17 +44,17 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="w-full z-1 top-0 fixed flex justify-center items-center bg-[#d9d9d9] font-objectsans-heavy uppercase"
+      className="w-full z-1 top-0 fixed flex items-center bg-black font-objectsans"
       style={{
         height: global.UTILS.NAV_HEIGHT,
       }}
     >
-      <div className="relative hidden w-full xl:w-[85%] h-[75%] md:flex justify-between items-center p-[12px] rounded-[1rem] ">
+      <div className="relative hidden w-full xl:w-[85%] h-[75%] md:flex items-center rounded-[1rem] ">
         <Link to="/" onClick={() => setCurrentPage("homepage")}>
           <img
-            src={logo_colorato_sapienzau}
+            src={logo_colorato_base_bianca}
             alt="Logo SapienzaU"
-            className="w-[200px]"
+            className="w-[268px] ml-[30px] mr-[50px]"
           />
         </Link>
         <section
@@ -73,7 +69,7 @@ export default function Navbar() {
               className={classNames(
                 item.current
                   ? "bg-gray-900 text-white"
-                  : "text-black text-[20px] hover:bg-gray-700 hover:text-white",
+                  : "text-white text-[20px] hover:bg-gray-700 hover:text-white",
                 "rounded-md px-3 py-2 text-sm font-semibold",
               )}
               onClick={() => {
