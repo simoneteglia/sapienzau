@@ -11,6 +11,8 @@ import Awards23 from "../../assets/images/events/header_awards23.webp";
 import Act22 from "../../assets/images/events/cover-edizione22.webp";
 import Awards22 from "../../assets/images/events/awards2022.webp";
 
+import global from "../../resources/global.json";
+
 // COMPONENTS
 import BentoBox from "./BentoBox";
 
@@ -41,7 +43,7 @@ export default function HorizontalScroll() {
         ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top top",
+          start: `top ${global.UTILS.NAV_HEIGHT}`,
           end: "+=" + totalWidth,
           pin: true,
           scrub: 1,

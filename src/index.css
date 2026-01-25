@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: GothamBook;
+  src: url("./assets/fonts/Gotham-Book.otf");
+}
+
+@font-face {
   font-family: GothamBold;
   src: url("./assets/fonts/Gotham-Bold.otf");
 }
@@ -19,6 +24,7 @@
 }
 
 
+
 @import "tailwindcss";
 
 @theme {
@@ -26,6 +32,7 @@
   --font-objectsans-heavy: "ObjectSansHeavy", sans-serif;
   --font-gotham-bold: "GothamBold", sans-serif;
   --font-gotham-ultra: "GothamUltra", sans-serif;
+  --font-gotham-book: "GothamBook", sans-serif;
 }
 
 body {
