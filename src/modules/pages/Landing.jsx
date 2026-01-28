@@ -9,21 +9,23 @@ import marchio_colorato_base_bianca from "../../assets/logos/marchio_colorato_ba
 // COMPONENTS
 import BentoBox from "../components/BentoBox";
 import HorizontalScroll from "../components/HorizontalScroll";
+import CustomButton from "../components/CustomButton";
 
 export default function Landing() {
   return (
     <div>
       <>
         <section
-          className="w-full p-[40px] flex items-end text-white uppercase relative overflow-hidden"
+          className="w-full p-[40px] content-end text-white uppercase relative overflow-hidden"
           style={{
             height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
             marginTop: global.UTILS.NAV_HEIGHT,
           }}
         >
-          <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] leading-none font-gotham-ultra overflow-hidden ">
+          <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] pb-5 leading-none font-gotham-ultra overflow-hidden ">
             Frase <br /> d'effetto <br /> con animazione
           </h1>
+          <CustomButton label="Scopri chi siamo" />
           <img
             src={marchio_colorato_base_bianca}
             alt="Marchio Colorato"
@@ -53,6 +55,7 @@ export default function Landing() {
               consectetur adipiscing elit sed do eiusmod tempor incididunt ut
               labore et dolore magna aliqua.{" "}
             </p>
+            <CustomButton label="Scopri il team" color="violet" />
           </BentoBox>
         </section>
       </>

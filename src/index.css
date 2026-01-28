@@ -23,7 +23,10 @@
   src: url("./assets/fonts/Gotham-Ultra.otf");
 }
 
-
+@font-face {
+  font-family: GothamMedium;
+  src: url("./assets/fonts/Gotham-Medium.otf");
+}
 
 @import "tailwindcss";
 
@@ -33,6 +36,7 @@
   --font-gotham-bold: "GothamBold", sans-serif;
   --font-gotham-ultra: "GothamUltra", sans-serif;
   --font-gotham-book: "GothamBook", sans-serif;
+  --font-gotham-medium: "GothamMedium", sans-serif;
 }
 
 body {
