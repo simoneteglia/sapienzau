@@ -29,7 +29,7 @@ export default function Landing() {
           <img
             src={marchio_colorato_base_bianca}
             alt="Marchio Colorato"
-            className="absolute w-[450px] right-[40px] top-[50px]"
+            className="absolute w-[30vw] right-[40px] top-[50px]"
           />
         </section>
         <HorizontalScroll />
