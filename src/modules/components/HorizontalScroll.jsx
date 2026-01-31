@@ -60,7 +60,7 @@ export default function HorizontalScroll() {
   return (
     <section
       ref={containerRef}
-      className="h-screen w-full bg-black text-white flex flex-col overflow-hidden"
+      className="h-screen w-full text-white flex flex-col overflow-hidden"
     >
       <div className="px-[40px] pt-[40px] pb-5 flex-shrink-0 z-10">
         <h1 className="text-[90px] leading-none font-gotham-ultra uppercase">
