@@ -94,6 +94,9 @@ export default function HorizontalScroll() {
           ))}
         </div>
       </div>
+      <div className="w-full flex justify-start px-[40px]">
+        <CustomButton label="Scopri tutti gli eventi" color="green" />
+      </div>
     </section>
   );
 }

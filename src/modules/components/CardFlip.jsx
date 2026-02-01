@@ -15,7 +15,7 @@ const FlipCard = ({
   frontWrapperClass = "",
   backWrapperClass = "",
   frontStyle = {},
-  backStyle = {}
+  backStyle = {},
 }) => {
   const containerRef = useRef(null);
   const frontRef = useRef(null);
@@ -59,7 +59,7 @@ const FlipCard = ({
     position: "absolute",
     top: 0,
     left: 0,
-    width: "100%",
+    width: "90%",
     height: "100%",
     backfaceVisibility: "hidden",
     WebkitBackfaceVisibility: "hidden",
@@ -78,9 +78,9 @@ const FlipCard = ({
     >
       {/* FRONT */}
       <div ref={frontRef} style={{ ...cardStyle, zIndex: 2 }}>
-        {/* FIX 1: Used backticks ` ` and removed hardcoded colors */}
-        <BentoBox className={`w-full h-full shadow-md ${frontWrapperClass}`}
-            style={frontStyle}
+        <BentoBox
+          className={`w-full h-full shadow-md ${frontWrapperClass}`}
+          style={frontStyle}
         >
           {frontContent}
         </BentoBox>
@@ -91,9 +91,9 @@ const FlipCard = ({
         ref={backRef}
         style={{ ...cardStyle, transform: "rotateY(-180deg)" }}
       >
-        {/* FIX 2: Removed bg-blue-200 and used backticks ` ` */}
-        <BentoBox className={`w-full h-full shadow-md ${backWrapperClass}`}
-            style={backStyle}
+        <BentoBox
+          className={`w-full h-full shadow-md ${backWrapperClass}`}
+          style={backStyle}
         >
           {backContent}
         </BentoBox>
@@ -108,14 +108,14 @@ export default function CardFlip() {
       {/* LEFT CARD */}
       <FlipCard
         className="flex-1 h-full"
-        frontWrapperClass="bg-red-500"
+        frontWrapperClass="bg-yellow-500"
         backWrapperClass="bg-purple-600"
         frontContent={
           <div className="flex flex-col justify-center gap-4 p-4 h-full ">
-            <h2 className="text-black text-4xl font-bold">
-              Davanti catchphrase
+            <h2 className=" xl:text-[60px] lg:text-[50px] md:text-[35px] text-white font-gotham-ultra text-4xl font-bold">
+              INVITO CATCHY A GIRARE LA CARD...
             </h2>
-            <p className="text-500 text-black mt-4">testo extra</p>
+            <p className="text-500 text-black mt-4"></p>
           </div>
         }
         backContent={
@@ -137,7 +137,7 @@ export default function CardFlip() {
           backgroundPosition: "center",
           backgroundColor: "black",
         }}
-        backWrapperClass="bg-black"
+        backWrapperClass="bg-gray-800"
         frontContent={
           <div className="flex flex-col items-center justify-center h-full">
             <h2 className="text-4xl font-bold"></h2>
@@ -146,8 +146,9 @@ export default function CardFlip() {
         }
         backContent={
           <div className="flex flex-col justify-center h-full p-10 text-center">
-            <h3 className="text-white text-4xl font-bold">Retro card</h3>
-            <p>testo extra</p>
+            <h2 className=" xl:text-[60px] lg:text-[50px] md:text-[35px] text-white font-gotham-ultra text-4xl font-bold">
+              FORM
+            </h2>
           </div>
         }
       />

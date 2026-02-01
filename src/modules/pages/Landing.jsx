@@ -38,7 +38,6 @@ export default function Landing() {
           className="absolute w-[30vw] right-[40px] top-[50px]"
         />
       </section>
-      <HorizontalScroll />
       <section
         className="w-full p-[40px] flex items-end justify-end text-white relative overflow-hidden"
         style={{
@@ -64,6 +63,7 @@ export default function Landing() {
           <CustomButton label="Scopri il team" color="violet" />
         </BentoBox>
       </section>
+      <HorizontalScroll />
       <section
         className="w-full p-[40px] flex flex-col justify-end text-white relative overflow-hidden"
         style={{
@@ -71,16 +71,18 @@ export default function Landing() {
           marginTop: global.UTILS.NAV_HEIGHT,
         }}
       >
-        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] leading-none font-gotham-ultra overflow-hidden uppercase">
-          Il Club
-        </h1>
-        <p className="font-gotham-book lg:text-[35px] w-xl mb-8">
-          consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore
-          et dolore magna aliqua.
-        </p>
+        <div className="shrink-0 flex flex-col items-end text-right w-full">
+          <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] leading-none font-gotham-ultra overflow-hidden uppercase">
+            Il Club
+          </h1>
+          <p className="font-gotham-book lg:text-[35px] w-xl mb-12">
+            consectetur adipiscing elit sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua.
+          </p>
+        </div>
         <div className="flex-1 w-full min-h-0">
-    <CardFlip />
-  </div>
+          <CardFlip />
+        </div>
       </section>
     </div>
   );
