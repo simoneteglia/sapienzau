@@ -12,6 +12,7 @@ import HorizontalScroll from "../components/HorizontalScroll";
 import CustomButton from "../components/CustomButton";
 import ColorBends from "../components/ColorBends";
 import InfiniteScroll from "../components/InfiniteScroll";
+import CardFlip from "../components/CardFlip";
 
 export default function Landing() {
   return (
@@ -64,7 +65,7 @@ export default function Landing() {
         </BentoBox>
       </section>
       <section
-        className="w-full p-[40px] content-end text-white relative overflow-hidden"
+        className="w-full p-[40px] flex flex-col justify-end text-white relative overflow-hidden"
         style={{
           height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           marginTop: global.UTILS.NAV_HEIGHT,
@@ -73,10 +74,13 @@ export default function Landing() {
         <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] leading-none font-gotham-ultra overflow-hidden uppercase">
           Il Club
         </h1>
-        <p className="font-gotham-book lg:text-[35px] w-xl">
+        <p className="font-gotham-book lg:text-[35px] w-xl mb-8">
           consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore
           et dolore magna aliqua.
         </p>
+        <div className="flex-1 w-full min-h-0">
+    <CardFlip />
+  </div>
       </section>
     </div>
   );
