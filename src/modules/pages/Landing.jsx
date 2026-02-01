@@ -11,6 +11,7 @@ import BentoBox from "../components/BentoBox";
 import HorizontalScroll from "../components/HorizontalScroll";
 import CustomButton from "../components/CustomButton";
 import ColorBends from "../components/ColorBends";
+import InfiniteScroll from "../components/InfiniteScroll";
 
 export default function Landing() {
   return (

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: ObjectSans;
   src: url("./assets/fonts/ObjectSans-Regular.otf");
@@ -28,8 +30,6 @@
   src: url("./assets/fonts/Gotham-Medium.otf");
 }
 
-@import "tailwindcss";
-
 @theme {
   --font-objectsans: "ObjectSans", sans-serif;
   --font-objectsans-heavy: "ObjectSansHeavy", sans-serif;
@@ -37,6 +37,25 @@
   --font-gotham-ultra: "GothamUltra", sans-serif;
   --font-gotham-book: "GothamBook", sans-serif;
   --font-gotham-medium: "GothamMedium", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-infinite-scroll {
+    animation: infinite-scroll 25s linear infinite;
+  }
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 body {

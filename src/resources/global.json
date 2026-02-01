@@ -17,7 +17,8 @@
     "GIALLO_COUNTDOWN": "#F1FF39",
     "MAGENTA_PARADOXA": "#ff009c",
     "BLU_PARADOXA": "#0033CB",
-    "AZZURRO_PARADOXA": "#009edc"
+    "AZZURRO_PARADOXA": "#009edc",
+    "GRIGIO_CHIARO": "#262626"
   },
   "UTILS": {
     "SOCIAL_NAV_HEIGHT": "0px",

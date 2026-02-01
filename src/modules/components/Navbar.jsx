@@ -44,7 +44,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="w-full z-1 top-0 fixed flex items-center bg-[#262626] font-objectsans"
+      className={`w-full z-1 top-0 fixed flex items-center bg-[${global.COLORS.GRIGIO_CHIARO}] font-objectsans`}
       style={{
         height: global.UTILS.NAV_HEIGHT,
       }}
