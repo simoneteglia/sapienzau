@@ -44,12 +44,12 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className={`w-full z-1 top-0 fixed flex items-center bg-[${global.COLORS.GRIGIO_CHIARO}] font-objectsans`}
+      className={`w-full top-0 left-0 fixed z-1 flex items-center bg-[${global.COLORS.GRIGIO_CHIARO}] font-objectsans`}
       style={{
         height: global.UTILS.NAV_HEIGHT,
       }}
     >
-      <div className="relative hidden w-full xl:w-[85%] h-[75%] md:flex items-center rounded-[1rem] ">
+      <div className="relative hidden z-1 w-full xl:w-[85%] h-[75%] md:flex items-center rounded-[1rem] ">
         <Link to="/" onClick={() => setCurrentPage("homepage")}>
           <img
             src={logo_colorato_base_bianca}

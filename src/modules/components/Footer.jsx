@@ -42,9 +42,7 @@ export default function Footer() {
   return (
     <section className="flex flex-col items-center justify-center gap-[15px] text-white">
       <InfiniteScroll />
-      <footer
-        className={`z-1 flex w-screen flex-wrap gap-[40px] bg-[${global.COLORS.GRIGIO_CHIARO}] p-[30px]`}
-      >
+      <footer className={`z-1 flex w-screen flex-wrap gap-[40px]  p-[30px]`}>
         <div>
           <img
             src={logo_colorato_base_bianca_sapienzau}
