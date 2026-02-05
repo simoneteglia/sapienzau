@@ -5,6 +5,7 @@ import Navbar from "./modules/components/Navbar";
 import Landing from "./modules/pages/Landing";
 import Footer from "./modules/components/Footer";
 import ErrorPage from "./modules/pages/ErrorPage";
+import Club from "./modules/pages/Club";
 
 import "./App.css";
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Landing />,
+      },
+      {
+        path: "/club",
+        element: <Club />,
       },
     ],
   },

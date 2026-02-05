@@ -1,4 +1,5 @@
 import React from "react";
+import global from "../../resources/global.json"
 
 import arrow_right from "../../assets/svg/arrow_right.svg";
 
@@ -10,6 +11,9 @@ const colors = {
   violet: "#BB5C9E",
   cyan: "#28BDEF",
   green: "#94C459",
+  argento: global.COLORS.ARGENTO,
+  oro: global.COLORS.ORO
+
 };
 
 export default function CustomButton({

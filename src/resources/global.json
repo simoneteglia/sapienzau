@@ -18,7 +18,20 @@
     "MAGENTA_PARADOXA": "#ff009c",
     "BLU_PARADOXA": "#0033CB",
     "AZZURRO_PARADOXA": "#009edc",
-    "GRIGIO_CHIARO": "#262626"
+    "GRIGIO_CHIARO": "#262626",
+    "ARGENTO": "#aeaeae",
+    "ORO": "#fab632"
+
+  },
+  "COLORS_TEAM": {
+    "ARANCIONE": "#ee7d29",
+    "GIALLO": "#f9b632",
+    "VERDE": "#94c359",
+    "ROSSO": "#e8493a",
+    "AZZURRO": "#1dbbee",
+    "BLU": "#2983c5",
+    "ROSA": "#ba5c9d"
+
   },
   "UTILS": {
     "SOCIAL_NAV_HEIGHT": "0px",
