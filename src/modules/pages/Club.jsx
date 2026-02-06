@@ -81,7 +81,7 @@ export default function Club() {
       </section>
 
       {/*TESTO CONVINCENTE*/}
-      <section className="flex flex-col lg:flex-row w-full lg:min-h-[70vh] min-h-[40vh] mb-[50px]">
+      <section className="flex flex-col lg:flex-row w-full md:min-h-[70vh] md:mt-0 mt-[100px] mb-[50px]">
         {/* LATO SX */}
         <div className="flex-1 relative flex flex-col justify-center p-[40px]">
           <div className="relative mb-6">
@@ -89,7 +89,7 @@ export default function Club() {
               src={team_it}
               className="absolute -top-20 left-10 w-[200px] md:w-[300px] h-auto -rotate-5 shadow-2xl z-1"
             />
-            <h1 className="relative z-10 xl:text-[80px] lg:text-[65px] md:text-[55px] leading-none font-gotham-ultra uppercase text-white">
+            <h1 className="relative z-10 xl:text-[80px] lg:text-[65px] md:text-[55px] text-[40px] leading-none font-gotham-ultra uppercase text-white">
               testo <br /> convincente
             </h1>
           </div>
@@ -115,7 +115,7 @@ export default function Club() {
               src={team_la}
               className="absolute -top-10 right-10 w-[200px] md:w-[300px] h-auto rotate-15 shadow-2xl z-0"
             />
-            <h1 className="relative z-10 xl:text-[120px] lg:text-[100px] md:text-[70px] pb-5 leading-none font-gotham-ultra uppercase text-white">
+            <h1 className="relative z-10 xl:text-[120px] lg:text-[100px] md:text-[70px] text-[40px] md:pb-5 leading-none font-gotham-ultra uppercase text-white">
               benefit club
             </h1>
           </div>
@@ -123,7 +123,7 @@ export default function Club() {
       </section>
 
       {/*GRID BENEFIT*/}
-      <section className="w-full px-[40px] py-[80px] bg-black">
+      <section className="w-full px-[40px] md:py-[80px] bg-black">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {benefits.map((item, index) => (
             <div
@@ -131,7 +131,7 @@ export default function Club() {
               className="flex flex-col items-center text-center space-y-4"
             >
               <h3
-                className={`xl:text-[60px] lg:text-[50px] md:text-[40px] font-gotham-ultra uppercase`}
+                className={`xl:text-[60px] lg:text-[50px] md:text-[40px] text-[30px] font-gotham-ultra uppercase`}
                 style={{ color: global.COLORS_TEAM[item.color] }}
               >
                 {item.title}
@@ -152,7 +152,7 @@ export default function Club() {
               src={team_pem}
               className="absolute -top-10 left-10 w-[200px] md:w-[300px] h-auto shadow-2xl z-0"
             />
-            <h1 className="relative z-10 xl:text-[80px] lg:text-[60px] md:text-[40px] pb-5 leading-none font-gotham-ultra text-white overflow-hidden">
+            <h1 className="relative z-10 xl:text-[80px] lg:text-[60px] md:text-[40px] text-[40px] pb-5 leading-none font-gotham-ultra text-white overflow-hidden">
               Frase che fa gasare che anticipa il counter di membri..
             </h1>
           </div>
@@ -171,7 +171,7 @@ export default function Club() {
             </h3>
           </div>
         </div>
-        <h1 className="relative z-10 xl:text-[80px] lg:text-[60px] md:text-[40px] pb-5 leading-none font-gotham-ultra text-white overflow-hidden">
+        <h1 className="relative z-10 xl:text-[80px] lg:text-[60px] md:text-[40px] text-[30px] pb-5 leading-none font-gotham-ultra text-white overflow-hidden">
           joined the club :o
         </h1>
       </section>
@@ -184,10 +184,10 @@ export default function Club() {
               src={team_hra}
               className="absolute left-10 w-[200px] md:w-[300px] h-auto -rotate-15 shadow-2xl z-0"
             />
-            <h1 className="relative z-10 xl:text-[60px] lg:text-[50px] md:text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden  text-white overflow-hidden">
+            <h1 className="relative z-10 xl:text-[60px] lg:text-[50px] md:text-[35px] text-[40px] pb-5 leading-none font-gotham-ultra overflow-hidden  text-white overflow-hidden">
               are you ready?
             </h1>
-            <h1 className="relative z-10 xl:text-[120px] lg:text-[100px] md:text-[70px] pb-5 leading-none font-gotham-ultra overflow-hidden  text-white overflow-hidden">
+            <h1 className="relative z-10 xl:text-[120px] lg:text-[100px] md:text-[70px] text-[40px] md:pb-5 leading-none font-gotham-ultra overflow-hidden  text-white overflow-hidden">
               become a member
             </h1>
           </div>
@@ -200,12 +200,12 @@ export default function Club() {
         <div className="flex-1 flex flex-col items-center justify-between p-12 border-r border-zinc-800">
           <div className="text-center mb-8">
             <h2
-              className="xl:text-[50px] lg:text-[40px] md:text-[45px] pb-5 leading-none font-gotham-ultra overflow-hidden"
+              className="xl:text-[50px] lg:text-[40px] md:text-[45px] text-[40px] pb-5 leading-none font-gotham-ultra overflow-hidden"
               style={{ color: global.COLORS.BRONZO }}
             >
               BRONZE
             </h2>
-            <h2 className="xl:text-[45px] lg:text-[35px] md:text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
+            <h2 className="xl:text-[45px] lg:text-[35px] md:text-[35px] text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
               MEMBER
             </h2>
           </div>
@@ -231,12 +231,12 @@ export default function Club() {
         <div className="flex-1 flex flex-col items-center justify-between p-12 bg-zinc-950">
           <div className="text-center mb-8">
             <h2
-              className="xl:text-[50px] lg:text-[40px] md:text-[45px] pb-5 leading-none font-gotham-ultra overflow-hidden"
+              className="xl:text-[50px] lg:text-[40px] md:text-[45px] text-[40px] pb-5 leading-none font-gotham-ultra overflow-hidden"
               style={{ color: global.COLORS.ORO }}
             >
               GOLD
             </h2>
-            <h2 className="xl:text-[45px] lg:text-[35px] md:text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
+            <h2 className="xl:text-[45px] lg:text-[35px] md:text-[35px] text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
               MEMBER
             </h2>
           </div>
