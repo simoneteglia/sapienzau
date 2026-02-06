@@ -68,3 +68,13 @@ body {
     "Segoe UI Symbol";
   overflow: hidden;
 }
+
+.masked-image {
+  -webkit-mask-image: url(assets/svg/blob_mask.png);
+  mask-image: url(assets/svg/blob_mask.png);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: right;
+  background: transparent;
+  overflow: hidden;
+}

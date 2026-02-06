@@ -18,7 +18,6 @@ import CardFlip from "../components/CardFlip";
 export default function Landing() {
   return (
     <div>
-      <ColorBends className="fixed z-0 t-0 l-0" />
       <section
         className="w-full p-[40px] content-end text-white uppercase relative overflow-hidden"
         style={{

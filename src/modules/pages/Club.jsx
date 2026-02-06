@@ -68,7 +68,7 @@ export default function Club() {
     <div>
       {/*TITOLO */}
       <section
-        className="w-full p-[40px] content-end items-center justify-center text-center text-white uppercase relative overflow-hidden"
+        className="w-full p-[40px] content-center items-center justify-center text-center text-white uppercase relative overflow-hidden"
         style={{
           height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           marginTop: global.UTILS.NAV_HEIGHT,
@@ -80,7 +80,7 @@ export default function Club() {
       </section>
 
       {/*TESTO CONVINCENTE*/}
-      <section className="flex flex-col md:flex-row w-full min-h-screen bg-black overflow-hidden">
+      <section className="flex flex-col md:flex-row w-full min-h-screen overflow-hidden">
         {/* LATO SX */}
         <div className="flex-1 relative flex flex-col justify-center p-[40px]">
           <div className="relative mb-6">
@@ -100,9 +100,10 @@ export default function Club() {
           </h3>
         </div>
         {/*LATO DX*/}
-        <BentoBox className="flex-1 w-full h-[50vh] md:h-auto overflow-hidden">
-          <img src={fotoAbbraccio} className="w-full h-full object-cover" />
-        </BentoBox>
+        <img
+          src={fotoAbbraccio}
+          className="masked-image object-cover object-right w-[1000px]"
+        />
       </section>
 
       {/*BENEFIT CLUB*/}
@@ -119,7 +120,7 @@ export default function Club() {
           </div>
         </div>
       </section>
-      
+
       {/*GRID BENEFIT*/}
       <section className="w-full px-[40px] py-[80px] bg-black">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
