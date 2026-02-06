@@ -9,6 +9,7 @@ import marchio_colorato_base_bianca from "../../assets/logos/marchio_colorato_ba
 // COMPONENTS
 import BentoBox from "../components/BentoBox";
 import HorizontalScroll from "../components/HorizontalScroll";
+import HorizontalSlider from "../components/HorizontalSlider";
 import CustomButton from "../components/CustomButton";
 import ColorBends from "../components/ColorBends";
 import InfiniteScroll from "../components/InfiniteScroll";
@@ -63,7 +64,7 @@ export default function Landing() {
           <CustomButton label="Scopri il team" color="violet" />
         </BentoBox>
       </section>
-      <HorizontalScroll />
+      <HorizontalSlider />
       <section
         className="w-full p-[40px] flex flex-col justify-end text-white relative overflow-hidden"
         style={{

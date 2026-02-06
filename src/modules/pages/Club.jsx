@@ -14,10 +14,10 @@ import GoldMember from "../../assets/images/cardflip/goldmember.webp";
 
 // COMPONENTS
 import BentoBox from "../components/BentoBox";
-import HorizontalScroll from "../components/HorizontalScroll";
 import CustomButton from "../components/CustomButton";
 import InfiniteScroll from "../components/InfiniteScroll";
 import AnimatedNumber from "../components/AnimatedNumber";
+import ImageSlider from "../components/ImageSlider";
 
 export default function Club() {
   const benefits = [
@@ -265,7 +265,7 @@ export default function Club() {
           </div>
         </div>
       </section>
-      {/*<HorizontalScroll />*/}
+      <ImageSlider />
     </div>
   );
 }
