@@ -20,8 +20,8 @@
     "AZZURRO_PARADOXA": "#009edc",
     "GRIGIO_CHIARO": "#262626",
     "ARGENTO": "#aeaeae",
+    "BRONZO": "#d46832",
     "ORO": "#fab632"
-
   },
   "COLORS_TEAM": {
     "ARANCIONE": "#ee7d29",
@@ -31,11 +31,10 @@
     "AZZURRO": "#1dbbee",
     "BLU": "#2983c5",
     "ROSA": "#ba5c9d"
-
   },
   "UTILS": {
     "SOCIAL_NAV_HEIGHT": "0px",
-    "NAV_HEIGHT": "99px",
+    "NAV_HEIGHT": "75px",
     "MOBILE_WIDTH": "480",
     "SMALL_MOBILE_WIDTH": "376",
     "TABLET_WIDTH": "768",

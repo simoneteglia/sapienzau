@@ -37,6 +37,8 @@
   --font-gotham-ultra: "GothamUltra", sans-serif;
   --font-gotham-book: "GothamBook", sans-serif;
   --font-gotham-medium: "GothamMedium", sans-serif;
+  --color-bronze: #d46832;
+  --color-gold: #fab632;
 }
 
 @tailwind base;
@@ -74,7 +76,7 @@ body {
   mask-image: url(assets/svg/blob_mask.png);
   mask-repeat: no-repeat;
   mask-size: contain;
-  mask-position: right;
+  mask-position: center;
   background: transparent;
   overflow: hidden;
 }

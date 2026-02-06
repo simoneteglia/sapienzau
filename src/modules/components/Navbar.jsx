@@ -44,10 +44,10 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className={`w-full top-0 left-0 fixed z-1 flex items-center font-objectsans`}
+      className={`w-full top-0 left-0 fixed z-100 flex items-center font-objectsans`}
       style={{
         height: global.UTILS.NAV_HEIGHT,
-        backgroundColor: global.COLORS.GRIGIO_CHIARO
+        backgroundColor: global.COLORS.GRIGIO_CHIARO,
       }}
     >
       <div className="relative hidden z-1 w-full xl:w-[85%] h-[75%] md:flex items-center rounded-[1rem] ">
@@ -55,7 +55,7 @@ export default function Navbar() {
           <img
             src={logo_colorato_base_bianca}
             alt="Logo SapienzaU"
-            className="w-[268px] ml-[30px] mr-[50px]"
+            className="w-[230px] ml-[30px] mr-[50px]"
           />
         </Link>
         <section

@@ -9,7 +9,7 @@ import it from "../../assets/logos/team_it.png";
 import la from "../../assets/logos/team_la.png";
 import pem from "../../assets/logos/team_pem.png";
 
-export default function InfiniteScroll() {
+export default function InfiniteScroll({ className }) {
   const logos = [
     { src: sec, alt: "SEC Logo" },
     { src: cemm, alt: "CEMM Logo" },
@@ -30,7 +30,9 @@ export default function InfiniteScroll() {
     "flex flex-nowrap items-center flex-shrink-0 [&_li]:mx-3 animate-infinite-scroll";
 
   return (
-    <div className="w-screen inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_100px,_black_calc(100%-100px),transparent_100%)]">
+    <div
+      className={`w-screen inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_100px,_black_calc(100%-100px),transparent_100%)] ${className}`}
+    >
       <ul className={ulClassName}>
         {displayLogos.map((logo, index) => (
           <li key={`primary-${index}`}>

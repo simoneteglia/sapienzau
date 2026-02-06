@@ -68,32 +68,33 @@ export default function Club() {
     <div>
       {/*TITOLO */}
       <section
-        className="w-full p-[40px] content-center items-center justify-center text-center text-white uppercase relative overflow-hidden"
+        className="w-full relative p-[40px] content-center items-center justify-center text-center text-white uppercase relative overflow-hidden"
         style={{
           height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           marginTop: global.UTILS.NAV_HEIGHT,
         }}
       >
-        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] pb-5 leading-none font-gotham-ultra overflow-hidden ">
+        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden ">
           vuoi un sacco <br /> entrare nel club <br /> (ma non lo sai)
         </h1>
+        <InfiniteScroll className="absolute w-screen bottom-10 left-0" />
       </section>
 
       {/*TESTO CONVINCENTE*/}
-      <section className="flex flex-col md:flex-row w-full min-h-screen overflow-hidden">
+      <section className="flex flex-col lg:flex-row w-full lg:min-h-[70vh] min-h-[40vh] mb-[50px]">
         {/* LATO SX */}
         <div className="flex-1 relative flex flex-col justify-center p-[40px]">
           <div className="relative mb-6">
             <img
               src={team_it}
-              className="absolute -top-20 left-10 w-[200px] md:w-[300px] h-auto -rotate-5 shadow-2xl z-0"
+              className="absolute -top-20 left-10 w-[200px] md:w-[300px] h-auto -rotate-5 shadow-2xl z-1"
             />
-            <h1 className="relative z-10 xl:text-[80px] lg:text-[65px] md:text-[42px] leading-none font-gotham-ultra uppercase text-white">
+            <h1 className="relative z-10 xl:text-[80px] lg:text-[65px] md:text-[55px] leading-none font-gotham-ultra uppercase text-white">
               testo <br /> convincente
             </h1>
           </div>
 
-          <h3 className="xl:text-[35px] lg:text-[25px] md:text-[15px] leading-tight font-gotham-book text-white max-w-2xl z-10">
+          <h3 className="xl:text-[35px] lg:text-[25px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl z-10">
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. consectetur adipiscing elit sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -102,7 +103,7 @@ export default function Club() {
         {/*LATO DX*/}
         <img
           src={fotoAbbraccio}
-          className="masked-image object-cover object-right w-[1000px]"
+          className="masked-image object-cover object-right lg:w-[1000px] hidden lg:inline lg:static"
         />
       </section>
 
@@ -135,7 +136,7 @@ export default function Club() {
               >
                 {item.title}
               </h3>
-              <p className="text-white xl:text-[25px] lg:text-[15px] md:text-[5px] font-gotham-book max-w-[250px]">
+              <p className="text-white xl:text-[25px] lg:text-[20px] md:text-[20px] font-gotham-book max-w-[250px]">
                 {item.desc}
               </p>
             </div>
@@ -160,10 +161,10 @@ export default function Club() {
           <div className="relative mb-6">
             <img
               src={team_dex}
-              className="absolute  right-10 w-[200px] md:w-[300px] h-auto rotate-15 shadow-2xl z-0"
+              className="absolute right-10 w-[200px] md:w-[300px] h-auto rotate-15 shadow-2xl z-[-1]"
             />
             <h3
-              className={`xl:text-[200px] lg:text-[160px] md:text-[120px] font-gotham-ultra uppercase`}
+              className={`xl:text-[200px] lg:text-[160px] md:text-[120px] font-gotham-ultra uppercase z-10`}
               style={{ color: global.COLORS_TEAM.ARANCIONE }}
             >
               <AnimatedNumber end={1253} duration={2500} />
@@ -194,28 +195,28 @@ export default function Club() {
       </section>
 
       {/*GOLD AND SILVER MEMBER*/}
-      <section className="flex flex-col md:flex-row w-full min-h-screen bg-black text-white">
+      <section className="flex flex-col lg:flex-row w-full min-h-screen bg-black text-white">
         {/*LATO SX*/}
         <div className="flex-1 flex flex-col items-center justify-between p-12 border-r border-zinc-800">
           <div className="text-center mb-8">
             <h2
-              className="xl:text-[60px] lg:text-[50px] md:text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden"
-              style={{ color: global.COLORS.ARGENTO }}
+              className="xl:text-[50px] lg:text-[40px] md:text-[45px] pb-5 leading-none font-gotham-ultra overflow-hidden"
+              style={{ color: global.COLORS.BRONZO }}
             >
-              SILVER
+              BRONZE
             </h2>
-            <h2 className="xl:text-[60px] lg:text-[50px] md:text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
+            <h2 className="xl:text-[45px] lg:text-[35px] md:text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
               MEMBER
             </h2>
           </div>
-          <div className="w-full aspect-video rounded-3xl overflow-hidden bg-zinc-800 mb-8">
+          <div className="xl:w-lg lg:w-md aspect-video rounded-3xl overflow-hidden bg-zinc-800 mb-8 drop-shadow-xl drop-shadow-bronze">
             <img
               src={GoldMember}
               className="w-full h-full object-cover"
               alt="Bento"
             />
           </div>
-          <h3 className="xl:text-[35px] lg:text-[25px] md:text-[15px] leading-tight font-gotham-book text-white max-w-2xl z-10">
+          <h3 className="xl:text-[30px] lg:text-[20px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl z-10">
             {leftList.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -230,23 +231,23 @@ export default function Club() {
         <div className="flex-1 flex flex-col items-center justify-between p-12 bg-zinc-950">
           <div className="text-center mb-8">
             <h2
-              className="xl:text-[60px] lg:text-[50px] md:text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden"
+              className="xl:text-[50px] lg:text-[40px] md:text-[45px] pb-5 leading-none font-gotham-ultra overflow-hidden"
               style={{ color: global.COLORS.ORO }}
             >
               GOLD
             </h2>
-            <h2 className="xl:text-[60px] lg:text-[50px] md:text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
+            <h2 className="xl:text-[45px] lg:text-[35px] md:text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
               MEMBER
             </h2>
           </div>
-          <div className="w-full aspect-video rounded-3xl overflow-hidden bg-zinc-800 mb-8">
+          <div className="xl:w-lg lg:w-md aspect-video rounded-3xl overflow-hidden bg-zinc-800 mb-8  drop-shadow-xl drop-shadow-gold">
             <img
               src={GoldMember}
               className="w-full h-full object-cover"
               alt="Bento"
             />
           </div>
-          <h3 className="xl:text-[35px] lg:text-[25px] md:text-[15px] leading-tight font-gotham-book text-white max-w-2xl z-10">
+          <h3 className="xl:text-[30px] lg:text-[20px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl z-10">
             {rightList.map((item) => (
               <li key={item}>{item}</li>
             ))}
