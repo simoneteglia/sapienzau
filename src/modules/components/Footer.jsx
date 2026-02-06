@@ -55,10 +55,6 @@ export default function Footer() {
             ad minim veniam.
           </p>
           <SocialIcon
-            icon={faFacebook}
-            link="https://www.facebook.com/tedxsapienzau/"
-          />
-          <SocialIcon
             icon={faLinkedin}
             link="https://www.linkedin.com/company/tedxsapienzau/mycompany/"
           />
@@ -79,13 +75,13 @@ export default function Footer() {
             link="https://www.flickr.com/photos/tedxsapienzau/albums"
           />
         </div>
-        <div className="flex flex-col gap-2 ml-8 font-gotham-bold uppercase text-lg [&_a:nth-child(1)]:cursor-pointer [&_a:nth-child(n+2)]:text-gray-400">
+        <div className="flex flex-col gap-2 md:ml-8 font-gotham-bold uppercase text-lg [&_a:nth-child(1)]:cursor-pointer [&_a:nth-child(n+2)]:text-gray-400">
           <a href="/club">Club</a>
           <a>Chi Siamo</a>
           <a>Team</a>
           <a>Eventi</a>
         </div>
-        <div className="w-full flex justify-between">
+        <div className="w-full flex md:flex-row flex-col md:gap-0 gap-3 justify-between">
           <div>
             <small>
               <a className="underline" href="/privacypolicy">
@@ -102,7 +98,7 @@ export default function Footer() {
             </small>
           </div>
           <small className="">
-            &copy; Copyright 2026 | TEDxSapienzaU | All Rights Reserved
+            &copy; Copyright 2026 | SapienzaU | All Rights Reserved
           </small>
         </div>
       </footer>
