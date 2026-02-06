@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState, useLayoutEffect } from "react";
 import { gsap } from "gsap";
-import { Draggable } from "gsap/draggable";
+import { Draggable } from "gsap/all";
 
 // RESOURCES
 import Paradoxa25 from "../../assets/images/events/cover-paradoxa25.webp";
