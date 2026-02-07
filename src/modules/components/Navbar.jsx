@@ -24,6 +24,24 @@ export default function Navbar() {
 
   const navigation = [
     { name: "Club", href: "/club", current: currentPage === "club" },
+    {
+      name: "Chi Siamo",
+      href: "/contact",
+      current: currentPage === "/contact",
+      disabled: true,
+    },
+    {
+      name: "Team",
+      href: "/team",
+      current: currentPage === "/team",
+      disabled: true,
+    },
+    {
+      name: "Eventi",
+      href: "/events",
+      current: currentPage === "/events",
+      disabled: true,
+    },
   ];
 
   return (
@@ -45,7 +63,7 @@ export default function Navbar() {
                   <img
                     src={logo_colorato_base_bianca}
                     alt="Logo SapienzaU"
-                    className="w-[180px]" // Slightly smaller for mobile
+                    className="w-[180px]"
                   />
                 </Link>
 
@@ -77,8 +95,11 @@ export default function Navbar() {
                       className={classNames(
                         item.current
                           ? "bg-gray-900 text-white"
-                          : "text-white text-[20px] hover:bg-gray-700",
+                          : "text-[20px] hover:bg-gray-700 ",
                         "rounded-md px-3 py-2 text-sm font-semibold",
+                        item.disabled
+                          ? "pointer-events-none text-gray-500"
+                          : "text-white",
                       )}
                       onClick={() => setCurrentPage(item.name.toLowerCase())}
                     >
@@ -91,19 +112,29 @@ export default function Navbar() {
           </div>
 
           {/* --- MOBILE DRAWER --- */}
-          <DisclosurePanel className="md:hidden absolute top-[70px] left-0 w-full bg-[#your-color] shadow-lg">
+          <DisclosurePanel
+            transition
+            className="md:hidden absolute left-0 w-full h-screen shadow-lg transition duration-300 ease-out 
+                      data-[closed]:-translate-y-6 data-[closed]:opacity-0 data-[closed]:delay-500"
+            style={{
+              backgroundColor: global.COLORS.GRIGIO_CHIARO,
+              top: global.UTILS.NAV_HEIGHT,
+            }}
+          >
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
+              {navigation.map((item, index) => (
                 <DisclosureButton
-                  key={item.name}
+                  key={index}
                   as={Link}
                   to={item.href}
                   className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-white hover:bg-gray-700",
-                    "block rounded-md px-3 py-2 text-base font-medium",
+                    `block rounded-md px-3 py-2 text-[50px] font-gotham-bold uppercase transition-all duration-500 transform ${open ? "translate-x-0 opacity-100" : "-translate-x-100 opacity-0"}`,
+                    item.current ? "underline" : "",
+                    item.disabled
+                      ? "pointer-events-none text-gray-500"
+                      : "text-white",
                   )}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                   onClick={() => setCurrentPage(item.name.toLowerCase())}
                 >
                   {item.name}
