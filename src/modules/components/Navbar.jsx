@@ -53,19 +53,39 @@ export default function Navbar() {
         backgroundColor: global.COLORS.GRIGIO_CHIARO,
       }}
     >
-      {({ open }) => (
+      {({ close, open }) => (
         <>
           <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="flex h-full items-center justify-between">
               {/* --- MOBILE LAYOUT: LOGO LEFT, HAMBURGER RIGHT --- */}
               <div className="flex w-full items-center justify-between md:hidden">
-                <Link to="/" onClick={() => setCurrentPage("homepage")}>
-                  <img
-                    src={logo_colorato_base_bianca}
-                    alt="Logo SapienzaU"
-                    className="w-[180px]"
-                  />
-                </Link>
+                {open ? (
+                  <DisclosureButton
+                    to="/"
+                    onClick={() => {
+                      setCurrentPage("homepage");
+                    }}
+                  >
+                    <img
+                      src={logo_colorato_base_bianca}
+                      alt="Logo SapienzaU"
+                      className="w-[180px]"
+                    />
+                  </DisclosureButton>
+                ) : (
+                  <Link
+                    to="/"
+                    onClick={() => {
+                      setCurrentPage("homepage");
+                    }}
+                  >
+                    <img
+                      src={logo_colorato_base_bianca}
+                      alt="Logo SapienzaU"
+                      className="w-[180px]"
+                    />
+                  </Link>
+                )}
 
                 {/* Mobile menu button */}
                 <DisclosureButton className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 focus:outline-none">
