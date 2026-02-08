@@ -21,11 +21,18 @@ export default function Landing() {
       <section
         className="w-full p-[40px] content-end text-white uppercase relative overflow-hidden"
         style={{
-          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: global.UTILS.NAV_HEIGHT,
+          height:
+            window.innerWidth < global.UTILS.MOBILE_WIDTH
+              ? `calc(50vh - ${global.UTILS.NAV_HEIGHT})`
+              : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          marginTop:
+            window.innerWidth < global.UTILS.MOBILE_WIDTH
+              ? "90px"
+              : global.UTILS.NAV_HEIGHT,
         }}
       >
         <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] pb-5 leading-none font-gotham-ultra overflow-hidden ">
+          {" "}
           Frase <br /> d'effetto <br /> con animazione
         </h1>
         <div className="w-full flex justify-end pr-10">
@@ -41,22 +48,28 @@ export default function Landing() {
       <section
         className="w-full p-[40px] flex items-end justify-end text-white relative overflow-hidden"
         style={{
-          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: global.UTILS.NAV_HEIGHT,
+          height:
+            window.innerWidth < global.UTILS.MOBILE_WIDTH
+              ? "auto"
+              : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          marginTop:
+            window.innerWidth < global.UTILS.MOBILE_WIDTH
+              ? "20px"
+              : global.UTILS.NAV_HEIGHT,
         }}
       >
         <BentoBox
-          className="flex w-full h-full flex items-end justify-end flex-col gap-[20px] text-right p-[40px]"
+          className="flex w-full h-auto md:h-full flex-col justify-end items-end gap-4 md:gap-[20px] text-right p-6 md:p-[40px] rounded-2xl overflow-hidden"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fotoAbbraccio})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
         >
-          <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] leading-none font-gotham-ultra overflow-hidden uppercase">
+          <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
             Il Team
           </h1>
-          <p className="font-gotham-book lg:text-[35px] w-xl">
+          <p className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-none overflow-hidden font-gotham-book w-xl">
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua.{" "}
           </p>
@@ -72,13 +85,13 @@ export default function Landing() {
         }}
       >
         <div className="shrink-0 flex flex-col items-end text-right w-full">
-          <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] leading-none font-gotham-ultra overflow-hidden uppercase">
+          <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
             Il Club
           </h1>
-          <p className="font-gotham-book lg:text-[35px] w-xl mb-12">
+          <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-xl break-words">
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua.
-          </p>
+          </h2>
         </div>
         <div className="flex-1 w-full min-h-0">
           <CardFlip />

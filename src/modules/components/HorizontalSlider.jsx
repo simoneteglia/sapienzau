@@ -137,10 +137,10 @@ export default function HorizontalSlider() {
     >
       {/* EVENTI */}
       <div className="px-[40px] pb-5 flex-shrink-0 relative">
-        <h1 className="text-[90px] leading-none font-gotham-ultra uppercase">
+        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
           Eventi
         </h1>
-        <h2 className="text-[30px] leading-none font-gotham max-w-4xl mt-2 ">
+        <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-xl break-words">
           consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore
           et dolore magna aliqua.
         </h2>
