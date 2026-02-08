@@ -131,7 +131,7 @@ export default function HorizontalSlider() {
   return (
     <section
       style={{
-        paddingTop: `calc(${global.UTILS.NAV_HEIGHT || "100px"} + 40px)`,
+        paddingTop: `40px)`,
       }}
       className="w-full text-white flex flex-col pb-10 relative overflow-hidden"
     >

@@ -14,25 +14,37 @@ import CustomButton from "../components/CustomButton";
 import ColorBends from "../components/ColorBends";
 import InfiniteScroll from "../components/InfiniteScroll";
 import CardFlip from "../components/CardFlip";
+import CardFlipMobile from "../components/CardFlipMobile";
 
 export default function Landing() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== "undefined") {
+        setIsMobile(window.innerWidth < global.UTILS.MOBILE_WIDTH);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div>
       <section
         className="w-full p-[40px] content-end text-white uppercase relative overflow-hidden"
         style={{
-          height:
-            window.innerWidth < global.UTILS.MOBILE_WIDTH
-              ? `calc(50vh - ${global.UTILS.NAV_HEIGHT})`
-              : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop:
-            window.innerWidth < global.UTILS.MOBILE_WIDTH
-              ? "90px"
-              : global.UTILS.NAV_HEIGHT,
+          height: isMobile
+            ? `calc(50vh - ${global.UTILS.NAV_HEIGHT})`
+            : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          marginTop: isMobile ? "90px" : global.UTILS.NAV_HEIGHT,
         }}
       >
-        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] pb-5 leading-none font-gotham-ultra overflow-hidden ">
-          {" "}
+        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[8vw] pb-5 leading-none font-gotham-ultra overflow-hidden ">
           Frase <br /> d'effetto <br /> con animazione
         </h1>
         <div className="w-full flex justify-end pr-10">
@@ -48,14 +60,10 @@ export default function Landing() {
       <section
         className="w-full p-[40px] flex items-end justify-end text-white relative overflow-hidden"
         style={{
-          height:
-            window.innerWidth < global.UTILS.MOBILE_WIDTH
-              ? "auto"
-              : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop:
-            window.innerWidth < global.UTILS.MOBILE_WIDTH
-              ? "20px"
-              : global.UTILS.NAV_HEIGHT,
+          height: isMobile
+            ? "auto"
+            : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          marginTop: isMobile ? "20px" : global.UTILS.NAV_HEIGHT,
         }}
       >
         <BentoBox
@@ -69,19 +77,23 @@ export default function Landing() {
           <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
             Il Team
           </h1>
-          <p className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-none overflow-hidden font-gotham-book w-xl">
+          <p className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-none overflow-hidden font-gotham-book w-full max-w-xl">
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua.{" "}
+            labore et dolore magna aliqua.
           </p>
           <CustomButton label="Scopri il team" color="violet" />
         </BentoBox>
       </section>
+
       <HorizontalSlider />
+
       <section
         className="w-full p-[40px] flex flex-col justify-end text-white relative overflow-hidden"
         style={{
-          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: global.UTILS.NAV_HEIGHT,
+          height: isMobile
+            ? "50vh"
+            : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          marginTop: isMobile ? "0px" : global.UTILS.NAV_HEIGHT,
         }}
       >
         <div className="shrink-0 flex flex-col items-end text-right w-full">
@@ -93,9 +105,16 @@ export default function Landing() {
             labore et dolore magna aliqua.
           </h2>
         </div>
-        <div className="flex-1 w-full min-h-0">
-          <CardFlip />
-        </div>
+        {isMobile ? (
+          <div className="block md:hidden w-full h-[200px]">
+            <CardFlipMobile />
+          </div>
+        ) : (
+          <div className="flex-1 w-full min-h-0">
+            {" "}
+            <CardFlip />
+          </div>
+        )}
       </section>
     </div>
   );
