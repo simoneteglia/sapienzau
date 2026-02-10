@@ -45,7 +45,7 @@ export default function Landing() {
         }}
       >
         <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[8vw] pb-5 leading-none font-gotham-ultra overflow-hidden ">
-          Frase <br /> d'effetto <br /> con animazione
+          Sapienza <br /> is <br /> U
         </h1>
         <div className="w-full flex justify-end pr-10">
           <CustomButton label="Scopri chi siamo" />
@@ -75,11 +75,10 @@ export default function Landing() {
           }}
         >
           <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
-            Il Team
+            Team
           </h1>
           <p className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-none overflow-hidden font-gotham-book w-full max-w-xl">
-            consectetur adipiscing elit sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua.
+            Sei pronto a “teamare”con noi? Scopri i team di SapienzaU che trasformano le idee in realtà.
           </p>
           <CustomButton label="Scopri il team" color="violet" />
         </BentoBox>
@@ -98,11 +97,10 @@ export default function Landing() {
       >
         <div className="shrink-0 flex flex-col items-end text-right w-full">
           <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
-            Il Club
+            Club
           </h1>
           <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-xl break-words">
-            consectetur adipiscing elit sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua.
+            Sei pronto a “clubare” con noi? Unisciti all’esclusivo Club di SapienzaU per rimanere aggiornato su ogni novità.
           </h2>
         </div>
         {isMobile ? (

@@ -113,7 +113,7 @@ export default function CardFlip() {
         frontContent={
           <div className="flex flex-col justify-center gap-4 p-4 h-full ">
             <h2 className=" xl:text-[60px] lg:text-[50px] md:text-[35px] text-white font-gotham-ultra text-4xl font-bold">
-              INVITO CATCHY A GIRARE LA CARD...
+              U are gold
             </h2>
             <p className="text-500 text-black mt-4"></p>
           </div>

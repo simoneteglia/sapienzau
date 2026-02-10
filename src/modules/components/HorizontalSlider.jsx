@@ -141,8 +141,7 @@ export default function HorizontalSlider() {
           Eventi
         </h1>
         <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-xl break-words">
-          consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore
-          et dolore magna aliqua.
+          Sei pronto a “eventare” con noi? Unisciti agli eventi ufficiali e scopri le iniziative di SapienzaU.
         </h2>
       </div>
 
