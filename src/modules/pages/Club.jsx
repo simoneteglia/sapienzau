@@ -22,34 +22,34 @@ import ImageSlider from "../components/ImageSlider";
 export default function Club() {
   const benefits = [
     {
-      title: "questo",
-      desc: "consectetur adipiscing elit sed do eiusmod tempor",
+      title: "tessera ",
+      desc: "La tessera digitale personalizzata di SapienzaU",
       color: "ARANCIONE",
     },
     {
-      title: "quello",
-      desc: "consectetur adipiscing elit sed do eiusmod tempor",
-      color: "GIALLO",
-    },
-    {
-      title: "l'altro",
-      desc: "consectetur adipiscing elit sed do eiusmod tempor",
+      title: "newsletter",
+      desc: "Accesso alla newsletter e a contenuti editoriali esclusivi",
       color: "VERDE",
     },
     {
-      title: "l'altro",
-      desc: "consectetur adipiscing elit sed do eiusmod tempor",
+      title: "workshop",
+      desc: "Accesso prioritario alla prenotazione dei workshop",
       color: "AZZURRO",
     },
     {
-      title: "questo",
-      desc: "consectetur adipiscing elit sed do eiusmod tempor",
+      title: "eventi",
+      desc: "Posti riservati agli eventi targati TEDxSapienzaU e SapienzaU",
       color: "ROSA",
     },
     {
-      title: "quello",
-      desc: "consectetur adipiscing elit sed do eiusmod tempor",
+      title: "tema",
+      desc: "Accesso anticipato al tema degli eventi della prossima edizione",
       color: "BLU",
+    },
+    {
+      title: "e molto altro...",
+      desc: "",
+      color: "GIALLO",
     },
   ];
 
@@ -74,14 +74,14 @@ export default function Club() {
           marginTop: global.UTILS.NAV_HEIGHT,
         }}
       >
-        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden ">
+        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] mb-5 leading-none font-gotham-ultra overflow-hidden ">
           vuoi un sacco <br /> entrare nel club <br /> (ma non lo sai)
         </h1>
         <InfiniteScroll className="absolute w-screen bottom-10 left-0" />
       </section>
 
       {/*TESTO CONVINCENTE*/}
-      <section className="flex flex-col lg:flex-row w-full md:min-h-[70vh] md:mt-0 mt-[100px] mb-[50px]">
+      <section className="flex flex-col lg:flex-row w-full xl:h-screen md:min-h-[70vh] md:mt-0 mt-[100px] mb-[50px]">
         {/* LATO SX */}
         <div className="flex-1 relative flex flex-col justify-center p-[40px]">
           <div className="relative mb-6">
@@ -90,15 +90,13 @@ export default function Club() {
               className="absolute -top-20 left-10 w-[200px] md:w-[300px] h-auto -rotate-5 shadow-2xl z-1"
             />
             <h1 className="relative z-10 xl:text-[80px] lg:text-[65px] md:text-[55px] text-[40px] leading-none font-gotham-ultra uppercase text-white">
-              testo <br /> convincente
+              la nostra visione
             </h1>
           </div>
 
-          <h3 className="xl:text-[35px] lg:text-[25px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl z-10">
-            consectetur adipiscing elit sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. consectetur adipiscing elit sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </h3>
+          <h3 className="xl:text-[35px] lg:text-[22px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl  min-w-xl z-10">
+            SapienzaU Club nasce come evoluzione naturale del progetto SapienzaU e di TEDxSapienzaU, con l’obiettivo di consolidare una community che va oltre il singolo evento. Il Club è pensato per ex volontari e sostenitori che continuano a supportare l’associazione.
+          </h3> 
         </div>
         {/*LATO DX*/}
         <img
@@ -131,12 +129,12 @@ export default function Club() {
               className="flex flex-col items-center text-center space-y-4"
             >
               <h3
-                className={`xl:text-[60px] lg:text-[50px] md:text-[40px] text-[30px] font-gotham-ultra uppercase`}
+                className={`xl:text-[55px] lg:text-[50px] md:text-[40px] text-[30px] font-gotham-ultra uppercase`}
                 style={{ color: global.COLORS_TEAM[item.color] }}
               >
                 {item.title}
               </h3>
-              <p className="text-white xl:text-[25px] lg:text-[20px] md:text-[20px] font-gotham-book max-w-[250px]">
+              <p className="text-white xl:text-[25px] lg:text-[20px] md:text-[20px] font-gotham-book max-w-[300px]">
                 {item.desc}
               </p>
             </div>

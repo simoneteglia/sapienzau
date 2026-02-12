@@ -45,7 +45,7 @@ export default function Landing() {
         }}
       >
         <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[8vw] pb-5 leading-none font-gotham-ultra overflow-hidden ">
-          Sapienza <br /> is <br /> U
+          Sapienza <br /> is U
         </h1>
         <div className="w-full flex justify-end pr-10">
           <CustomButton label="Scopri chi siamo" />
