@@ -147,7 +147,7 @@ export default function Club() {
       </section>
 
       {/*COUNTER*/}
-      <section className="w-full p-[40px] content-end items-center justify-center text-center text-white relative overflow-hidden">
+      {/* <section className="w-full p-[40px] content-end items-center justify-center text-center text-white relative overflow-hidden">
         <div className="flex-1 relative flex flex-col justify-center p-[40px]">
           <div className="relative mb-6">
             <img
@@ -176,6 +176,135 @@ export default function Club() {
         <h1 className="relative z-10 xl:text-[80px] lg:text-[60px] md:text-[40px] text-[30px] pb-5 leading-none font-gotham-ultra text-white overflow-hidden">
           joined the club :o
         </h1>
+      </section> */}
+
+      {/* BENEFITS SECTION */}
+      <section id="benefits" className="w-full p-[20px] md:p-[40px] bg-black">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
+          {/* BRONZE BENTO BOX */}
+          <div className="flex-1 bg-zinc-900/50 border border-zinc-800 p-8 rounded-[30px] flex flex-col">
+            <div className="mb-6">
+              <h2
+                className="text-[40px] md:text-[50px] font-gotham-ultra mb-1 uppercase leading-none"
+                style={{ color: global.COLORS.BRONZO }}
+              >
+                Bronze
+              </h2>
+              <p className="text-[24px] font-gotham-ultra text-white uppercase opacity-80">
+                15 EURO
+              </p>
+            </div>
+
+            <ul className="space-y-4 text-white font-gotham-book text-[16px] md:text-[18px]">
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                Newsletter SapienzaU
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                Inserimento nel Google Group dedicato
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                Poster numerato dell'edizione
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                Accesso prioritario ai workshop
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                Tessera associativa Digitale
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>1 Posto
+                riservato: Evento Maggio & Awards Novembre 2026
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                Accesso anticipato al tema dell'edizione
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                Sezione dedicata su sito e Instagram
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                Possibilità di partecipare agli eventi associativi
+              </li>
+            </ul>
+            <div className="mt-5">
+              <CustomButton
+                label="JOIN BRONZE"
+                color="bronzo"
+                className="w-full justify-center"
+              />
+            </div>
+          </div>
+
+          {/* GOLD BENTO BOX */}
+          <div className="flex-1 bg-zinc-900/50 border border-zinc-800 p-8 rounded-[30px] flex flex-col relative overflow-hidden">
+            {/* Decorative Gradient for Gold */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 blur-[80px] rounded-full"></div>
+
+            <div className="mb-6 relative z-10">
+              <h2
+                className="text-[40px] md:text-[50px] font-gotham-ultra mb-1 uppercase leading-none"
+                style={{ color: global.COLORS.ORO }}
+              >
+                Gold
+              </h2>
+              <p className="text-[24px] font-gotham-ultra text-white uppercase opacity-80">
+                25 EURO
+              </p>
+              <p className="font-gotham-ultra text-zinc-500 mt-2 uppercase text-[12px] tracking-widest">
+                Tutto i benefit del piano Bronze +
+              </p>
+            </div>
+
+            <ul className="space-y-4 text-white font-gotham-book text-[16px] md:text-[18px]">
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.ORO }}>★</span>
+                Contenuti editoriali extra nella newsletter
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.ORO }}>★</span>
+                Poster evento autografato dagli speaker
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.ORO }}>★</span>
+                Prenotazione workshop con posto garantito
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.ORO }}>★</span>
+                Tessera associativa fisica (cartacea)
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.ORO }}>★</span>2 Posti
+                riservati (Maggio/Awards) + 2 Posti VIP Main Event 2027
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.ORO }}>★</span>
+                Accesso ai Team Building associativi
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.ORO }}>★</span>
+                Gadget VIP esclusivi (Main Event ed Edizione)
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.ORO }}>★</span>
+                Possibilità di partecipare all'Opening Event
+              </li>
+            </ul>
+            <div className="mt-5 relative z-10">
+              <CustomButton
+                label="JOIN GOLD"
+                color="oro"
+                className="w-full justify-center"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/*BECOME A MEMBER*/}
