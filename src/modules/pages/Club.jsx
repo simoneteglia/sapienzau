@@ -257,8 +257,8 @@ export default function Club() {
               <p className="text-[24px] font-gotham-ultra text-white uppercase opacity-80">
                 25 EURO
               </p>
-              <p className="font-gotham-ultra text-zinc-500 mt-2 uppercase text-[12px] tracking-widest">
-                Tutto i benefit del piano Bronze +
+              <p className="font-gotham-ultra text-zinc-500 mt-2 uppercase text-[16px] tracking-widest">
+                Tutti i benefit del piano Bronze +
               </p>
             </div>
 
