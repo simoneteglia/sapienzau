@@ -214,11 +214,21 @@ export default function Club() {
               </li>
               <li className="flex items-start gap-3">
                 <span style={{ color: global.COLORS.BRONZO }}>•</span>
-                Tessera associativa Digitale
+                Tessera associativa digitale
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: global.COLORS.BRONZO }}>•</span>1 Posto
-                riservato: Evento Maggio & Awards Novembre 2026
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                <span>
+                  1 Posto riservato: Launch Event{" "}
+                  <span className="italic">(TEDxSapienzaU Maggio 2026)</span>
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.BRONZO }}>•</span>
+                <span>
+                  1 Posto riservato: Awards Event{" "}
+                  <span className="italic">(Novembre 2026)</span>
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <span style={{ color: global.COLORS.BRONZO }}>•</span>
@@ -277,11 +287,15 @@ export default function Club() {
               </li>
               <li className="flex items-start gap-3">
                 <span style={{ color: global.COLORS.ORO }}>★</span>
-                Tessera associativa fisica (cartacea)
+                Tessera associativa fisica
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: global.COLORS.ORO }}>★</span>2 Posti
-                riservati (Maggio/Awards) + 2 Posti VIP Main Event 2027
+                <span style={{ color: global.COLORS.ORO }}>★</span>1 posto extra
+                riservato per Launch Event e Awards Event
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: global.COLORS.ORO }}>★</span>2 Posti VIP
+                Main Event 2027
               </li>
               <li className="flex items-start gap-3">
                 <span style={{ color: global.COLORS.ORO }}>★</span>
