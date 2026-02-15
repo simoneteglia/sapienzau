@@ -36,7 +36,7 @@ export default function Landing() {
   return (
     <div>
       <section
-        className="w-full p-[40px] content-end text-white uppercase relative overflow-hidden flex flex-col-reverse justify-start items-center gap-3 lg:block"
+        className="w-full p-[40px] content-end text-white uppercase relative overflow-hidden flex flex-col-reverse justify-center items-center gap-3 lg:block"
         style={{
           height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           marginTop: isMobile ? "90px" : global.UTILS.NAV_HEIGHT,
