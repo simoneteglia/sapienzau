@@ -4,7 +4,8 @@ import { useGSAP } from "@gsap/react";
 // COMPONENTS
 import BentoBox from "./BentoBox";
 // RESOURCES
-import GoldMember from "../../assets/images/cardflip/goldmember.webp";
+import GoldMember from "../../assets/images/cardflip/goldmember.png";
+import BronzeMember from "../../assets/images/cardflip/bronzemember.png";
 
 gsap.registerPlugin(useGSAP);
 
@@ -48,7 +49,7 @@ export default function CardFlipMobile() {
       }
     },
     { scope: containerRef, dependencies: [isFlipped] },
-  ); 
+  );
   const handleFlip = () => {
     setIsFlipped((prev) => !prev);
   };
@@ -86,9 +87,7 @@ export default function CardFlipMobile() {
             }}
           >
             <div className="flex flex-col items-center justify-center h-full">
-              <span className="opacity-50 text-white text-sm mt-auto pb-4">
-                testo
-              </span>
+              <span className="opacity-50 text-white text-sm mt-auto pb-4"></span>
             </div>
           </BentoBox>
         </div>

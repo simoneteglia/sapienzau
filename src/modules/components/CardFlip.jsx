@@ -4,7 +4,8 @@ import { useGSAP } from "@gsap/react";
 // COMPONENTS
 import BentoBox from "./BentoBox";
 // RESOURCES
-import GoldMember from "../../assets/images/cardflip/goldmember.webp";
+import GoldMember from "../../assets/images/cardflip/goldmember.png";
+import BronzeMember from "../../assets/images/cardflip/bronzemember.png";
 
 gsap.registerPlugin(useGSAP);
 

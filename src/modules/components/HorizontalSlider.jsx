@@ -141,7 +141,8 @@ export default function HorizontalSlider() {
           Eventi
         </h1>
         <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-xl break-words">
-          Sei pronto a “eventare” con noi? Unisciti agli eventi ufficiali e scopri le iniziative di SapienzaU.
+          Sei pronto a “eventare” con noi? Unisciti agli eventi ufficiali e
+          scopri le iniziative di SapienzaU.
         </h2>
       </div>
 
@@ -204,7 +205,7 @@ export default function HorizontalSlider() {
                 style={{ backgroundImage: `url(${item.image})` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
-                <h2 className="text-5xl font-gotham-book text-white uppercase relative z-10 select-none">
+                <h2 className="xl:text-4xl lg:text-2xl text-xl font-gotham-book text-white uppercase relative z-10 select-none">
                   {item.title}
                 </h2>
                 <div className="relative z-10 select-none">
@@ -217,9 +218,9 @@ export default function HorizontalSlider() {
       </div>
 
       {/* BUTTON */}
-      <div className="w-full flex justify-start px-[40px] mt-8">
+      {/* <div className="w-full flex justify-start px-[40px] mt-8">
         <CustomButton label="Scopri tutti gli eventi" color="green" />
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import global from "../../resources/global.json"
+import global from "../../resources/global.json";
 
 import arrow_right from "../../assets/svg/arrow_right.svg";
 
@@ -12,8 +12,8 @@ const colors = {
   cyan: "#28BDEF",
   green: "#94C459",
   argento: global.COLORS.ARGENTO,
-  oro: global.COLORS.ORO
-
+  oro: global.COLORS.ORO,
+  bronzo: global.COLORS.BRONZO,
 };
 
 export default function CustomButton({

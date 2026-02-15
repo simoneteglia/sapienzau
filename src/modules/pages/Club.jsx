@@ -10,7 +10,8 @@ import team_pem from "../../assets/logos/team_pem.png";
 import team_dex from "../../assets/logos/team_dex.png";
 import team_hra from "../../assets/logos/team_hra.png";
 import team_cemm from "../../assets/logos/team_cemm.png";
-import GoldMember from "../../assets/images/cardflip/goldmember.webp";
+import GoldMember from "../../assets/images/cardflip/goldmember.png";
+import BronzeMember from "../../assets/images/cardflip/bronzemember.png";
 
 // COMPONENTS
 import BentoBox from "../components/BentoBox";
@@ -94,9 +95,12 @@ export default function Club() {
             </h1>
           </div>
 
-          <h3 className="xl:text-[35px] lg:text-[22px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl  min-w-xl z-10">
-            SapienzaU Club nasce come evoluzione naturale del progetto SapienzaU e di TEDxSapienzaU, con l’obiettivo di consolidare una community che va oltre il singolo evento. Il Club è pensato per ex volontari e sostenitori che continuano a supportare l’associazione.
-          </h3> 
+          <h3 className="xl:text-[35px] lg:text-[22px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl  xl:min-w-xl z-10">
+            SapienzaU Club nasce come evoluzione naturale del progetto SapienzaU
+            e di TEDxSapienzaU, con l’obiettivo di consolidare una community che
+            va oltre il singolo evento. Il Club è pensato per ex volontari e
+            sostenitori che continuano a supportare l’associazione.
+          </h3>
         </div>
         {/*LATO DX*/}
         <img
@@ -209,19 +213,19 @@ export default function Club() {
           </div>
           <div className="xl:w-lg lg:w-md aspect-video rounded-3xl overflow-hidden bg-zinc-800 mb-8 drop-shadow-xl drop-shadow-bronze">
             <img
-              src={GoldMember}
+              src={BronzeMember}
               className="w-full h-full object-cover"
               alt="Bento"
             />
           </div>
-          <h3 className="xl:text-[30px] lg:text-[20px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl z-10">
+          {/* <h3 className="xl:text-[30px] lg:text-[20px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl z-10">
             {leftList.map((item) => (
               <li key={item}>{item}</li>
             ))}
-          </h3>
+          </h3> */}
           <div className="flex-1 relative flex flex-col justify-center p-[40px]">
             <div className="relative mb-6">
-              <CustomButton label="JOIN THE CLUB :)" color="argento" />
+              <CustomButton label="JOIN THE CLUB :)" color="bronzo" />
             </div>
           </div>
         </div>
@@ -245,11 +249,11 @@ export default function Club() {
               alt="Bento"
             />
           </div>
-          <h3 className="xl:text-[30px] lg:text-[20px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl z-10">
+          {/* <h3 className="xl:text-[30px] lg:text-[20px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl z-10">
             {rightList.map((item) => (
               <li key={item}>{item}</li>
             ))}
-          </h3>
+          </h3> */}
           <div className="flex-1 relative flex flex-col justify-center p-[40px]">
             <div className="relative mb-6">
               <img

@@ -36,38 +36,33 @@ export default function Landing() {
   return (
     <div>
       <section
-        className="w-full p-[40px] content-end text-white uppercase relative overflow-hidden"
+        className="w-full p-[40px] content-end text-white uppercase relative overflow-hidden flex flex-col-reverse justify-start items-center gap-3 lg:block"
         style={{
-          height: isMobile
-            ? `calc(50vh - ${global.UTILS.NAV_HEIGHT})`
-            : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           marginTop: isMobile ? "90px" : global.UTILS.NAV_HEIGHT,
         }}
       >
-        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[8vw] pb-5 leading-none font-gotham-ultra overflow-hidden ">
-          Sapienza <br /> is U
+        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[15vw] text-center lg:text-left lg:max-w-[8ch] pb-5 leading-none font-gotham-ultra overflow-hidden ">
+          Sapienza is U
         </h1>
-        <div className="w-full flex justify-end pr-10">
+        {/* <div className="w-full flex justify-end pr-10">
           <CustomButton label="Scopri chi siamo" />
-        </div>
+        </div> */}
 
         <img
           src={marchio_colorato_base_bianca}
           alt="Marchio Colorato"
-          className="absolute w-[30vw] right-[40px] top-[50px]"
+          className="lg:absolute lg:w-[30vw] max-w-[600px]  right-[40px] top-[50px]"
         />
       </section>
       <section
         className="w-full p-[40px] flex items-end justify-end text-white relative overflow-hidden"
         style={{
-          height: isMobile
-            ? "auto"
-            : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           marginTop: isMobile ? "20px" : global.UTILS.NAV_HEIGHT,
         }}
       >
         <BentoBox
-          className="flex w-full h-auto md:h-full flex-col justify-end items-end gap-4 md:gap-[20px] text-right p-6 md:p-[40px] rounded-2xl overflow-hidden"
+          className="flex w-full h-auto min-h-[50vh] md:h-full flex-col justify-end items-end gap-4 md:gap-[20px] text-right p-6 md:p-[40px] rounded-2xl overflow-hidden"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fotoAbbraccio})`,
             backgroundPosition: "center",
@@ -77,10 +72,11 @@ export default function Landing() {
           <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
             Team
           </h1>
-          <p className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-none overflow-hidden font-gotham-book w-full max-w-xl">
-            Sei pronto a “teamare”con noi? Scopri i team di SapienzaU che trasformano le idee in realtà.
+          <p className="xl:text-[35px] lg:text-[25px] md:text-[20px] text-[16px] pb-5 leading-none overflow-hidden font-gotham-book w-full max-w-xl">
+            Sei pronto a “teamare”con noi? Scopri i team di SapienzaU che
+            trasformano le idee in realtà.
           </p>
-          <CustomButton label="Scopri il team" color="violet" />
+          {/* <CustomButton label="Scopri il team" color="violet" /> */}
         </BentoBox>
       </section>
 
@@ -100,7 +96,8 @@ export default function Landing() {
             Club
           </h1>
           <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-xl break-words">
-            Sei pronto a “clubare” con noi? Unisciti all’esclusivo Club di SapienzaU per rimanere aggiornato su ogni novità.
+            Sei pronto a “clubare” con noi? Unisciti all’esclusivo Club di
+            SapienzaU per rimanere aggiornato su ogni novità.
           </h2>
         </div>
         {isMobile ? (
