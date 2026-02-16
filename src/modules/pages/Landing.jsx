@@ -72,9 +72,10 @@ export default function Landing() {
           <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
             Team
           </h1>
-          <p className="xl:text-[35px] lg:text-[25px] md:text-[20px] text-[16px] pb-5 leading-none overflow-hidden font-gotham-book w-full max-w-xl">
-            Sei pronto a “teamare”con noi? Scopri i team di SapienzaU che
-            trasformano le idee in realtà.
+          <p className="xl:text-[35px] lg:text-[25px] md:text-[20px] text-[16px] pb-5 leading-none overflow-hidden font-gotham-book w-full max-w-2xl">
+            I team di SapienzaU sono il cuore del progetto. Divisione del
+            lavoro, idee e impegno sono i valori che rapprestano al meglio
+            l’identità di ogni gruppo.
           </p>
           {/* <CustomButton label="Scopri il team" color="violet" /> */}
         </BentoBox>
@@ -95,7 +96,7 @@ export default function Landing() {
           <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
             Club
           </h1>
-          <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-xl break-words">
+          <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-2xl break-words">
             Sei pronto a “clubare” con noi? Unisciti all’esclusivo Club di
             SapienzaU per rimanere aggiornato su ogni novità.
           </h2>

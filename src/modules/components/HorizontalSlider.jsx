@@ -140,9 +140,9 @@ export default function HorizontalSlider() {
         <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
           Eventi
         </h1>
-        <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-xl break-words">
-          Sei pronto a “eventare” con noi? Unisciti agli eventi ufficiali e
-          scopri le iniziative di SapienzaU.
+        <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-2xl break-words">
+          Gli eventi e le iniziative TedXSapienzaU sono un’occasione unica per
+          confrontarci e scoprire realtà nuove, con attività in location uniche.
         </h2>
       </div>
 

@@ -385,7 +385,7 @@ export default function Club() {
               MEMBER
             </h2>
           </div>
-          <div className="xl:w-lg lg:w-md aspect-video rounded-3xl overflow-hidden bg-zinc-800 mb-8  drop-shadow-xl drop-shadow-gold">
+          <div className="xl:w-lg lg:w-md aspect-video rounded-3xl overflow-hidden bg-zinc-800 mb-8 drop-shadow-xl drop-shadow-gold">
             <img
               src={GoldMember}
               className="w-full h-full object-cover"
