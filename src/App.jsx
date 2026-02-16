@@ -6,6 +6,7 @@ import Landing from "./modules/pages/Landing";
 import Footer from "./modules/components/Footer";
 import ErrorPage from "./modules/pages/ErrorPage";
 import Club from "./modules/pages/Club";
+import ScrollToTop from "./modules/components/ScrollToTop";
 
 import "./App.css";
 
@@ -47,6 +48,7 @@ function LandingManager() {
   return (
     <div>
       <Navbar />
+      <ScrollToTop />
       <Outlet context={[windowSize, setWindowSize]} />
       <Footer />
     </div>
