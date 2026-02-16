@@ -180,7 +180,7 @@ export default function Club() {
 
       {/* BENEFITS SECTION */}
       <section id="benefits" className="w-full p-[20px] md:p-[40px] bg-black">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
+        <div className="max-w-7xl mx-auto flex flex-col justify-between md:flex-row gap-8">
           {/* BRONZE BENTO BOX */}
           <div className="flex-1 bg-zinc-900/50 border border-zinc-800 p-8 rounded-[30px] flex flex-col">
             <div className="mb-6">
@@ -253,7 +253,7 @@ export default function Club() {
           </div>
 
           {/* GOLD BENTO BOX */}
-          <div className="flex-1 bg-zinc-900/50 border border-zinc-800 p-8 rounded-[30px] flex flex-col relative overflow-hidden">
+          <div className="flex-1 bg-zinc-900/50 border border-zinc-800 p-8 rounded-[30px] flex flex-col justify-between relative overflow-hidden">
             {/* Decorative Gradient for Gold */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 blur-[80px] rounded-full"></div>
 
@@ -340,7 +340,7 @@ export default function Club() {
       </section>
 
       {/*GOLD AND SILVER MEMBER*/}
-      <section className="flex flex-col lg:flex-row w-full min-h-screen bg-black text-white">
+      <section className="flex flex-col lg:flex-row w-full bg-black text-white">
         {/*LATO SX*/}
         <div className="flex-1 flex flex-col items-center justify-between p-12 border-r border-zinc-800">
           <div className="text-center mb-8">
@@ -366,7 +366,7 @@ export default function Club() {
               <li key={item}>{item}</li>
             ))}
           </h3> */}
-          <div className="flex-1 relative flex flex-col justify-center p-[40px]">
+          <div className="flex-1 relative flex flex-col justify-start p-[40px]">
             <div className="relative mb-6">
               <CustomButton label="JOIN THE CLUB :)" color="bronzo" />
             </div>
@@ -397,7 +397,7 @@ export default function Club() {
               <li key={item}>{item}</li>
             ))}
           </h3> */}
-          <div className="flex-1 relative flex flex-col justify-center p-[40px]">
+          <div className="flex-1 relative flex flex-col justify-start p-[40px]">
             <div className="relative mb-6">
               <img
                 src={team_cemm}
