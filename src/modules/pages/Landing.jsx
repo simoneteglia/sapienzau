@@ -87,9 +87,9 @@ export default function Landing() {
         className="w-full p-[40px] flex flex-col justify-end text-white relative overflow-hidden"
         style={{
           height: isMobile
-            ? "50vh"
+            ? "60vh"
             : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: isMobile ? "10px" : global.UTILS.NAV_HEIGHT, //modifica se testo club tagliato
+          marginTop: isMobile ? "0px" : global.UTILS.NAV_HEIGHT, //modifica se testo club tagliato
         }}
       >
         <div className="shrink-0 flex flex-col items-end text-right w-full">
