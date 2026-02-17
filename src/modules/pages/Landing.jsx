@@ -89,7 +89,7 @@ export default function Landing() {
           height: isMobile
             ? "50vh"
             : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: isMobile ? "0px" : global.UTILS.NAV_HEIGHT,
+          marginTop: isMobile ? "10px" : global.UTILS.NAV_HEIGHT, //modifica se testo club tagliato
         }}
       >
         <div className="shrink-0 flex flex-col items-end text-right w-full">

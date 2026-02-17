@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 // COMPONENTS
 import BentoBox from "./BentoBox";
+import global from "../../resources/global.json";
 // RESOURCES
 import GoldMember from "../../assets/images/cardflip/goldmember.png";
 import BronzeMember from "../../assets/images/cardflip/bronzemember.png";
@@ -110,21 +111,20 @@ export default function CardFlip() {
       <FlipCard
         className="flex-1 h-full"
         frontWrapperClass="bg-yellow-500"
-        backWrapperClass="bg-purple-600"
+        backWrapperClass="bg-yellow-800"
         frontContent={
           <div className="flex flex-col justify-center gap-4 p-4 h-full ">
-            <h2 className=" xl:text-[60px] lg:text-[50px] md:text-[35px] text-white font-gotham-ultra text-4xl font-bold">
-              U are gold
+            <h2 className=" xl:text-[60px] lg:text-[50px] md:text-[35px] text-black font-gotham-ultra text-4xl font-bold">
+              Diventa un membro gold!
             </h2>
             <p className="text-500 text-black mt-4"></p>
           </div>
         }
         backContent={
-          <div className="flex flex-col items-center justify-center h-full p-10 text-center">
-            <h3 className="text-2xl font-semibold mb-4 text-black">
-              Dietro benefit club
-            </h3>
-            <p className="text-black">testo extra</p>
+          <div className="flex flex-col justify-center gap-4 p-4 h-full">
+            <h2 className=" xl:text-[60px] lg:text-[50px] md:text-[35px] text-white font-gotham-ultra text-4xl font-bold">
+              ...oppure un membro bronze!
+            </h2>
           </div>
         }
       />

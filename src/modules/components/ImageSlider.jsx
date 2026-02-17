@@ -97,14 +97,23 @@ export default function ImageSlider() {
     const track = trackRef.current;
     const container = containerRef.current;
 
-    if (!track || !container) return;
+    if (!track || !container || !track.children.length) return;
 
     const currentX = gsap.getProperty(track, "x");
     const containerWidth = container.offsetWidth;
     const trackWidth = track.scrollWidth;
     const minX = containerWidth - trackWidth;
 
-    const slideAmount = containerWidth * 0.5;
+    // Dynamically calculate the width of one card + its right margin
+    const firstItem = track.children[0];
+    const itemStyle = window.getComputedStyle(firstItem);
+    const itemMarginRight = parseFloat(itemStyle.marginRight) || 0;
+    const singleCardWidth = firstItem.offsetWidth + itemMarginRight;
+
+    // Use full card width on mobile (under 768px), keep the 50% feel on desktop
+    const isMobile = window.innerWidth < 768;
+    const slideAmount = isMobile ? singleCardWidth : containerWidth * 0.5;
+
     let targetX =
       direction === "next" ? currentX - slideAmount : currentX + slideAmount;
 
@@ -115,8 +124,12 @@ export default function ImageSlider() {
       duration: 0.8,
       ease: "power3.out",
       onUpdate: function () {
-        if (draggableInstance.current && draggableInstance.current[0]) {
-          draggableInstance.current[0].update();
+        // Sync Draggable with tween (matching your array structure)
+        if (draggableInstance.current) {
+          const instance = Array.isArray(draggableInstance.current)
+            ? draggableInstance.current[0]
+            : draggableInstance.current;
+          if (instance) instance.update();
         }
         setIsAtStart(targetX >= -10);
         setIsAtEnd(targetX <= minX + 10);
@@ -126,10 +139,8 @@ export default function ImageSlider() {
 
   return (
     <section
-      style={{
-        paddingTop: `calc(${global.UTILS.NAV_HEIGHT || "100px"} + 40px)`,
-      }}
-      className="w-full flex flex-col pb-10 relative overflow-hidden"
+      style={{ paddingTop: "40px" }}
+      className="w-full flex flex-col pb-10 relative overflow-hidden bg-black"
     >
       {/* SLIDER SECTION */}
       <div

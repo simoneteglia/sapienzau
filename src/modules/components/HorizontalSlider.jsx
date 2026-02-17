@@ -98,19 +98,27 @@ export default function HorizontalSlider() {
     const container = containerRef.current;
 
     // Safety check
-    if (!track || !container) return;
+    if (!track || !container || !track.children.length) return;
 
     const currentX = gsap.getProperty(track, "x");
     const containerWidth = container.offsetWidth;
     const trackWidth = track.scrollWidth;
     const minX = containerWidth - trackWidth;
 
-    // Slide by 50% of screen width for a nice "page" feel
-    const slideAmount = containerWidth * 0.5;
+    // Dynamically calculate the width of one card + its right margin
+    const firstItem = track.children[0];
+    const itemStyle = window.getComputedStyle(firstItem);
+    const itemMarginRight = parseFloat(itemStyle.marginRight) || 0;
+    const singleCardWidth = firstItem.offsetWidth + itemMarginRight;
+
+    // Use full card width on mobile (under 768px), keep the "page" feel on desktop
+    const isMobile = window.innerWidth < 768;
+    const slideAmount = isMobile ? singleCardWidth : containerWidth * 0.5;
+
     let targetX =
       direction === "next" ? currentX - slideAmount : currentX + slideAmount;
 
-    // Clamp values
+    // Clamp values so it doesn't scroll past the beginning or end
     targetX = Math.max(minX, Math.min(0, targetX));
 
     gsap.to(track, {
