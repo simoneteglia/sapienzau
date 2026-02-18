@@ -21,6 +21,7 @@ export default function CustomButton({
   color = "orange",
   outlined = false,
   className = "",
+  href = "#",
 }) {
   return (
     <button
@@ -29,7 +30,12 @@ export default function CustomButton({
         borderRadius: "16px",
         padding: "10px 15px",
       }}
-      className={`uppercase flex items-center font-gotham-bold text-black xl:text-[25px] ${className}`}
+      onClick={() => {
+        if (href !== "#") {
+          window.location.href = href;
+        }
+      }}
+      className={`uppercase flex items-center font-gotham-bold text-black xl:text-[25px] cursor-pointer ${className}`}
     >
       {label}{" "}
       <img src={arrow_right} style={{ height: "40px" }} alt="arrow right" />

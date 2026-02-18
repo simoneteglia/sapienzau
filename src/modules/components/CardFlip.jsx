@@ -146,9 +146,17 @@ export default function CardFlip() {
           </div>
         }
         backContent={
-          <div className="flex flex-col justify-center h-full p-10 text-center">
+          <div
+            className="flex flex-col justify-center h-full p-10 text-center"
+            onClick={() =>
+              window.open(
+                "https://docs.google.com/forms/d/1NwVt3MRRaiaC0hpvZKDNy4sr13RqjIVAKqRGelpnuK0/edit?hl=it",
+                "_blank",
+              )
+            }
+          >
             <h2 className=" xl:text-[60px] lg:text-[50px] md:text-[35px] text-white font-gotham-ultra text-4xl font-bold">
-              FORM
+              VAI AL FORM
             </h2>
           </div>
         }
