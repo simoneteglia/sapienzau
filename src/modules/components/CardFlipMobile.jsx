@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 // COMPONENTS
 import BentoBox from "./BentoBox";
+import CustomButton from "./CustomButton";
 // RESOURCES
 import GoldMember from "../../assets/images/cardflip/goldmember.png";
 import BronzeMember from "../../assets/images/cardflip/bronzemember.png";
@@ -99,10 +100,16 @@ export default function CardFlipMobile() {
         >
           <BentoBox className="w-full h-full shadow-md bg-gray-800 rounded-2xl">
             <div className="flex flex-col justify-center h-full p-10 text-center">
-              <h2 className="text-[35px] text-white font-gotham-ultra font-bold">
-                FORM
-              </h2>
-              {/* CONTENUTO FORM */}
+              <p className="text-white mt-4">
+                Scopri i vantaggi esclusivi riservati ai membri del nostro club
+                e unisciti alla nostra community!{" "}
+              </p>
+              <CustomButton
+                label="VAI AL FORM"
+                color="oro"
+                className="w-full justify-center mt-5"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSd2qpgFR1eUBXCXRrrO78-o7LRWAfitZ45y6Wopm-0HHdbiUA/viewform"
+              />
             </div>
           </BentoBox>
         </div>

@@ -283,7 +283,7 @@ export default function Club() {
                   label="JOIN BRONZE"
                   color="bronzo"
                   className="w-full justify-center"
-                  href="https://docs.google.com/forms/d/1NwVt3MRRaiaC0hpvZKDNy4sr13RqjIVAKqRGelpnuK0/edit?hl=it"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSd2qpgFR1eUBXCXRrrO78-o7LRWAfitZ45y6Wopm-0HHdbiUA/viewform"
                 />
               </div>
             </div>
@@ -365,7 +365,7 @@ export default function Club() {
                   label="JOIN GOLD"
                   color="oro"
                   className="w-full justify-center"
-                  href="https://docs.google.com/forms/d/1NwVt3MRRaiaC0hpvZKDNy4sr13RqjIVAKqRGelpnuK0/edit?hl=it"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSd2qpgFR1eUBXCXRrrO78-o7LRWAfitZ45y6Wopm-0HHdbiUA/viewform"
                 />
               </div>
             </div>

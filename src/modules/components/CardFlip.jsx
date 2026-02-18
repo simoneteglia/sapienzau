@@ -150,7 +150,7 @@ export default function CardFlip() {
             className="flex flex-col justify-center h-full p-10 text-center"
             onClick={() =>
               window.open(
-                "https://docs.google.com/forms/d/1NwVt3MRRaiaC0hpvZKDNy4sr13RqjIVAKqRGelpnuK0/edit?hl=it",
+                "https://docs.google.com/forms/d/e/1FAIpQLSd2qpgFR1eUBXCXRrrO78-o7LRWAfitZ45y6Wopm-0HHdbiUA/viewform",
                 "_blank",
               )
             }
