@@ -248,7 +248,7 @@ export default function Club() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span style={{ color: global.COLORS.BRONZO }}>•</span>
-                  Poster numerato dell'edizione
+                  Poster dell'edizione
                 </li>
                 <li className="flex items-start gap-3">
                   <span style={{ color: global.COLORS.BRONZO }}>•</span>
@@ -261,15 +261,8 @@ export default function Club() {
                 <li className="flex items-start gap-3">
                   <span style={{ color: global.COLORS.BRONZO }}>•</span>
                   <span>
-                    1 Posto riservato: Launch Event{" "}
-                    <span className="italic">(TEDxSapienzaU Maggio 2026)</span>
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: global.COLORS.BRONZO }}>•</span>
-                  <span>
-                    1 Posto riservato: Awards Event{" "}
-                    <span className="italic">(Novembre 2026)</span>
+                    1 Posto riservato agli eventi targati TEDxSapienzaU e
+                    SapienzaU
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -294,6 +287,7 @@ export default function Club() {
               </div>
             </div>
           </div>
+
           {/* --- GOLD COLUMN --- */}
           <div className="flex flex-col gap-8 lg:pl-12">
             {/* Gold Header & Image */}
@@ -353,19 +347,12 @@ export default function Club() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span style={{ color: global.COLORS.ORO }}>★</span>1 posto
-                  extra riservato per Launch Event e Awards Event
-                </li>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: global.COLORS.ORO }}>★</span>2 Posti VIP
-                  Main Event 2027
+                  extra riservato per gli eventi targati TEDxSapienzaU e
+                  SapienzaU
                 </li>
                 <li className="flex items-start gap-3">
                   <span style={{ color: global.COLORS.ORO }}>★</span>
                   Accesso ai Team Building associativi
-                </li>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: global.COLORS.ORO }}>★</span>
-                  Gadget VIP esclusivi (Main Event ed Edizione)
                 </li>
                 <li className="flex items-start gap-3">
                   <span style={{ color: global.COLORS.ORO }}>★</span>
