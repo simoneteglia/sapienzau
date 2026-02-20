@@ -49,11 +49,7 @@ export default function Footer() {
             alt="Logo SapienzaU"
             className="w-[200px] md:w-[200px] lg:w-[220px]"
           />
-          <p className="w-[220px] md:w-[300px] lg:w-[400px] tertiary-text mt-[5px] mb-[25px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
-          </p>
+          <p className="w-[220px] md:w-[300px] lg:w-[400px] tertiary-text mt-[5px] mb-[25px]"></p>
           <SocialIcon
             icon={faLinkedin}
             link="https://www.linkedin.com/company/tedxsapienzau/mycompany/"

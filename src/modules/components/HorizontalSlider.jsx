@@ -149,7 +149,7 @@ export default function HorizontalSlider() {
           Eventi
         </h1>
         <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-2xl break-words">
-          Gli eventi e le iniziative TedXSapienzaU sono un’occasione unica per
+          Gli eventi e le iniziative SapienzaU sono un’occasione unica per
           confrontarci e scoprire realtà nuove, con attività in location uniche.
         </h2>
       </div>
