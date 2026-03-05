@@ -18,13 +18,13 @@ import BentoBox from "./BentoBox";
 gsap.registerPlugin(Draggable);
 
 const items = [
-  { id: 1, image: Paradoxa25 },
-  { id: 2, image: Awards24 },
-  { id: 3, image: Countdown24 },
-  { id: 4, image: Backtozero23 },
-  { id: 5, image: Awards23 },
-  { id: 6, image: Act22 },
-  { id: 7, image: Awards22 },
+  { id: 1, image: Paradoxa25, size: 1 },
+  { id: 2, image: Awards24, size: 1.5 },
+  { id: 3, image: Countdown24, size:2  },
+  { id: 4, image: Backtozero23, size:1.5 },
+  { id: 5, image: Awards23, size:2 },
+  { id: 6, image: Act22, size: 1.5 },
+  { id: 7, image: Awards22, size: 2 },
 ];
 
 export default function ImageSlider() {
@@ -187,19 +187,30 @@ export default function ImageSlider() {
         {/* TRACK */}
         <div
           ref={trackRef}
-          className="flex w-max px-[40px] cursor-grab active:cursor-grabbing"
+          className="flex w-max px-[40px] cursor-grab active:cursor-grabbing items-center"
         >
-          {items.map((item) => (
-            <div
-              key={item.id}
-              className="h-[45vh] w-[25vw] min-w-[300px] flex-shrink-0 mr-10"
-            >
-              <BentoBox
-                className="w-full h-full bg-cover bg-center relative rounded-lg overflow-hidden transition-transform hover:scale-[1.02] duration-300 shadow-xl"
-                style={{ backgroundImage: `url(${item.image})` }}
-              ></BentoBox>
-            </div>
-          ))}
+          {items.map((item) => {
+            const baseWidth = 350;
+            const calculatedWidth = baseWidth * item.size;
+
+            return (
+              <div
+                key={item.id}
+                className="h-[45vh] flex-shrink-0 mr-10"
+                style={{
+                  width: `${calculatedWidth}px`,
+                  minWidth: `${250 * item.size}px`, 
+                }}
+              >
+                <BentoBox
+                  className="w-full h-full bg-cover bg-center relative rounded-2xl overflow-hidden transition-transform hover:scale-[1.02] duration-300 shadow-xl border border-white/10"
+                  style={{ backgroundImage: `url(${item.image})` }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                </BentoBox>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

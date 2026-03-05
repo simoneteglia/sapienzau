@@ -36,24 +36,32 @@ export default function Landing() {
   return (
     <div>
       <section
-        className="w-full p-[40px] content-end text-white uppercase relative overflow-hidden flex flex-col-reverse justify-center items-center gap-3 lg:block"
+        className="w-full px-[20px] lg:px-[60px] flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-between text-white uppercase relative overflow-hidden bg-black"
         style={{
-          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: isMobile ? "90px" : global.UTILS.NAV_HEIGHT,
+          minHeight: isMobile
+            ? "auto"
+            : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          marginTop: isMobile ? "120px" : global.UTILS.NAV_HEIGHT,
+          paddingBottom: isMobile ? "60px" : "0px",
         }}
       >
-        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[15vw] text-center lg:text-left lg:max-w-[8ch] pb-5 leading-none font-gotham-ultra overflow-hidden ">
-          Sapienza is U
-        </h1>
-        {/* <div className="w-full flex justify-end pr-10">
+        <div className="flex flex-col lg:flex-row items-center lg:justify-between w-full max-w-[1600px] mx-auto lg:gap-10">
+          <div className="w-full lg:w-auto text-left">
+            <h1 className="flex flex-col xl:text-[110px] lg:text-[90px] md:text-[80px] text-[15vw] leading-[0.8] font-gotham-ultra">
+              <span>Sapienza is</span>
+            </h1>
+            {/* <div className="w-full flex justify-end pr-10">
           <CustomButton label="Scopri chi siamo" />
         </div> */}
-
-        <img
-          src={marchio_colorato_base_bianca}
-          alt="Marchio Colorato"
-          className="lg:absolute lg:w-[30vw] max-w-[600px]  right-[40px] top-[50px]"
-        />
+          </div>
+          <div className="w-full lg:w-auto flex justify-center lg:justify-end mt-4 lg:mt-0">
+            <img
+              src={marchio_colorato_base_bianca}
+              alt="Marchio Colorato"
+              className="w-[70vw] lg:w-[40vw] max-w-[320px] lg:max-w-[650px] h-auto object-contain"
+            />
+          </div>
+        </div>
       </section>
       <section
         className="w-full p-[40px] flex items-end justify-end text-white relative overflow-hidden"

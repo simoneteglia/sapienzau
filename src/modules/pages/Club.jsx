@@ -67,78 +67,81 @@ export default function Club() {
 
   return (
     <div>
-      {/*TITOLO */}
+      {/* TITOLO */}
       <section
-        className="w-full relative p-[40px] content-center items-center justify-center text-center text-white uppercase relative overflow-hidden"
+        className="w-full relative px-[20px] md:px-[40px] pt-[20px] pb-[30px] flex flex-col items-center justify-center text-center text-white uppercase overflow-hidden bg-black"
         style={{
-          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: global.UTILS.NAV_HEIGHT,
+          marginTop: `calc(${global.UTILS.NAV_HEIGHT} + 10px)`,
         }}
       >
-        <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] mb-5 leading-none font-gotham-ultra overflow-hidden ">
-          vuoi un sacco <br /> entrare nel club <br /> (ma non lo sai)
+        <h1 className="xl:text-[90px] lg:text-[75px] md:text-[60px] text-[32px] sm:text-[38px] leading-[1] font-gotham-ultra max-w-[90vw] md:max-w-none">
+          {/* I <br /> sono visibili solo da tablet in su (md:) */}
+          vuoi un sacco <br className="hidden md:block" /> entrare nel club{" "}
+          <br className="hidden md:block" />{" "}
+          <span className="text-white">(ma ancora non lo sai)</span>
         </h1>
-        <InfiniteScroll className="absolute w-screen bottom-10 left-0" />
       </section>
 
-      {/*TESTO CONVINCENTE*/}
-      <section className="flex flex-col lg:flex-row w-full xl:h-screen md:min-h-[70vh] md:mt-0 mt-[100px] mb-[50px]">
-        {/* LATO SX */}
-        <div className="flex-1 relative flex flex-col justify-center p-[40px]">
-          <div className="relative mb-6">
+      {/* TESTO CONVINCENTE */}
+      <section className="flex flex-col lg:flex-row w-full items-center justify-between pt-[40px] pb-0 md:py-[50px] bg-black">
+        {/* LATO SX: Testo che non interseca più */}
+        <div className="w-full lg:flex-1 relative flex flex-col justify-center px-[40px] lg:pl-[80px] z-10">
+          <div className="relative mb-10 md:mb-6">
             <img
               src={team_it}
-              className="absolute -top-20 left-10 w-[200px] md:w-[300px] h-auto -rotate-5 shadow-2xl z-1"
+              className="absolute -top-12 left-0 w-[140px] md:w-[260px] h-auto -rotate-5 z-0"
             />
-            <h1 className="relative z-10 xl:text-[80px] lg:text-[65px] md:text-[55px] text-[40px] leading-none font-gotham-ultra uppercase text-white">
+            <h2 className="relative z-10 xl:text-[60px] lg:text-[50px] md:text-[40px] text-[30px] leading-none font-gotham-ultra uppercase text-white">
               la nostra visione
-            </h1>
+            </h2>
           </div>
-
-          <h3 className="xl:text-[35px] lg:text-[22px] md:text-[20px] leading-tight font-gotham-book text-white max-w-2xl  xl:min-w-xl z-10">
+          <p className="xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] leading-snug font-gotham-book text-white max-w-xl z-10">
             SapienzaU Club nasce come evoluzione naturale del progetto SapienzaU
             e di TEDxSapienzaU, con l’obiettivo di consolidare una community che
             va oltre il singolo evento. Il Club è pensato per ex volontari e
             sostenitori che continuano a supportare l’associazione.
-          </h3>
+          </p>
         </div>
-        {/*LATO DX*/}
-        <img
-          src={fotoAbbraccio}
-          className="masked-image object-cover object-right lg:w-[1000px] hidden lg:inline lg:static"
-        />
+
+        {/* LATO DX */}
+        <div className="w-full lg:w-[55%] mt-10 lg:mt-0 flex justify-end overflow-hidden">
+          <img
+            src={fotoAbbraccio}
+            className="masked-image object-cover w-[90%] md:w-full max-h-[400px] md:max-h-[800px] translate-x-[5%] lg:translate-x-0"
+          />
+        </div>
       </section>
 
-      {/*BENEFIT CLUB*/}
-      <section className="w-full p-[40px] content-end items-center justify-center text-center text-white uppercase relative overflow-hidden">
-        <div className="flex-1 relative flex flex-col justify-center p-[40px]">
-          <div className="relative mb-6">
+      {/* BENEFIT CLUB */}
+      <section className="w-full px-[20px] pt-[60px] pb-4 md:px-[40px] md:pt-[100px] md:pb-8 flex flex-col items-center justify-end text-center text-white uppercase relative bg-black">
+        <div className="relative w-full max-w-[1600px] mx-auto">
+          <div className="relative inline-block">
             <img
               src={team_la}
-              className="absolute -top-10 right-10 w-[200px] md:w-[300px] h-auto rotate-15 shadow-2xl z-0"
+              className="absolute -top-12 -right-4 md:-top-16 md:-right-12 w-[110px] md:w-[300px] h-auto rotate-12 z-0"
             />
-            <h1 className="relative z-10 xl:text-[120px] lg:text-[100px] md:text-[70px] text-[40px] md:pb-5 leading-none font-gotham-ultra uppercase text-white">
+            <h1 className="relative z-10 text-[40px] sm:text-[60px] md:text-[80px] lg:text-[110px] xl:text-[140px] leading-[0.8] font-gotham-ultra uppercase text-white">
               benefit club
             </h1>
           </div>
         </div>
       </section>
 
-      {/*GRID BENEFIT*/}
-      <section className="w-full px-[40px] md:py-[80px] bg-black">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      {/* GRID BENEFIT */}
+      <section className="w-full px-[20px] md:px-[40px] py-[20px] md:py-[40px] bg-black">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-24 gap-y-12">
           {benefits.map((item, index) => (
             <div
               key={index}
               className="flex flex-col items-center text-center space-y-4"
             >
               <h3
-                className={`xl:text-[55px] lg:text-[50px] md:text-[40px] text-[30px] font-gotham-ultra uppercase`}
+                className="text-[32px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-gotham-ultra uppercase leading-[0.9]"
                 style={{ color: global.COLORS_TEAM[item.color] }}
               >
                 {item.title}
               </h3>
-              <p className="text-white xl:text-[25px] lg:text-[20px] md:text-[20px] font-gotham-book max-w-[300px]">
+              <p className="text-white text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-gotham-book max-w-[400px] leading-tight">
                 {item.desc}
               </p>
             </div>
@@ -205,17 +208,20 @@ export default function Club() {
           <div className="flex flex-col gap-8 lg:pr-12 lg:border-r lg:border-zinc-800">
             {/* Bronze Header & Image */}
             <div className="flex flex-col items-center text-center">
-              <div className="mb-8">
+              {/* Container Titolo: rimosso mb-8 e gestito con margin-bottom più stretto */}
+              <div className="mb-6 flex flex-col items-center">
                 <h2
-                  className="xl:text-[50px] lg:text-[40px] md:text-[45px] text-[40px] pb-5 leading-none font-gotham-ultra overflow-hidden"
+                  className="xl:text-[70px] lg:text-[60px] md:text-[55px] text-[50px] leading-[0.8] font-gotham-ultra uppercase"
                   style={{ color: global.COLORS.BRONZO }}
                 >
                   BRONZE
                 </h2>
-                <h2 className="xl:text-[45px] lg:text-[35px] md:text-[35px] text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
+                <h2 className="xl:text-[65px] lg:text-[55px] md:text-[50px] text-[45px] leading-[0.8] font-gotham-ultra uppercase">
                   MEMBER
                 </h2>
               </div>
+
+              {/* Card Immagine */}
               <div className="w-full max-w-md aspect-video rounded-3xl overflow-hidden bg-zinc-800 drop-shadow-xl drop-shadow-bronze">
                 <img
                   src={BronzeMember}
@@ -293,17 +299,20 @@ export default function Club() {
           <div className="flex flex-col gap-8 lg:pl-12">
             {/* Gold Header & Image */}
             <div className="flex flex-col items-center text-center">
-              <div className="mb-8">
+              {/* Container del titolo con interlinea corretta */}
+              <div className="mb-6 flex flex-col items-center">
                 <h2
-                  className="xl:text-[50px] lg:text-[40px] md:text-[45px] text-[40px] pb-5 leading-none font-gotham-ultra overflow-hidden"
+                  className="xl:text-[70px] lg:text-[60px] md:text-[55px] text-[50px] leading-[0.8] font-gotham-ultra uppercase"
                   style={{ color: global.COLORS.ORO }}
                 >
                   GOLD
                 </h2>
-                <h2 className="xl:text-[45px] lg:text-[35px] md:text-[35px] text-[35px] pb-5 leading-none font-gotham-ultra overflow-hidden">
+                <h2 className="xl:text-[65px] lg:text-[55px] md:text-[50px] text-[45px] leading-[0.8] font-gotham-ultra uppercase">
                   MEMBER
                 </h2>
               </div>
+
+              {/* Card Immagine */}
               <div className="w-full max-w-md aspect-video rounded-3xl overflow-hidden bg-zinc-800 drop-shadow-xl drop-shadow-gold">
                 <img
                   src={GoldMember}
