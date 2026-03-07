@@ -28,19 +28,19 @@ export default function Navbar() {
       name: "Chi Siamo",
       href: "/contact",
       current: currentPage === "/contact",
-      disabled: true,
+      disabled: false,
     },
     {
       name: "Team",
       href: "/team",
       current: currentPage === "/team",
-      disabled: true,
+      disabled: false,
     },
     {
       name: "Eventi",
       href: "/events",
       current: currentPage === "/events",
-      disabled: true,
+      disabled: false,
     },
   ];
 
