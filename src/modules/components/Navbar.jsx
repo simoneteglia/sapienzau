@@ -99,7 +99,7 @@ export default function Navbar() {
               </div>
 
               {/* --- DESKTOP LAYOUT --- */}
-              <div className="hidden md:flex items-center w-full">
+              <div className="hidden md:flex items-center justify-between w-full">
                 <Link to="/" onClick={() => setCurrentPage("homepage")}>
                   <img
                     src={logo_colorato_base_bianca}
@@ -107,16 +107,14 @@ export default function Navbar() {
                     className="w-[230px] mr-[50px]"
                   />
                 </Link>
-                <section className="flex justify-between items-center gap-5">
+                <section className="flex justify-between items-center xl:gap-15 md:gap-3">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
                       className={classNames(
-                        item.current
-                          ? "bg-gray-900 text-white"
-                          : "text-[20px] hover:bg-gray-700 ",
-                        "rounded-md px-3 py-2 text-sm font-semibold",
+                        item.current ? "text-white" : " hover:bg-gray-700 ",
+                        "lg:text-[18px] md:text-[15px] rounded-md px-3 py-2 font-gotham-bold uppercase transition-colors duration-300",
                         item.disabled
                           ? "pointer-events-none text-gray-500"
                           : "text-white",
@@ -126,6 +124,16 @@ export default function Navbar() {
                       {item.name}
                     </Link>
                   ))}
+                  <Link
+                    key="join-us"
+                    to="/"
+                    className={classNames(
+                      "lg:text-[18px] md:text-[15px] bg-white rounded-3xl px-5 py-1 font-gotham-bold uppercase transition-colors duration-300",
+                    )}
+                    // onClick={() => setCurrentPage("join-us")}
+                  >
+                    Join us
+                  </Link>
                 </section>
               </div>
             </div>
