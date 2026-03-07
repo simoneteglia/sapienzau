@@ -11,6 +11,14 @@ import Act22 from "../../assets/images/events/cover-edizione22.webp";
 import Awards22 from "../../assets/images/events/awards2022.webp";
 import global from "../../resources/global.json";
 
+import foto1 from "../../assets/images/events/foto_club_1.jpg";
+import foto2 from "../../assets/images/events/foto_club_2.jpg";
+import foto3 from "../../assets/images/events/foto_club_3.jpg";
+import foto4 from "../../assets/images/events/foto_club_4.jpg";
+import foto5 from "../../assets/images/events/foto_club_5.jpg";
+import foto6 from "../../assets/images/events/foto_club_6.jpg";
+import foto7 from "../../assets/images/events/foto_club_7.jpg";
+
 // COMPONENTS
 import BentoBox from "./BentoBox";
 
@@ -19,12 +27,13 @@ gsap.registerPlugin(Draggable);
 
 const items = [
   { id: 1, image: Paradoxa25, size: 1 },
-  { id: 2, image: Awards24, size: 1.5 },
-  { id: 3, image: Countdown24, size:2  },
-  { id: 4, image: Backtozero23, size:1.5 },
-  { id: 5, image: Awards23, size:2 },
-  { id: 6, image: Act22, size: 1.5 },
-  { id: 7, image: Awards22, size: 2 },
+  { id: 2, image: foto1, size: 1.5 },
+  { id: 3, image: foto2, size: 1 },
+  { id: 4, image: foto3, size: 1.5 },
+  { id: 5, image: foto4, size: 2 },
+  { id: 6, image: foto5, size: 1.5 },
+  { id: 7, image: foto6, size: 1 },
+  { id: 8, image: foto7, size: 1.5 },
 ];
 
 export default function ImageSlider() {
@@ -199,7 +208,7 @@ export default function ImageSlider() {
                 className="h-[45vh] flex-shrink-0 mr-10"
                 style={{
                   width: `${calculatedWidth}px`,
-                  minWidth: `${250 * item.size}px`, 
+                  minWidth: `${250 * item.size}px`,
                 }}
               >
                 <BentoBox
