@@ -71,10 +71,10 @@ export default function Club() {
       <section
         className="w-full relative px-[20px] md:px-[40px] pt-[20px] pb-[30px] flex flex-col items-center justify-center text-center text-white uppercase overflow-hidden bg-black"
         style={{
-          marginTop: `calc(${global.UTILS.NAV_HEIGHT} + 10px)`,
+          marginTop: `calc(${global.UTILS.NAV_HEIGHT} + 120px)`,
         }}
       >
-        <h1 className="xl:text-[90px] lg:text-[75px] md:text-[60px] text-[32px] sm:text-[38px] leading-[1] font-gotham-ultra max-w-[90vw] md:max-w-none">
+        <h1 className="xl:text-[100px] lg:text-[85px] md:text-[70px] text-[42px] sm:text-[48px] leading-[1] font-gotham-ultra max-w-[90vw] md:max-w-none">
           {/* I <br /> sono visibili solo da tablet in su (md:) */}
           vuoi un sacco <br className="hidden md:block" /> entrare nel club{" "}
           <br className="hidden md:block" />{" "}
@@ -83,19 +83,22 @@ export default function Club() {
       </section>
 
       {/* TESTO CONVINCENTE */}
-      <section className="flex flex-col lg:flex-row w-full items-center justify-between pt-[40px] pb-0 md:py-[50px] bg-black">
+      <section className="flex flex-col lg:flex-row w-full items-center justify-between pt-[40px] pb-0 md:py-[50px] bg-black"
+      style={{
+          marginTop: `calc(${global.UTILS.NAV_HEIGHT} + 80px)`,
+        }}>
         {/* LATO SX: Testo che non interseca più */}
-        <div className="w-full lg:flex-1 relative flex flex-col justify-center px-[40px] lg:pl-[80px] z-10">
+        <div className="w-full lg:w-[65%] lg:shrink-0 relative flex flex-col justify-center px-[40px] lg:pl-[80px] z-10">
           <div className="relative mb-10 md:mb-6">
             <img
               src={team_it}
               className="absolute -top-12 left-0 w-[140px] md:w-[260px] h-auto -rotate-5 z-0"
             />
-            <h2 className="relative z-10 xl:text-[60px] lg:text-[50px] md:text-[40px] text-[30px] leading-none font-gotham-ultra uppercase text-white">
+            <h2 className="relative z-10 xl:text-[70px] lg:text-[60px] md:text-[50px] text-[40px] leading-none font-gotham-ultra uppercase text-white">
               la nostra visione
             </h2>
           </div>
-          <p className="xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] leading-snug font-gotham-book text-white max-w-xl z-10">
+          <p className="xl:text-[34px] lg:text-[30px] md:text-[28px] text-[26px] leading-snug font-gotham-book text-white max-w-xl z-10">
             SapienzaU Club nasce come evoluzione naturale del progetto SapienzaU
             e di TEDxSapienzaU, con l’obiettivo di consolidare una community che
             va oltre il singolo evento. Il Club è pensato per ex volontari e
@@ -104,10 +107,10 @@ export default function Club() {
         </div>
 
         {/* LATO DX */}
-        <div className="w-full lg:w-[55%] mt-10 lg:mt-0 flex justify-end overflow-hidden">
+        <div className="w-full lg:w-[65%] lg:shrink-0 mt-10 lg:mt-0 flex justify-end relative">
           <img
             src={fotoAbbraccio}
-            className="masked-image object-cover w-[90%] md:w-full max-h-[400px] md:max-h-[800px] translate-x-[5%] lg:translate-x-0"
+            className="masked-image object-cover w-[90%] md:w-full max-h-[400px] md:max-h-[800px] translate-x-[5%] lg:translate-x-[-25%]"
           />
         </div>
       </section>

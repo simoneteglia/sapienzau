@@ -47,7 +47,7 @@ export default function Landing() {
       >
         <div className="flex flex-col lg:flex-row items-center lg:justify-between w-full max-w-[1600px] mx-auto lg:gap-10">
           <div className="w-full lg:w-auto text-left">
-            <h1 className="flex flex-col xl:text-[110px] lg:text-[90px] md:text-[80px] text-[15vw] leading-[0.8] font-gotham-ultra">
+            <h1 className="flex flex-col xl:text-[110px] lg:text-[90px] md:text-[80px] text-[15vw] leading-[0.8] font-gotham-ultra ml-[20px] md:ml-[80px]">
               <span>Sapienza is</span>
             </h1>
             {/* <div className="w-full flex justify-end pr-10">
@@ -58,7 +58,7 @@ export default function Landing() {
             <img
               src={marchio_colorato_base_bianca}
               alt="Marchio Colorato"
-              className="w-[70vw] lg:w-[40vw] max-w-[320px] lg:max-w-[650px] h-auto object-contain"
+              className="w-[60vw] lg:w-[30vw] max-w-[300px] lg:max-w-[620px] h-auto object-contain"
             />
           </div>
         </div>
