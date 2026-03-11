@@ -65,40 +65,61 @@ export default function Club() {
     "consectetur adipiscing elit sed do eiusmod tempor",
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== "undefined") {
+        setIsMobile(window.innerWidth < global.UTILS.MOBILE_WIDTH);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div>
       {/* TITOLO */}
       <section
-        className="w-full relative px-[20px] md:px-[40px] pt-[20px] pb-[30px] flex flex-col items-center justify-center text-center text-white uppercase overflow-hidden bg-black"
+        className="w-full relative px-[20px] md:px-[40px] pt-[10px] md:pt-[20px] pb-0 md:pb-[30px] flex flex-col items-center justify-center text-center text-white uppercase overflow-hidden bg-black"
         style={{
-          marginTop: `calc(${global.UTILS.NAV_HEIGHT} + 120px)`,
+          marginTop: isMobile
+            ? `calc(${global.UTILS.NAV_HEIGHT} + 40px)`
+            : `calc(${global.UTILS.NAV_HEIGHT} + 120px)`,
         }}
       >
-        <h1 className="xl:text-[100px] lg:text-[85px] md:text-[70px] text-[42px] sm:text-[48px] leading-[1] font-gotham-ultra max-w-[90vw] md:max-w-none">
-          {/* I <br /> sono visibili solo da tablet in su (md:) */}
+        <h1 className="xl:text-[100px] lg:text-[85px] md:text-[70px] text-[32px] sm:text-[48px] leading-[1] font-gotham-ultra max-w-[90vw] md:max-w-none m-0">
           vuoi un sacco <br className="hidden md:block" /> entrare nel club{" "}
           <br className="hidden md:block" />{" "}
           <span className="text-white">(ma ancora non lo sai)</span>
         </h1>
       </section>
 
-      {/* TESTO CONVINCENTE */}
-      <section className="flex flex-col lg:flex-row w-full items-center justify-between pt-[40px] pb-0 md:py-[50px] bg-black"
-      style={{
-          marginTop: `calc(${global.UTILS.NAV_HEIGHT} + 80px)`,
-        }}>
-        {/* LATO SX: Testo che non interseca più */}
-        <div className="w-full lg:w-[65%] lg:shrink-0 relative flex flex-col justify-center px-[40px] lg:pl-[80px] z-10">
-          <div className="relative mb-10 md:mb-6">
+      {/*TESTO CONVINCENTE*/}
+      <section
+        className="flex flex-row w-full items-center justify-between pt-[30px] min-[480px]:pt-[40px] pb-0 min-[480px]:py-[50px] bg-black overflow-hidden"
+        style={{
+          marginTop: isMobile
+            ? "10px"
+            : `calc(${global.UTILS.NAV_HEIGHT} + 80px)`,
+        }}
+      >
+        {/* LATO SX */}
+        <div className="w-[60%] min-[480px]:w-[65%] shrink-0 relative flex flex-col justify-center pl-[20px] min-[480px]:pl-[80px] z-10">
+          <div className="relative mb-4 min-[480px]:mb-6">
             <img
               src={team_it}
-              className="absolute -top-12 left-0 w-[140px] md:w-[260px] h-auto -rotate-5 z-0"
+              className="absolute -top-6 min-[480px]:-top-12 left-0 w-[60px] min-[480px]:w-[260px] h-auto -rotate-5 z-0"
             />
-            <h2 className="relative z-10 xl:text-[70px] lg:text-[60px] md:text-[50px] text-[40px] leading-none font-gotham-ultra uppercase text-white">
+            <h2 className="relative z-10 text-[6vw] min-[480px]:text-[50px] lg:text-[70px] leading-none font-gotham-ultra uppercase text-white">
               la nostra visione
             </h2>
           </div>
-          <p className="xl:text-[34px] lg:text-[30px] md:text-[28px] text-[26px] leading-snug font-gotham-book text-white max-w-xl z-10">
+          <p className="text-[4vw] min-[480px]:text-[26px] lg:text-[34px] leading-snug font-gotham-book text-white max-w-xl z-10 pr-2 min-[480px]:pr-0">
             SapienzaU Club nasce come evoluzione naturale del progetto SapienzaU
             e di TEDxSapienzaU, con l’obiettivo di consolidare una community che
             va oltre il singolo evento. Il Club è pensato per ex volontari e
@@ -107,10 +128,10 @@ export default function Club() {
         </div>
 
         {/* LATO DX */}
-        <div className="w-full lg:w-[65%] lg:shrink-0 mt-10 lg:mt-0 flex justify-end relative">
+        <div className="w-[40%] min-[480px]:w-[65%] shrink-0 flex justify-end relative">
           <img
             src={fotoAbbraccio}
-            className="masked-image object-cover w-[90%] md:w-full max-h-[400px] md:max-h-[800px] translate-x-[5%] lg:translate-x-[-25%]"
+            className="masked-image object-cover max-w-none w-[180%] h-[220px] min-[480px]:w-full min-[480px]:h-auto min-[480px]:max-h-[800px] translate-x-[15%] min-[480px]:translate-x-[-25%]"
           />
         </div>
       </section>
@@ -132,19 +153,19 @@ export default function Club() {
 
       {/* GRID BENEFIT */}
       <section className="w-full px-[20px] md:px-[40px] py-[20px] md:py-[40px] bg-black">
-        <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-24 gap-y-12">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-24 gap-y-10 md:gap-y-12">
           {benefits.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center space-y-4"
+              className="flex flex-col items-center text-center space-y-2 md:space-y-4"
             >
               <h3
-                className="text-[32px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-gotham-ultra uppercase leading-[0.9]"
+                className="text-[22px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-gotham-ultra uppercase leading-[0.9]"
                 style={{ color: global.COLORS_TEAM[item.color] }}
               >
                 {item.title}
               </h3>
-              <p className="text-white text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-gotham-book max-w-[400px] leading-tight">
+              <p className="text-white text-[14px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-gotham-book max-w-[400px] leading-tight">
                 {item.desc}
               </p>
             </div>
