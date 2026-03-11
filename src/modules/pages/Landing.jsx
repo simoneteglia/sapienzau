@@ -36,7 +36,7 @@ export default function Landing() {
   return (
     <div>
       <section
-        className="w-full px-[20px] lg:px-[60px] flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-between text-white uppercase relative overflow-hidden bg-black"
+        className="w-full px-[15px] min-[480px]:px-[60px] flex flex-col min-[480px]:flex-row items-center justify-center min-[480px]:justify-between text-white uppercase relative overflow-hidden bg-black"
         style={{
           minHeight: isMobile
             ? "auto"
@@ -45,18 +45,17 @@ export default function Landing() {
           paddingBottom: isMobile ? "60px" : "0px",
         }}
       >
-        <div className="flex flex-col lg:flex-row items-center lg:justify-between w-full max-w-[1600px] mx-auto lg:gap-10">
-          <div className="w-full lg:w-auto text-center lg:text-left flex flex-col items-center lg:items-start">
-            <h1 className="flex flex-col xl:text-[7vw] lg:text-[7vw] md:text-[7vw] text-[7vw] leading-[0.8] font-gotham-ultra ml-0 md:ml-[80px] whitespace-nowra">
+        <div className="flex flex-col min-[480px]:flex-row items-center min-[480px]:justify-between w-full min-[480px]:max-w-[1600px] mx-auto min-[480px]:gap-10">
+          <div className="w-full min-[480px]:w-auto text-center min-[480px]:text-left flex flex-col items-center min-[480px]:items-start">
+            <h1 className="flex flex-col text-[9.5vw] min-[480px]:text-[7vw] leading-[0.8] font-gotham-ultra m-0 min-[480px]:ml-[80px] whitespace-nowrap">
               <span>Sapienza is</span>
             </h1>
           </div>
-          <div className="w-full lg:w-auto flex justify-center lg:justify-end mt-2 lg:mt-0">
-            {" "}
+          <div className="w-full min-[480px]:w-auto flex justify-center min-[480px]:justify-end mt-4 min-[480px]:mt-0 px-2 min-[480px]:px-0">
             <img
               src={marchio_colorato_base_bianca}
               alt="Marchio Colorato"
-              className="w-[120%] lg:w-[30vw] max-w-[60vw] lg:max-w-[620px] h-auto object-contain"
+              className="w-[90%] max-w-full min-[480px]:w-[30vw] min-[480px]:max-w-[620px] h-auto object-contain"
             />
           </div>
         </div>
