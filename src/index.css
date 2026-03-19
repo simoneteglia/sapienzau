@@ -80,3 +80,13 @@ body {
   background: transparent;
   overflow: hidden;
 }
+
+.masked-image2 {
+  -webkit-mask-image: url(assets/svg/blob_mask2.png);
+  mask-image: url(assets/svg/blob_mask2.png);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background: transparent;
+  overflow: hidden;
+}

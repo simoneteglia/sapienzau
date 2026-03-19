@@ -10,13 +10,28 @@ import {
 // RESOURCES
 import global from "../../resources/global.json";
 import "../../resources/styles/navbar.css";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"; // Added icons
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 // MEDIA
 import logo_colorato_base_bianca from "../../assets/logos/logo_colorato_base_bianca_sapienzau.svg";
+import marchio_colorato_base_bianca from "../../assets/logos/marchio_colorato_base_bianca.svg";
+import arrow_right from "../../assets/svg/arrow_right.svg";
 
 export default function Navbar() {
   const [currentPage, setCurrentPage] = useState("homepage");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== "undefined") {
+        setIsMobile(window.innerWidth < global.UTILS.MOBILE_WIDTH);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -47,10 +62,13 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="w-full top-0 left-0 fixed z-50 flex items-center font-objectsans"
+      className={classNames(
+        "w-full top-0 left-0 fixed z-50 flex items-center font-objectsans",
+        isMobile ? "bg-black" : "",
+      )}
       style={{
         height: global.UTILS.NAV_HEIGHT,
-        backgroundColor: global.COLORS.GRIGIO_CHIARO,
+        backgroundColor: isMobile ? "black" : global.COLORS.GRIGIO_CHIARO,
       }}
     >
       {({ close, open }) => (
@@ -67,9 +85,9 @@ export default function Navbar() {
                     }}
                   >
                     <img
-                      src={logo_colorato_base_bianca}
-                      alt="Logo SapienzaU"
-                      className="w-[180px]"
+                      src={marchio_colorato_base_bianca}
+                      alt="Marchio SapienzaU"
+                      className="w-[60px]"
                     />
                   </DisclosureButton>
                 ) : (
@@ -80,9 +98,9 @@ export default function Navbar() {
                     }}
                   >
                     <img
-                      src={logo_colorato_base_bianca}
-                      alt="Logo SapienzaU"
-                      className="w-[180px]"
+                      src={marchio_colorato_base_bianca}
+                      alt="Marchio SapienzaU"
+                      className="w-[60px]"
                     />
                   </Link>
                 )}
@@ -99,21 +117,26 @@ export default function Navbar() {
               </div>
 
               {/* --- DESKTOP LAYOUT --- */}
-              <div className="hidden md:flex items-center justify-between w-full">
-                <Link to="/" onClick={() => setCurrentPage("homepage")}>
+              <div className="hidden md:flex items-center w-full">
+                <Link
+                  to="/"
+                  onClick={() => setCurrentPage("homepage")}
+                  className="shrink-0"
+                >
                   <img
                     src={logo_colorato_base_bianca}
                     alt="Logo SapienzaU"
-                    className="w-[230px] mr-[50px]"
+                    className="w-[230px]"
                   />
                 </Link>
-                <section className="flex justify-between items-center xl:gap-15 md:gap-3">
+
+                <section className="flex-1 flex justify-between items-center ml-[8%] lg:ml-[12%]">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
                       className={classNames(
-                        item.current ? "text-white" : " hover:bg-gray-700 ",
+                        item.current ? "text-white" : "hover:bg-gray-700",
                         "lg:text-[18px] md:text-[15px] rounded-md px-3 py-2 font-gotham-bold uppercase transition-colors duration-300",
                         item.disabled
                           ? "pointer-events-none text-gray-500"
@@ -128,9 +151,8 @@ export default function Navbar() {
                     key="join-us"
                     to="/"
                     className={classNames(
-                      "lg:text-[18px] md:text-[15px] bg-white rounded-3xl px-5 py-1 font-gotham-bold uppercase transition-colors duration-300",
+                      "lg:text-[18px] md:text-[15px] bg-white text-[#262626] hover:bg-gray-200 rounded-3xl px-5 py-1 font-gotham-bold uppercase transition-colors duration-300",
                     )}
-                    // onClick={() => setCurrentPage("join-us")}
                   >
                     Join us
                   </Link>
@@ -142,32 +164,67 @@ export default function Navbar() {
           {/* --- MOBILE DRAWER --- */}
           <DisclosurePanel
             transition
-            className="md:hidden absolute left-0 w-full h-screen shadow-lg transition duration-300 ease-out 
-                      data-[closed]:-translate-y-6 data-[closed]:opacity-0 data-[closed]:delay-500"
+            className="md:hidden absolute right-0 w-3/4 shadow-lg transition duration-300 ease-out 
+                      data-[closed]:translate-x-full data-[closed]:opacity-0 bg-black flex flex-col"
             style={{
-              backgroundColor: global.COLORS.GRIGIO_CHIARO,
               top: global.UTILS.NAV_HEIGHT,
+              height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
             }}
           >
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item, index) => (
+            <div className="flex flex-col h-full px-6 pt-10 pb-10 overflow-y-auto">
+              <div className="space-y-6">
+                {navigation.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-between items-center w-full"
+                  >
+                    <DisclosureButton
+                      as={Link}
+                      to={item.href}
+                      className={classNames(
+                        `text-[32px] font-gotham-bold capitalize transition-all duration-500 transform ${open ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`,
+                        item.current ? "underline" : "",
+                        item.disabled
+                          ? "pointer-events-none text-gray-500"
+                          : "text-white",
+                      )}
+                      style={{ transitionDelay: `${index * 100}ms` }}
+                      onClick={() => setCurrentPage(item.name.toLowerCase())}
+                    >
+                      {item.name}
+                    </DisclosureButton>
+
+                    <DisclosureButton
+                      as={Link}
+                      to={item.href}
+                      className={`text-white transition-all duration-500 transform ${open ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
+                      style={{ transitionDelay: `${index * 100}ms` }}
+                      onClick={() => setCurrentPage(item.name.toLowerCase())}
+                    >
+                      <img
+                        src={arrow_right}
+                        alt="Freccia"
+                        className="w-8 h-8 object-contain invert"
+                      />
+                    </DisclosureButton>
+                  </div>
+                ))}
+              </div>
+
+              {/* Tasto Join Us Mobile */}
+              <div
+                className={`mt-12 flex justify-end transition-all duration-500 transform ${open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+                style={{ transitionDelay: `${navigation.length * 100}ms` }}
+              >
                 <DisclosureButton
-                  key={index}
                   as={Link}
-                  to={item.href}
-                  className={classNames(
-                    `block rounded-md px-3 py-2 text-[50px] font-gotham-bold uppercase transition-all duration-500 transform ${open ? "translate-x-0 opacity-100" : "-translate-x-100 opacity-0"}`,
-                    item.current ? "underline" : "",
-                    item.disabled
-                      ? "pointer-events-none text-gray-500"
-                      : "text-white",
-                  )}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                  onClick={() => setCurrentPage(item.name.toLowerCase())}
+                  to="/"
+                  className="text-[20px] bg-white text-[#262626] rounded-3xl px-6 py-2 font-gotham-bold uppercase text-center inline-block"
+                  onClick={() => setCurrentPage("join us")}
                 >
-                  {item.name}
+                  Join us
                 </DisclosureButton>
-              ))}
+              </div>
             </div>
           </DisclosurePanel>
         </>

@@ -60,19 +60,17 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      {/* <div className="w-full flex justify-end pr-10">
-          <CustomButton label="Scopri chi siamo" />
-        </div> */}
+
       <section
         className="w-full text-white relative overflow-hidden bg-black"
         style={{
           marginTop: isMobile ? "20px" : global.UTILS.NAV_HEIGHT,
         }}
       >
-        {/*  DESKTOP: BENTO */}
+        {/* DESKTOP: BENTO */}
         <div className="hidden min-[480px]:flex w-full p-[40px] items-end justify-end">
           <BentoBox
-            className="flex w-full h-auto min-h-[50vh] md:h-full flex-col justify-end items-end gap-4 md:gap-[20px] text-right p-6 md:p-[40px] rounded-2xl overflow-hidden"
+            className="flex w-full h-auto min-h-[50vh] md:h-full flex-col justify-end items-end text-right p-6 md:p-[40px] rounded-2xl overflow-hidden"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fotoAbbraccio})`,
               backgroundPosition: "center",
@@ -91,26 +89,26 @@ export default function Landing() {
           </BentoBox>
         </div>
 
-        {/* MOBILE: SPLIT */}
-        <div className="flex min-[480px]:hidden flex-row w-full items-center justify-between pt-[10px] pb-[30px]">
-          {/* LATO SX */}
-          <div className="w-[45%] shrink-0 flex justify-start relative mt-[40px]">
-            <img
-              src={fotoAbbraccio}
-              className="masked-image object-cover max-w-none w-[180%] h-[220px] translate-x-[-20%]"
-            />
-          </div>
-
-          {/* LATO DX */}
-          <div className="w-[55%] shrink-0 relative flex flex-col justify-center pr-[20px] pl-[10px] z-10 text-right">
-            <h1 className="relative z-10 text-[10vw] leading-none font-gotham-ultra uppercase text-white mb-2">
+        {/* MOBILE: BLOB E TESTO ASSOLUTI */}
+        <div className="flex min-[480px]:hidden relative w-full flex-col items-end pt-[10px] pb-[230px]">
+          {/* LATO TESTO */}
+          <div className="w-[75%] relative z-10 text-right pr-[20px]">
+            <h1 className="text-[10vw] leading-none font-gotham-ultra uppercase text-white mb-2">
               Team
             </h1>
-            <p className="text-[4vw] leading-snug font-gotham-book text-white">
+            <p className="text-[4vw] leading-snug font-gotham-book text-white w-[60%] ml-auto">
               I team di SapienzaU sono il cuore del progetto. Divisione del
               lavoro, idee e impegno sono i valori che rapprestano al meglio
               l’identità di ogni gruppo.
             </p>
+          </div>
+
+          {/* LATO IMMAGINE */}
+          <div className="absolute top-[120px] left-[-15%] w-[80%] z-0 pointer-events-none">
+            <img
+              src={fotoAbbraccio}
+              className="masked-image2 object-cover w-full h-[300px]"
+            />
           </div>
         </div>
       </section>
@@ -118,30 +116,29 @@ export default function Landing() {
       <HorizontalSlider />
 
       <section
-        className="w-full p-[40px] flex flex-col justify-end text-white relative overflow-hidden"
+        className="w-full px-[20px] pt-[20px] pb-[40px] md:p-[40px] flex flex-col justify-end text-white relative overflow-hidden mb-0 md:mb-[100px]"
         style={{
           height: isMobile
-            ? "60vh"
+            ? "auto"
             : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: isMobile ? "0px" : global.UTILS.NAV_HEIGHT, //modifica se testo club tagliato
+          marginTop: isMobile ? "0px" : global.UTILS.NAV_HEIGHT,
         }}
       >
-        <div className="shrink-0 flex flex-col items-end text-right w-full">
+        <div className="shrink-0 flex flex-col items-end text-right w-full pt-4 md:pt-0">
           <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
             Club
           </h1>
-          <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 leading-tight md:leading-none font-gotham-book w-full max-w-2xl break-words">
+          <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 md:pb-[50px] leading-tight md:leading-none font-gotham-book w-full max-w-2xl break-words">
             Sei pronto a “clubare” con noi? Unisciti all’esclusivo Club di
             SapienzaU per rimanere aggiornato su ogni novità.
           </h2>
         </div>
         {isMobile ? (
-          <div className="block md:hidden w-full h-[200px]">
+          <div className="block md:hidden w-full h-[200px] mt-4">
             <CardFlipMobile />
           </div>
         ) : (
           <div className="flex-1 w-full min-h-0">
-            {" "}
             <CardFlip />
           </div>
         )}

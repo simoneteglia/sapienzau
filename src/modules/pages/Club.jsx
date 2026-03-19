@@ -95,31 +95,33 @@ export default function Club() {
         <h1 className="xl:text-[100px] lg:text-[85px] md:text-[70px] text-[32px] sm:text-[48px] leading-[1] font-gotham-ultra max-w-[90vw] md:max-w-none m-0">
           vuoi un sacco <br className="hidden md:block" /> entrare nel club{" "}
           <br className="hidden md:block" />{" "}
-          <span className="text-white">(ma ancora non lo sai)</span>
+          <span className="text-white text-[18px] sm:text-[24px] md:text-[35px] lg:text-[42px] xl:text-[50px]">
+            (ma ancora non lo sai)
+          </span>
         </h1>
       </section>
 
       {/*TESTO CONVINCENTE*/}
       <section
-        className="flex flex-row w-full items-center justify-between pt-[30px] min-[480px]:pt-[40px] pb-0 min-[480px]:py-[50px] bg-black overflow-hidden"
+        className="flex flex-col md:flex-row w-full items-center justify-between pt-[30px] md:pt-[40px] pb-[30px] md:py-[50px] bg-black overflow-hidden"
         style={{
           marginTop: isMobile
-            ? "10px"
-            : `calc(${global.UTILS.NAV_HEIGHT} + 80px)`,
+            ? "60px"
+            : `calc(${global.UTILS.NAV_HEIGHT} + 160px)`,
         }}
       >
         {/* LATO SX */}
-        <div className="w-[60%] min-[480px]:w-[65%] shrink-0 relative flex flex-col justify-center pl-[20px] min-[480px]:pl-[80px] z-10">
-          <div className="relative mb-4 min-[480px]:mb-6">
+        <div className="w-full md:w-[65%] shrink-0 relative flex flex-col justify-center px-[20px] md:px-0 md:pl-[80px] z-10 items-start md:items-start text-left md:text-left">
+          <div className="relative mb-4 md:mb-6">
             <img
               src={team_it}
-              className="absolute -top-6 min-[480px]:-top-12 left-0 w-[60px] min-[480px]:w-[260px] h-auto -rotate-5 z-0"
+              className="absolute top-[-10px] md:top-[-20px] left-0 w-[120px] md:w-[260px] h-auto -rotate-5 z-0"
             />
-            <h2 className="relative z-10 text-[6vw] min-[480px]:text-[50px] lg:text-[70px] leading-none font-gotham-ultra uppercase text-white">
-              la nostra visione
+            <h2 className="relative z-10 text-[32px] sm:text-[40px] md:text-[50px] lg:text-[70px] leading-[1.1] font-gotham-ultra uppercase text-white">
+              la nostra <br /> visione
             </h2>
           </div>
-          <p className="text-[4vw] min-[480px]:text-[26px] lg:text-[34px] leading-snug font-gotham-book text-white max-w-xl z-10 pr-2 min-[480px]:pr-0">
+          <p className="text-[16px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-snug font-gotham-book text-white max-w-xl z-10 mt-2">
             SapienzaU Club nasce come evoluzione naturale del progetto SapienzaU
             e di TEDxSapienzaU, con l’obiettivo di consolidare una community che
             va oltre il singolo evento. Il Club è pensato per ex volontari e
@@ -128,10 +130,10 @@ export default function Club() {
         </div>
 
         {/* LATO DX */}
-        <div className="w-[40%] min-[480px]:w-[65%] shrink-0 flex justify-end relative">
+        <div className="w-full md:w-[35%] lg:w-[65%] shrink-0 flex justify-start md:justify-end px-[20px] md:px-0 relative mt-10 md:mt-0">
           <img
             src={fotoAbbraccio}
-            className="masked-image object-cover max-w-none w-[180%] h-[220px] min-[480px]:w-full min-[480px]:h-auto min-[480px]:max-h-[800px] translate-x-[15%] min-[480px]:translate-x-[-25%]"
+            className="masked-image object-cover w-[80%] max-w-[350px] h-[250px] md:max-w-none md:w-full md:h-auto md:max-h-[800px] translate-x-0 md:translate-x-[-25%]"
           />
         </div>
       </section>
@@ -173,37 +175,6 @@ export default function Club() {
         </div>
       </section>
 
-      {/*COUNTER*/}
-      {/* <section className="w-full p-[40px] content-end items-center justify-center text-center text-white relative overflow-hidden">
-        <div className="flex-1 relative flex flex-col justify-center p-[40px]">
-          <div className="relative mb-6">
-            <img
-              src={team_pem}
-              className="absolute -top-10 left-10 w-[200px] md:w-[300px] h-auto shadow-2xl z-0"
-            />
-            <h1 className="relative z-10 xl:text-[80px] lg:text-[60px] md:text-[40px] text-[40px] pb-5 leading-none font-gotham-ultra text-white overflow-hidden">
-              Frase che fa gasare che anticipa il counter di membri..
-            </h1>
-          </div>
-        </div>
-        <div className="flex-1 relative flex flex-col justify-center p-[40px]">
-          <div className="relative mb-6">
-            <img
-              src={team_dex}
-              className="absolute right-10 w-[200px] md:w-[300px] h-auto rotate-15 shadow-2xl z-[-1]"
-            />
-            <h3
-              className={`xl:text-[200px] lg:text-[160px] md:text-[120px] font-gotham-ultra uppercase z-10`}
-              style={{ color: global.COLORS_TEAM.ARANCIONE }}
-            >
-              <AnimatedNumber end={1253} duration={2500} />
-            </h3>
-          </div>
-        </div>
-        <h1 className="relative z-10 xl:text-[80px] lg:text-[60px] md:text-[40px] text-[30px] pb-5 leading-none font-gotham-ultra text-white overflow-hidden">
-          joined the club :o
-        </h1>
-      </section> */}
       {/*BECOME A MEMBER*/}
       <section className="w-full p-[40px] content-end items-center justify-center text-center text-white uppercase relative overflow-hidden">
         <div className="flex-1 relative flex flex-col justify-center p-[40px]">
@@ -212,10 +183,10 @@ export default function Club() {
               src={team_hra}
               className="absolute left-10 w-[200px] md:w-[300px] h-auto -rotate-15 shadow-2xl z-0"
             />
-            <h1 className="relative z-10 xl:text-[60px] lg:text-[50px] md:text-[35px] text-[40px] pb-5 leading-none font-gotham-ultra overflow-hidden  text-white overflow-hidden">
+            <h1 className="relative z-10 xl:text-[60px] lg:text-[50px] md:text-[35px] text-[40px] pb-5 leading-none font-gotham-ultra overflow-hidden  text-white">
               are you ready?
             </h1>
-            <h1 className="relative z-10 xl:text-[120px] lg:text-[100px] md:text-[70px] text-[40px] md:pb-5 leading-none font-gotham-ultra overflow-hidden  text-white overflow-hidden">
+            <h1 className="relative z-10 xl:text-[120px] lg:text-[100px] md:text-[70px] text-[40px] md:pb-5 leading-none font-gotham-ultra overflow-hidden  text-white">
               become a member
             </h1>
           </div>
@@ -225,14 +196,13 @@ export default function Club() {
       {/*GOLD AND BRONZE MEMBER*/}
       <section
         id="benefits"
-        className="w-full bg-black text-white pb-0 px-[20px] md:px-[40px]"
+        className="w-full bg-black text-white pb-[40px] md:pb-[100px] px-[20px] md:px-[40px]"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-0">
           {/* --- BRONZE COLUMN --- */}
           <div className="flex flex-col gap-8 lg:pr-12 lg:border-r lg:border-zinc-800">
             {/* Bronze Header & Image */}
             <div className="flex flex-col items-center text-center">
-              {/* Container Titolo: rimosso mb-8 e gestito con margin-bottom più stretto */}
               <div className="mb-6 flex flex-col items-center">
                 <h2
                   className="xl:text-[70px] lg:text-[60px] md:text-[55px] text-[50px] leading-[0.8] font-gotham-ultra uppercase"
@@ -323,7 +293,6 @@ export default function Club() {
           <div className="flex flex-col gap-8 lg:pl-12">
             {/* Gold Header & Image */}
             <div className="flex flex-col items-center text-center">
-              {/* Container del titolo con interlinea corretta */}
               <div className="mb-6 flex flex-col items-center">
                 <h2
                   className="xl:text-[70px] lg:text-[60px] md:text-[55px] text-[50px] leading-[0.8] font-gotham-ultra uppercase"
@@ -406,7 +375,9 @@ export default function Club() {
         </div>
       </section>
 
-      <ImageSlider />
+      <div className="w-full bg-black pb-[60px] md:pb-[140px]">
+        <ImageSlider />
+      </div>
     </div>
   );
 }
