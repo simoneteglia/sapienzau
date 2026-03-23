@@ -8,6 +8,7 @@ import ErrorPage from "./modules/pages/ErrorPage";
 import Club from "./modules/pages/Club";
 import ScrollToTop from "./modules/components/ScrollToTop";
 import WIP from "./modules/pages/WIP";
+import Shop from "./modules/pages/Shop";
 
 import "./App.css";
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/club",
         element: <Club />,
+      },
+      {
+        path: "/shop",
+        element: <Shop />,
       },
       { path: "/events", element: <WIP /> },
       { path: "/team", element: <WIP /> },
