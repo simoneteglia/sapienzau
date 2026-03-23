@@ -11,6 +11,7 @@ import WIP from "./modules/pages/WIP";
 import Shop from "./modules/pages/Shop";
 
 import "./App.css";
+import ShopItem from "./modules/pages/ShopItem";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
+      },
+      {
+        path: "/shop/:item",
+        element: <ShopItem />,
       },
       { path: "/events", element: <WIP /> },
       { path: "/team", element: <WIP /> },

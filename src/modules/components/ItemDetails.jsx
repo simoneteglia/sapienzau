@@ -1,7 +1,7 @@
 import React from "react";
 import CustomButton from "../components/CustomButton";
 
-const ItemDetails = ({ imageUrl, title, description, price, onBuy }) => {
+const ItemDetails = ({ id, imageUrl, title, description, price, onBuy }) => {
   return (
     <div className="bg-white p-3 pb-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[300px] rounded-sm flex flex-col">
       <img
@@ -19,7 +19,11 @@ const ItemDetails = ({ imageUrl, title, description, price, onBuy }) => {
 
         <div className="flex justify-between items-center mt-auto">
           <span className="text-xl font-bold text-gray-900">€ {price}</span>
-          <CustomButton label="compra" color="pink" href="#">
+          <CustomButton
+            label="compra"
+            color="pink"
+            href={`/shop/item?id=${id}`}
+          >
             Compra
           </CustomButton>
         </div>

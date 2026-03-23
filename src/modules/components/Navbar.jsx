@@ -57,6 +57,12 @@ export default function Navbar() {
       current: currentPage === "/events",
       disabled: false,
     },
+    // {
+    //   name: "Shop",
+    //   href: "/shop",
+    //   current: currentPage === "shop",
+    //   disabled: false,
+    // },
   ];
 
   return (
@@ -130,23 +136,25 @@ export default function Navbar() {
                   />
                 </Link>
 
-                <section className="flex-1 flex justify-between items-center ml-[8%] lg:ml-[12%]">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className={classNames(
-                        item.current ? "text-white" : "hover:bg-gray-700",
-                        "lg:text-[18px] md:text-[15px] rounded-md px-3 py-2 font-gotham-bold uppercase transition-colors duration-300",
-                        item.disabled
-                          ? "pointer-events-none text-gray-500"
-                          : "text-white",
-                      )}
-                      onClick={() => setCurrentPage(item.name.toLowerCase())}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                <section className="flex-1 flex items-center justify-end ml-[8%] lg:ml-[12%] gap-x-6">
+                  <div className="flex gap-x-6">
+                    {navigation.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className={classNames(
+                          item.current ? "text-white" : "hover:bg-gray-700",
+                          "lg:text-[18px] md:text-[15px] rounded-md px-3 py-2  font-gotham-bold uppercase transition-colors duration-300",
+                          item.disabled
+                            ? "pointer-events-none text-gray-500"
+                            : "text-white",
+                        )}
+                        onClick={() => setCurrentPage(item.name.toLowerCase())}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
                   <Link
                     key="join-us"
                     to="/"

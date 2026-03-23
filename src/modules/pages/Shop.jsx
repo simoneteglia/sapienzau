@@ -96,6 +96,7 @@ const Shop = () => {
           {productsData.map((product) => (
             <ItemDetails
               key={product.id}
+              id={product.id}
               imageUrl={product.imageUrl}
               title={product.title}
               description={product.description}
