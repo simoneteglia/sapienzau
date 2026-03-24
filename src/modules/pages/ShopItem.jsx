@@ -6,16 +6,29 @@ import global from "../../resources/global.json";
 import team_it from "../../assets/logos/team_it.png";
 import team_la from "../../assets/logos/team_la.png";
 import team_pem from "../../assets/logos/team_pem.png";
+import { productsData } from "../../data/productsData.js";
 
 export default function ShopItem() {
   const [searchParams] = useSearchParams();
   const itemId = searchParams.get("id");
   console.log(itemId);
 
-  const images = [
-    "https://www.repeatedcycle.com/cdn/shop/files/placeholder-tshirt-on-transparent-background-square-ratio.png?v=1769944980&width=1600",
-    "https://images.squarespace-cdn.com/content/v1/5984c4a0cd39c369f61bbf0f/1729555802923-LTKNBTR6XZJTTR02I0RS/unisex-denim-t-shirt-garnet-red-front-6716ed50d3a96.jpg?format=1000w", // Placeholder for the second image
-  ];
+  const selectedProduct = productsData.find(
+    (product) => product.id === parseInt(itemId, 10),
+  );
+
+  const primaryImage =
+    selectedProduct && !selectedProduct.imageUrl.includes("placeholder")
+      ? selectedProduct.imageUrl
+      : "https://www.repeatedcycle.com/cdn/shop/files/placeholder-tshirt-on-transparent-background-square-ratio.png?v=1769944980&width=1600";
+
+  const secondaryImage =
+    selectedProduct.imageUrl2 &&
+    !selectedProduct.imageUrl2.includes("placeholder")
+      ? selectedProduct.imageUrl2
+      : "https://images.squarespace-cdn.com/content/v1/5984c4a0cd39c369f61bbf0f/1729555802923-LTKNBTR6XZJTTR02I0RS/unisex-denim-t-shirt-garnet-red-front-6716ed50d3a96.jpg?format=1000w"; // Immagine 2 stock
+
+  const images = [primaryImage, secondaryImage];
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -76,15 +89,17 @@ export default function ShopItem() {
           <div className="md:w-1/2">
             <div className="flex flex-col gap-4 bg-white p-6 text-black mb-5">
               <h3 className="text-2xl font-gotham-bold">
-                Nome Prodotto {itemId}
+                {selectedProduct
+                  ? selectedProduct.title
+                  : `Nome Prodotto ${itemId}`}
               </h3>
               <p className="font-gotham-book">
-                Descrizione dettagliata del prodotto. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
+                {selectedProduct
+                  ? selectedProduct.description
+                  : `Descrizione dettagliata del prodotto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`}
               </p>
               <span className="text-xl font-semibold text-[#32A32A]">
-                €49.99
+                € {selectedProduct ? selectedProduct.price : "NON DISPONIBILE"}
               </span>
               <hr className="border-t relative border-black w-full z-10" />
               <div className="flex gap-4">

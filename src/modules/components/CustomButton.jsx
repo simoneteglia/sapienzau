@@ -1,6 +1,5 @@
 import React from "react";
 import global from "../../resources/global.json";
-
 import arrow_right from "../../assets/svg/arrow_right.svg";
 
 const colors = {
@@ -22,23 +21,34 @@ export default function CustomButton({
   outlined = false,
   className = "",
   href = "#",
+  size = "normal", // ("normal" | "small")
 }) {
+  const isSmall = size === "small";
+
+  const padding = isSmall ? "6px 12px" : "10px 15px";
+  const borderRadius = isSmall ? "8px" : "16px";
+  const iconHeight = isSmall ? "20px" : "40px";
+
+  const textSizeClass = isSmall
+    ? "text-[14px] md:text-[16px]"
+    : "text-[18px] xl:text-[25px]";
+
   return (
     <button
       style={{
         backgroundColor: colors[color],
-        borderRadius: "16px",
-        padding: "10px 15px",
+        borderRadius: borderRadius,
+        padding: padding,
       }}
       onClick={() => {
         if (href !== "#") {
           window.location.href = href;
         }
       }}
-      className={`uppercase flex items-center font-gotham-bold text-black xl:text-[25px] cursor-pointer ${className}`}
+      className={`uppercase flex items-center justify-center font-gotham-bold text-black cursor-pointer ${isSmall ? "gap-1" : "gap-2"} ${textSizeClass} ${className}`}
     >
-      {label}{" "}
-      <img src={arrow_right} style={{ height: "40px" }} alt="arrow right" />
+      {label}
+      <img src={arrow_right} style={{ height: iconHeight }} alt="arrow right" />
     </button>
   );
 }
