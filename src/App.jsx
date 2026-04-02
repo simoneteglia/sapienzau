@@ -9,6 +9,7 @@ import Club from "./modules/pages/Club";
 import ScrollToTop from "./modules/components/ScrollToTop";
 import WIP from "./modules/pages/WIP";
 import Shop from "./modules/pages/Shop";
+import Team from "./modules/pages/Team";
 
 import "./App.css";
 import ShopItem from "./modules/pages/ShopItem";
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
         element: <ShopItem />,
       },
       { path: "/events", element: <WIP /> },
-      { path: "/team", element: <WIP /> },
+      { path: "/team", element: <Team /> },
       { path: "/contact", element: <WIP /> },
     ],
   },
