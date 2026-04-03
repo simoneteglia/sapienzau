@@ -203,7 +203,7 @@
 
 .team-focus-mode-description {
   margin: 0;
-  max-width: 29ch;
+  max-width: 45ch;
   color: rgba(255, 255, 255, 0.88);
   font-family: "GothamBook";
   font-size: 17px;
@@ -355,7 +355,7 @@
 .team-section-kicker {
   margin: 0;
   color: var(--team-accent, #eb0028);
-  font-family: "Anton";
+  font-family: "GothamBook";
   font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;

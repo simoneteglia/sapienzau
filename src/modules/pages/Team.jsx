@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import global from "../../resources/global.json";
 import { teamSections } from "../../data/teamData";
-import simoneImage from "../../assets/images/team/simone.png";
+import placeholderImage from "../../assets/images/team/placeholder.webp";
 import "../../resources/styles/team.css";
 
 function TeamMemberCard({ member, accent, imageSrc }) {
@@ -167,7 +167,7 @@ export default function Team() {
                         key={`${team.id}-${index}`}
                         member={member}
                         accent={team.accent}
-                        imageSrc={simoneImage}
+                        imageSrc={placeholderImage}
                       />
                     ))}
                   </div>
@@ -212,7 +212,7 @@ export default function Team() {
                   key={`${focusedTeam.id}-${index}`}
                   member={member}
                   accent={focusedTeam.accent}
-                  imageSrc={simoneImage}
+                  imageSrc={placeholderImage}
                 />
               ))}
             </div>
