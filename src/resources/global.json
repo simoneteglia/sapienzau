@@ -24,13 +24,14 @@
     "ORO": "#fab632"
   },
   "COLORS_TEAM": {
-    "ARANCIONE": "#ee7d29",
-    "GIALLO": "#f9b632",
-    "VERDE": "#94c359",
-    "ROSSO": "#e8493a",
-    "AZZURRO": "#1dbbee",
-    "BLU": "#2983c5",
-    "ROSA": "#ba5c9d"
+    "IT": "#ee7d29",
+    "DEX": "#f9b632",
+    "SEC": "#94c359",
+    "CEMM": "#e9493a",
+    "LA": "#1dbbee",
+    "HRA": "#2983c5",
+    "ERS": "#f089b7",
+    "PEM": "#bb5c9e"
   },
   "UTILS": {
     "SOCIAL_NAV_HEIGHT": "0px",

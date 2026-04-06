@@ -85,7 +85,7 @@ export default function Shop() {
         <img
           src={team_dex}
           alt="deco"
-          className="absolute bottom-[-200px] hidden md:block left-0 w-[80px] md:w-[130px] h-auto rotate-325 -z-0 scale-180"
+          className="absolute bottom-[-100px] hidden md:block left-0 w-[80px] md:w-[130px] h-auto rotate-325 -z-0 scale-180"
         />
       </section>
     </div>

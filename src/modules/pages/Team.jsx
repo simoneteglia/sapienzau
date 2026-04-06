@@ -114,12 +114,9 @@ export default function Team() {
             <section className="team-hero">
               <h1 className="team-hero-title">Meet our team(s)</h1>
               <p className="team-hero-description">
-                TEDxSapienzaU prende forma grazie a persone con background
-                diversi che lavorano insieme su curatela, produzione,
-                partnership, design e tecnologia. Qui sotto trovi le aree che
-                costruiscono ogni edizione: per ora sono raccontate come card di
-                struttura, pronte da sostituire con nomi e foto reali quando
-                vorrai.
+                SapienzaU prende forma grazie a persone con background
+                diversi che lavorano insieme. Qui sotto trovi le aree che
+                costruiscono ogni evento.
               </p>
 
               <div className="team-chip-row">

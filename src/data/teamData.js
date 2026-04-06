@@ -1,3 +1,5 @@
+import global from "../resources/global.json"
+
 const ensureMemberCount = (members, count) =>
   Array.from({ length: count }, (_, index) => ({
     ...members[index % members.length],
@@ -7,8 +9,8 @@ const baseTeamSections = [
   {
     id: "board",
     label: "Board",
-    code: "BD",
-    accent: "#ff5e73",
+    code: "BOARD",
+    accent: global.COLORS.ROSSO_TED,
     description: "",
     members: [
       {
@@ -65,7 +67,7 @@ const baseTeamSections = [
     id: "it-website",
     label: "IT & Website",
     code: "IT",
-    accent: "#5db4ff",
+    accent: global.COLORS_TEAM.IT,
     eyebrow: "IT",
     description:
       "Il team IT & Website garantisce il corretto funzionamento del sito web, lato front-end e back-end, gestisce la web app ufficiale e coordina la newsletter, assicurando un'esperienza utente ottimale. Supporta la regia tecnica durante gli eventi.",
@@ -91,8 +93,8 @@ const baseTeamSections = [
   {
     id: "external-relations-sponsor",
     label: "External Relations & Sponsor",
-    code: "ER",
-    accent: "#ffd84a",
+    code: "ERS",
+    accent: global.COLORS_TEAM.ERS,
     eyebrow: "ERS",
     description:
       "Il team External Relations & Sponsor gestisce sponsorizzazioni, partnership, patrocini e bandi pubblici. Si occupa della ricerca di aziende, startup, PMI, media, associazioni, enti e istituzioni e della firma dei contratti, coltivando collaborazioni reciprocamente vantaggiose. I fondi raccolti finanziano il progetto e le iniziative del TEDxSapienzaU.",
@@ -111,8 +113,8 @@ const baseTeamSections = [
   {
     id: "planning-event-management",
     label: "Planning & Event Management",
-    code: "PM",
-    accent: "#ffb347",
+    code: "PEM",
+    accent: global.COLORS_TEAM.PEM,
     eyebrow: "PEM",
     description:
       "Il team Planning and Event Management pianifica e gestisce gli aspetti organizzativi delle conferenze TEDxSapienzaU e di altri eventi dedicati agli studenti Sapienza, anche in collaborazione con gli Sponsor. Si occupa delle richieste di preventivi alle aziende, della ricerca degli spazi per gli eventi e della loro promozione.",
@@ -133,7 +135,7 @@ const baseTeamSections = [
     id: "legal-administrative",
     label: "Legal & Administrative",
     code: "LA",
-    accent: "#c2b8ff",
+    accent: global.COLORS_TEAM.LA,
     eyebrow: "LA",
     description:
       "Il team Legal & Administrative gestisce gli aspetti giuridici e amministrativi degli eventi TEDxSapienzaU. Si occupa della stesura dei contratti, della contabilità, della ricerca dei bandi per il recupero fondi. Garantisce il rispetto delle regole TEDx e delle linee guida dell'Ateneo, insieme alla tutela della privacy e del diritto d'autore.",
@@ -150,8 +152,8 @@ const baseTeamSections = [
   {
     id: "design",
     label: "Design",
-    code: "DE",
-    accent: "#ff7cd6",
+    code: "DEX",
+    accent: global.COLORS_TEAM.DEX,
     eyebrow: "DEX",
     description:
       "Il team Design si occupa della progettazione grafica dell’evento. Crea l'identità visiva e grafica, gestisce l’ideazione e la realizzazione di prodotti e allestimenti, assicurando un'esperienza visiva coinvolgente e coerente con il tema dell’evento.",
@@ -178,8 +180,8 @@ const baseTeamSections = [
   {
     id: "speakers-event-curation",
     label: "Speakers & Event Curation",
-    code: "SE",
-    accent: "#58d39b",
+    code: "SEC",
+    accent: global.COLORS_TEAM.SEC,
     eyebrow: "SEC",
     description:
       "Il team Speakers & Event Curation propone i temi degli eventi, seleziona gli Speakers e ne cura i dettagli burocratici e pratici (email, contatti, slides, speech). Si occupa di ogni fase del rapporto con gli Speakers, garantendo attenzione alle loro necessità e assicurando una preparazione ottimale.",
@@ -202,8 +204,8 @@ const baseTeamSections = [
   {
     id: "human-resources-academy",
     label: "Human Resources & Academy",
-    code: "HR",
-    accent: "#8be0ff",
+    code: "HRA",
+    accent: global.COLORS_TEAM.HRA,
     eyebrow: "HRA",
     description:
       "Il team Human Resources & Academy gestisce la selezione dei volontari attraverso candidature e colloqui conoscitivi, e ne promuove il benessere promuovendo un ambiente creativo e produttivo. Si occupa inoltre della formazione interna tramite masterclass, create e esposte da membri interni e collaboratori esterni.",
@@ -225,8 +227,8 @@ const baseTeamSections = [
   {
     id: "communication-editorial-marketing-media",
     label: "Communication, Editorial, Marketing & Media",
-    code: "CM",
-    accent: "#ff8e63",
+    code: "CEMM",
+    accent: global.COLORS_TEAM.CEMM,
     eyebrow: "CEMM",
     description:
       "Il team Communication, Editorial & Marketing si occupa della comunicazione di TEDxSapienzaU. Pianifica e cura la reputazione online, l'awareness e le campagne per coinvolgere il pubblico. Realizza comunicati stampa, newsletter, articoli e contenuti visuali e video, curando l’efficacia dei messaggi. Gestisce la collaborazione con i Media Partner.",
