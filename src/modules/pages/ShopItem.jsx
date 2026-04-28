@@ -17,20 +17,33 @@ export default function ShopItem() {
     (product) => product.id === parseInt(itemId, 10),
   );
 
-  const primaryImage =
-    selectedProduct && !selectedProduct.imageUrl.includes("placeholder")
-      ? selectedProduct.imageUrl
-      : "https://www.repeatedcycle.com/cdn/shop/files/placeholder-tshirt-on-transparent-background-square-ratio.png?v=1769944980&width=1600";
+  let images = [];
+  if (selectedProduct) {
+    const keys = Object.keys(selectedProduct).filter(key => key.startsWith('imageUrl'));
+    keys.sort((a, b) => {
+      const aNum = a === 'imageUrl' ? 1 : parseInt(a.replace('imageUrl', ''), 10);
+      const bNum = b === 'imageUrl' ? 1 : parseInt(b.replace('imageUrl', ''), 10);
+      return aNum - bNum;
+    });
 
-  const secondaryImage =
-    selectedProduct.imageUrl2 &&
-    !selectedProduct.imageUrl2.includes("placeholder")
-      ? selectedProduct.imageUrl2
-      : "https://images.squarespace-cdn.com/content/v1/5984c4a0cd39c369f61bbf0f/1729555802923-LTKNBTR6XZJTTR02I0RS/unisex-denim-t-shirt-garnet-red-front-6716ed50d3a96.jpg?format=1000w"; // Immagine 2 stock
+    images = keys.map(key => selectedProduct[key]).filter(url => url && !url.includes("placeholder"));
+  }
 
-  const images = [primaryImage, secondaryImage];
+  if (images.length === 0) {
+    images = ["https://www.repeatedcycle.com/cdn/shop/files/placeholder-tshirt-on-transparent-background-square-ratio.png?v=1769944980&width=1600"];
+  }
 
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const productColors = selectedProduct
+    ? selectedProduct.colors || selectedProduct.color
+    : null;
+
+  const colorsArray = Array.isArray(productColors)
+    ? productColors
+    : productColors
+    ? [productColors]
+    : [];
 
   return (
     <div
@@ -45,7 +58,7 @@ export default function ShopItem() {
           alt="deco"
           className="absolute top-[-40px] md:top-[-40px] left-0 w-[80px] md:w-[130px] h-auto -rotate-5 z-0 scale-90"
         />
-        <h2 className="relative z-10 text-[16px] sm:text-[20px] md:text-[25px] lg:text-[35px] leading-[1.1] font-gotham-bold text-white">
+        <h2 className="relative z-10 text-[30px] sm:text-[35px] md:text-[40px] lg:text-[45px] leading-[1.1] font-gotham-bold text-white">
           Categoria
         </h2>
         <img
@@ -102,14 +115,28 @@ export default function ShopItem() {
                 € {selectedProduct ? selectedProduct.price : "NON DISPONIBILE"}
               </span>
               <hr className="border-t relative border-black w-full z-10" />
-              <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-red-500 cursor-pointer"></div>
-                <div className="w-8 h-8 rounded-full bg-blue-500 cursor-pointer"></div>
-                <div className="w-8 h-8 rounded-full bg-yellow-500 cursor-pointer"></div>
-                <div className="w-8 h-8 rounded-full bg-green-500 cursor-pointer"></div>
-              </div>
+              {colorsArray.length > 0 && (
+                <div className="flex gap-4">
+                  {colorsArray.map((c, index) => (
+                    <div
+                      key={index}
+                      className="w-8 h-8 rounded-full cursor-pointer border border-gray-400"
+                      style={{ backgroundColor: c }}
+                      onClick={() => {
+                        if (index < images.length) {
+                          setActiveIndex(index);
+                        }
+                      }}
+                    ></div>
+                  ))}
+                </div>
+              )}
             </div>
-            <CustomButton label="Comprami! :)" color="violet" />
+            <CustomButton 
+              label="Comprami! :)" 
+              color="violet" 
+              href={selectedProduct ? selectedProduct.link : "#"}
+            />
           </div>
         </div>
         <img

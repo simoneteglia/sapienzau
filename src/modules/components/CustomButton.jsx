@@ -42,7 +42,11 @@ export default function CustomButton({
       }}
       onClick={() => {
         if (href !== "#") {
-          window.location.href = href;
+          if (href.startsWith("http")) {
+            window.open(href, "_blank", "noopener,noreferrer");
+          } else {
+            window.location.href = href;
+          }
         }
       }}
       className={`uppercase flex items-center justify-center font-gotham-bold text-black cursor-pointer ${isSmall ? "gap-1" : "gap-2"} ${textSizeClass} ${className}`}

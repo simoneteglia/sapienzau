@@ -7,7 +7,7 @@ const ItemDetails = ({ id, imageUrl, title, description, price }) => {
       <img
         src={imageUrl}
         alt={title}
-        className="w-full h-[250px] object-cover bg-gray-100 block"
+        className="w-full h-[250px] object-contain bg-white block"
       />
 
       <div className="mt-4 flex flex-col flex-grow">

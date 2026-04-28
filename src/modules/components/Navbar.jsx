@@ -57,12 +57,12 @@ export default function Navbar() {
       current: currentPage === "/events",
       disabled: false,
     },
-    // {
-    //   name: "Shop",
-    //   href: "/shop",
-    //   current: currentPage === "shop",
-    //   disabled: false,
-    // },
+    {
+      name: "Shop",
+      href: "/shop",
+      current: currentPage === "shop",
+      disabled: false,
+    },
   ];
 
   return (

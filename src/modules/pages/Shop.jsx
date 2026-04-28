@@ -59,7 +59,7 @@ export default function Shop() {
             alt="deco"
             className="absolute top-[-40px] md:top-[-40px] left-0 w-[80px] md:w-[130px] h-auto -rotate-5 z-0 scale-90"
           />
-          <h2 className="relative z-10 text-[16px] sm:text-[20px] md:text-[25px] lg:text-[35px] leading-[1.1] font-gotham-bold text-white">
+          <h2 className="relative z-10 text-[30px] sm:text-[35px] md:text-[40px] lg:text-[45px] leading-[1.1] font-gotham-bold text-white">
             Prodotti
           </h2>
           <img
