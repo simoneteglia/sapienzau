@@ -45,11 +45,7 @@ const router = createBrowserRouter([
       },
       { path: "/events", element: <WIP /> },
       { path: "/team", element: <Team /> },
-      { path: "/contact", element: <WIP /> },
-      {
-        path: "/chisiamo",
-        element: <AssociazioneSapienzaU />,
-      },
+      { path: "/contact", element: <AssociazioneSapienzaU />, },
     ],
   },
 ]);

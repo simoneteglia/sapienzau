@@ -610,7 +610,7 @@ export default function SapienzaUMobile() {
     }));
   }, [x, y, z, targetX, targetY, targetZ, zoom]);
 
-  const HtmlTeamDescription = ({ teamName, teamKey, position }) => {
+  const HtmlTeamDescription = ({ teamName, teamKey, description, position }) => {
     return (
       <Html
         as="div"
@@ -628,7 +628,7 @@ export default function SapienzaUMobile() {
         position={position}
       >
         <h1 className="team-title">Il team {teamName}</h1>
-        <p className="team-description">{t(`joinus.${teamKey}`)}</p>
+        <p className="team-description">{description}</p>
       </Html>
     );
   };
@@ -674,41 +674,49 @@ export default function SapienzaUMobile() {
             teamName="IT"
             teamKey="IT"
             position={ITDescriptionPosition}
+            description="Il team IT & Website garantisce il corretto funzionamento del sito web, lato front-end e back-end, gestisce la web app ufficiale e coordina la newsletter, assicurando un'esperienza utente ottimale. Supporta la regia tecnica durante gli eventi."
           />
           <HtmlTeamDescription
             teamName="SEC"
             teamKey="SEC"
             position={SECDescriptionPosition}
+            description="Il team Speakers & Event Curation propone i temi degli eventi, seleziona gli Speakers e ne cura i dettagli burocratici e pratici (email, contatti, slides, speech). Si occupa di ogni fase del rapporto con gli Speakers, garantendo attenzione alle loro necessità e assicurando una preparazione ottimale."
           />
           <HtmlTeamDescription
             teamName="PEM"
             teamKey="PEM"
             position={PEMDescriptionPosition}
+            description="Il team Planning and Event Management pianifica e gestisce gli aspetti organizzativi delle conferenze TEDxSapienzaU e di altri eventi dedicati agli studenti Sapienza, anche in collaborazione con gli Sponsor. Si occupa delle richieste di preventivi alle aziende, della ricerca degli spazi per gli eventi e della loro promozione."
           />
           <HtmlTeamDescription
             teamName="DEX"
             teamKey="DESIGN"
             position={DEXDescriptionPosition}
+            description="Il team Design si occupa della progettazione grafica dell’evento. Crea l'identità visiva e grafica, gestisce l’ideazione e la realizzazione di prodotti e allestimenti, assicurando un'esperienza visiva coinvolgente e coerente con il tema dell’evento."
           />
           <HtmlTeamDescription
             teamName="L&A"
             teamKey="LA"
             position={LADescriptionPosition}
+            description="Il team Legal & Administrative gestisce gli aspetti giuridici e amministrativi degli eventi TEDxSapienzaU. Si occupa della stesura dei contratti, della contabilità, della ricerca dei bandi per il recupero fondi. Garantisce il rispetto delle regole TEDx e delle linee guida dell'Ateneo, insieme alla tutela della privacy e del diritto d'autore."
           />
           <HtmlTeamDescription
             teamName="ERS"
             teamKey="ERS"
             position={ERSDescriptionPosition}
+            description="Il team External Relations & Sponsor gestisce sponsorizzazioni, partnership, patrocini e bandi pubblici. Si occupa della ricerca di aziende, startup, PMI, media, associazioni, enti e istituzioni e della firma dei contratti, coltivando collaborazioni reciprocamente vantaggiose. I fondi raccolti finanziano il progetto e le iniziative del TEDxSapienzaU."
           />
           <HtmlTeamDescription
             teamName="CEM"
             teamKey="CEM"
             position={CEMDescriptionPosition}
+            description="Il team Communication, Editorial & Marketing si occupa della comunicazione di TEDxSapienzaU. Pianifica e cura la reputazione online, l'awareness e le campagne per coinvolgere il pubblico. Realizza comunicati stampa, newsletter, articoli e contenuti visuali e video, curando l’efficacia dei messaggi. Gestisce la collaborazione con i Media Partner."
           />
           <HtmlTeamDescription
             teamName="HRA"
             teamKey="HRA"
             position={HRADescriptionPosition}
+            description="Il team Human Resources & Academy gestisce la selezione dei volontari attraverso candidature e colloqui conoscitivi, e ne promuove il benessere promuovendo un ambiente creativo e produttivo. Si occupa inoltre della formazione interna tramite masterclass, create e esposte da membri interni e collaboratori esterni."
           />
         </Suspense>
       </Canvas>
@@ -746,7 +754,7 @@ export default function SapienzaUMobile() {
             }}
           >
             {cameraState === "default" || cameraState === "discoverTeam" ? (
-              t("sapienzau.button_sap")
+              "Scopri cos'è SapienzaU"
             ) : (
               <FontAwesomeIcon icon={faArrowLeft} />
             )}
@@ -766,7 +774,7 @@ export default function SapienzaUMobile() {
             }}
           >
             {cameraState === "default" || cameraState === "discover" ? (
-              t("sapienzau.button_team")
+              "Scopri i Team"
             ) : (
               <FontAwesomeIcon icon={faArrowLeft} />
             )}
@@ -798,10 +806,10 @@ export default function SapienzaUMobile() {
             fontSize: "30px",
           }}
         >
-          {t("sapienzau.chi_siamo")}
+          Chi siamo
         </h1>
         <p>
-          {t("sapienzau.chi_siamo_des")}
+          SapienzaU è un’associazione studentesca ufficialmente riconosciuta da Sapienza Università di Roma, fondata nel 2024 e attiva come Comitato TEDxSapienzaU sin dal 2021. Con oltre 110 membri provenienti da quasi tutte le Facoltà, ci impegniamo a costruire una comunità accogliente e multidisciplinare, dove il dialogo e la crescita collettiva sono al centro.
         </p>
 
         <h1
@@ -810,10 +818,10 @@ export default function SapienzaUMobile() {
             fontSize: "30px",
           }}
         >
-          {t("sapienzau.cosa_facciamo")}
+          Cosa facciamo
         </h1>
         <p>
-          {t("sapienzau.cosa_facciamo_des")}
+            Il nostro obiettivo è organizzare eventi formativi e culturali che arricchiscano l’esperienza universitaria. Ispirata ai principi TED, SapienzaU offre contenuti di valore, organizzando iniziative che promuovono attivismo civico, diversità e dialogo.
         </p>
         <h1
           style={{
@@ -821,10 +829,10 @@ export default function SapienzaUMobile() {
             fontSize: "30px",
           }}
         >
-          {t("sapienzau.i_nostri_valori")}
+          I nostri valori
         </h1>
         <p>
-          {t("sapienzau.i_nostri_valori_des")}
+          Come da statuto, SapienzaU è indipendente da qualsiasi movimento elettorale o partitico e opera esclusivamente per scopi educativi e culturali. Il nostro regolamento punta a garantire uno spazio inclusivo e rispettoso, dove ogni studente possa trovare ispirazione e sostegno per crescere sia come individuo, sia come parte della comunità della nostra Università.
         </p>
       </div>
     </div>

@@ -39,7 +39,7 @@ export const productsData = [
     description: "T-shirt unisex in cotone organico",
     price: "13.00",
     link: "https://sapienzaushop.teetaly.com/IT/t-shirt-unisex-light-cotton-gildan-gl3000-23",
-    color: ["#fff", "#000"]
+    color: ["#000","#fff"]
   },
   {
     id: 5,

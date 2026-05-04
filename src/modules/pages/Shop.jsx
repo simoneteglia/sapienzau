@@ -44,8 +44,8 @@ export default function Shop() {
         />
         <div className="absolute inset-0 flex items-center justify-center text-black px-4 text-center">
           <div>
-            <h2 className="text-5xl font-extrabold mb-4 tracking-tight">
-              Shop
+            <h2 className="text-7xl font-extrabold mb-4 tracking-tight">
+              SupporTED Kit 
             </h2>
           </div>
         </div>
