@@ -12,6 +12,7 @@ import team_hra from "../../assets/logos/team_hra.png";
 import team_cemm from "../../assets/logos/team_cemm.png";
 import GoldMember from "../../assets/images/cardflip/goldmember.png";
 import BronzeMember from "../../assets/images/cardflip/bronzemember.png";
+import arrow_right from "../../assets/svg/arrow_right.svg";
 
 // COMPONENTS
 import BentoBox from "../components/BentoBox";
@@ -25,32 +26,32 @@ export default function Club() {
     {
       title: "tessera ",
       desc: "La tessera digitale personalizzata di SapienzaU",
-      color: "ARANCIONE",
+      color: "IT",
     },
     {
       title: "newsletter",
       desc: "Accesso alla newsletter e a contenuti editoriali esclusivi",
-      color: "VERDE",
+      color: "SEC",
     },
     {
       title: "workshop",
       desc: "Accesso prioritario alla prenotazione dei workshop",
-      color: "AZZURRO",
+      color: "LA",
     },
     {
       title: "eventi",
       desc: "Posti riservati agli eventi targati TEDxSapienzaU e SapienzaU",
-      color: "ROSA",
+      color: "ERS",
     },
     {
       title: "tema",
       desc: "Accesso anticipato al tema degli eventi della prossima edizione",
-      color: "BLU",
+      color: "HRA",
     },
     {
       title: "e molto altro...",
       desc: "",
-      color: "GIALLO",
+      color: "DEX",
     },
   ];
 
@@ -99,6 +100,9 @@ export default function Club() {
             (ma ancora non lo sai)
           </span>
         </h1>
+        <div className="mt-8 md:mt-12 flex flex-col items-center animate-bounce">
+          <img src={arrow_right} className="w-10 h-10 md:w-14 md:h-14 rotate-90 invert" alt="Scroll down" />
+        </div>
       </section>
 
       {/*TESTO CONVINCENTE*/}
@@ -121,19 +125,19 @@ export default function Club() {
               la nostra <br /> visione
             </h2>
           </div>
-          <p className="text-[16px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-snug font-gotham-book text-white max-w-xl z-10 mt-2">
+          <h2 className="text-[16px] sm:text-[18px] md:text-[26px] lg:text-[34px] leading-relaxed font-gotham-book text-white max-w-xl z-10 mt-2">
             SapienzaU Club nasce come evoluzione naturale del progetto SapienzaU
             e di TEDxSapienzaU, con l’obiettivo di consolidare una community che
             va oltre il singolo evento. Il Club è pensato per ex volontari e
             sostenitori che continuano a supportare l’associazione.
-          </p>
+          </h2>
         </div>
 
         {/* LATO DX */}
         <div className="w-full md:w-[35%] lg:w-[65%] shrink-0 flex justify-start md:justify-end px-[20px] md:px-0 relative mt-10 md:mt-0">
           <img
             src={fotoAbbraccio}
-            className="masked-image object-cover w-[80%] max-w-[350px] h-[250px] md:max-w-none md:w-full md:h-auto md:max-h-[800px] translate-x-0 md:translate-x-[-25%]"
+            className="masked-image3 object-cover w-[80%] max-w-[350px] h-[250px] md:max-w-none md:w-full md:h-auto md:max-h-[800px] translate-x-0 md:translate-x-[-25%]"
           />
         </div>
       </section>

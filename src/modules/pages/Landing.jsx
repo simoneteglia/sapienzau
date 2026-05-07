@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import global from "../../resources/global.json";
 import fotoAbbraccio from "../../assets/images/volunteers.webp";
 import marchio_colorato_base_bianca from "../../assets/logos/marchio_colorato_base_bianca.svg";
+import arrow_right from "../../assets/svg/arrow_right.svg";
 
 // COMPONENTS
 import BentoBox from "../components/BentoBox";
@@ -59,57 +60,40 @@ export default function Landing() {
             />
           </div>
         </div>
+
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center animate-bounce">
+          <img src={arrow_right} className="w-10 h-10 md:w-14 md:h-14 rotate-90 invert" alt="Scroll down" />
+        </div>
       </section>
 
       <section
-        className="w-full text-white relative overflow-hidden bg-black"
+        className="w-full px-[20px] pt-[20px] pb-[40px] md:p-[40px] flex flex-col justify-center text-white relative overflow-hidden mb-0 md:mb-[100px]"
         style={{
-          marginTop: isMobile ? "20px" : global.UTILS.NAV_HEIGHT,
+          height: isMobile
+            ? "auto"
+            : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          marginTop: isMobile ? "0px" : global.UTILS.NAV_HEIGHT,
         }}
       >
-        {/* DESKTOP: BENTO */}
-        <div className="hidden min-[480px]:flex w-full p-[40px] items-end justify-end">
-          <BentoBox
-            className="flex w-full h-auto min-h-[50vh] md:h-full flex-col justify-end items-end text-right p-6 md:p-[40px] rounded-2xl overflow-hidden"
-            style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fotoAbbraccio})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
-          >
-            <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
-              Team
-            </h1>
-            <p className="xl:text-[35px] lg:text-[25px] md:text-[20px] text-[16px] pb-5 leading-none overflow-hidden font-gotham-book w-full max-w-2xl">
-              I team di SapienzaU sono il cuore del progetto. Divisione del
-              lavoro, idee e impegno sono i valori che rapprestano al meglio
-              l’identità di ogni gruppo.
-            </p>
-            {/* <CustomButton label="Scopri il team" color="violet" /> */}
-          </BentoBox>
+        {/* LATO IMMAGINE */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-[-25%] md:left-[-12%] w-[100%] md:w-[60%] max-w-[1000px] z-0 pointer-events-none">
+          <img
+            src={fotoAbbraccio}
+            className="masked-image object-cover w-full h-[250px] md:h-[450px]"
+            alt="Team Volunteers"
+          />
         </div>
 
-        {/* MOBILE: BLOB E TESTO ASSOLUTI */}
-        <div className="flex min-[480px]:hidden relative w-full flex-col items-end pt-[10px] pb-[230px]">
-          {/* LATO TESTO */}
-          <div className="w-[75%] relative z-10 text-right pr-[20px]">
-            <h1 className="text-[10vw] leading-none font-gotham-ultra uppercase text-white mb-2">
-              Team
-            </h1>
-            <p className="text-[4vw] leading-snug font-gotham-book text-white w-[60%] ml-auto">
-              I team di SapienzaU sono il cuore del progetto. Divisione del
-              lavoro, idee e impegno sono i valori che rapprestano al meglio
-              l’identità di ogni gruppo.
-            </p>
-          </div>
-
-          {/* LATO IMMAGINE */}
-          <div className="absolute top-[120px] left-[-15%] w-[80%] z-0 pointer-events-none">
-            <img
-              src={fotoAbbraccio}
-              className="masked-image2 object-cover w-full h-[300px]"
-            />
-          </div>
+        {/* LATO TESTO */}
+        <div className="shrink-0 flex flex-col items-end text-right w-full pt-4 md:pt-0 relative z-10">
+          <h1 className="xl:text-[120px] lg:text-[100px] md:text-[70px] text-[50px] pb-5 leading-none font-gotham-ultra overflow-hidden uppercase">
+            Team
+          </h1>
+          <h2 className="xl:text-[35px] lg:text-[25px] md:text-[20px] pb-5 md:pb-[50px] leading-tight md:leading-none font-gotham-book w-full max-w-2xl break-words">
+            I team di SapienzaU sono il cuore del progetto. Divisione del
+            lavoro, idee e impegno sono i valori che rapprestano al meglio
+            l’identità di ogni gruppo.
+          </h2>
         </div>
       </section>
 

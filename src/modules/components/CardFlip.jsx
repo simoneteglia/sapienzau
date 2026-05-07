@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 // COMPONENTS
 import BentoBox from "./BentoBox";
+import CustomButton from "./CustomButton";
 import global from "../../resources/global.json";
 // RESOURCES
 import GoldMember from "../../assets/images/cardflip/goldmember.png";
@@ -146,18 +147,17 @@ export default function CardFlip() {
           </div>
         }
         backContent={
-          <div
-            className="flex flex-col justify-center h-full p-10 text-center"
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLSd2qpgFR1eUBXCXRrrO78-o7LRWAfitZ45y6Wopm-0HHdbiUA/viewform",
-                "_blank",
-              )
-            }
-          >
-            <h2 className=" xl:text-[60px] lg:text-[50px] md:text-[35px] text-white font-gotham-ultra text-4xl font-bold">
-              VAI AL FORM
+          <div className="flex flex-col justify-center h-full p-10 text-center">
+            <h2 className=" xl:text-[30px] lg:text-[25px] md:text-[17px] text-white font-gotham-ultra text-4xl font-bold">
+              Scopri i vantaggi esclusivi riservati ai membri del nostro club
+              e unisciti alla nostra community!
             </h2>
+            <CustomButton
+              label="VAI AL FORM"
+              color="oro"
+              className="w-full justify-center mt-5"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd2qpgFR1eUBXCXRrrO78-o7LRWAfitZ45y6Wopm-0HHdbiUA/viewform"
+            />
           </div>
         }
       />

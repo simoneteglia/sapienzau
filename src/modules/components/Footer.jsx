@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import InfiniteScroll from "./InfiniteScroll";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // -------------RESOURCES-------------
 import global from "../../resources/global.json";
@@ -22,6 +22,8 @@ import logo_colorato_base_bianca_sapienzau from "../../assets/logos/logo_colorat
 
 export default function Footer() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const location = useLocation();
+  const isContactPage = location.pathname === "/contact";
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -41,7 +43,7 @@ export default function Footer() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-[15px] text-white">
-      <InfiniteScroll />
+      {!isContactPage && <InfiniteScroll />}
       <footer className={`z-1 flex w-screen flex-wrap gap-[40px]  p-[30px]`}>
         <div>
           <img

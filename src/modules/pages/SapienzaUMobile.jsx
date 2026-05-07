@@ -310,25 +310,53 @@ function ObjModel(props) {
   );
 }
 
-const CustomCamera = ({ startPosition, startTarget, startZoom, onUpdate }) => {
+const CustomCamera = ({ targetSettings }) => {
   const cameraRef = useRef();
+  const currentTarget = useRef(new THREE.Vector3(...targetSettings.target));
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
-    if (cameraRef.current) {
-      cameraRef.current.lookAt(...startTarget);
+    if (!cameraRef.current) return;
+
+    if (isFirstRender.current) {
+      cameraRef.current.position.set(...targetSettings.position);
+      cameraRef.current.zoom = targetSettings.zoom;
+      cameraRef.current.lookAt(...targetSettings.target);
+      cameraRef.current.updateProjectionMatrix();
+      isFirstRender.current = false;
+      return;
     }
-  }, [startTarget]);
 
-  useEffect(() => {
-    onUpdate(cameraRef.current);
-  }, [onUpdate]);
+    gsap.to(cameraRef.current.position, {
+      x: targetSettings.position[0],
+      y: targetSettings.position[1],
+      z: targetSettings.position[2],
+      duration: 1.5,
+      ease: "power4.inOut"
+    });
+
+    gsap.to(currentTarget.current, {
+      x: targetSettings.target[0],
+      y: targetSettings.target[1],
+      z: targetSettings.target[2],
+      duration: 1.5,
+      ease: "power4.inOut",
+      onUpdate: () => cameraRef.current.lookAt(currentTarget.current)
+    });
+
+    gsap.to(cameraRef.current, {
+      zoom: targetSettings.zoom,
+      duration: 1.5,
+      ease: "power4.inOut",
+      onUpdate: () => cameraRef.current.updateProjectionMatrix()
+    });
+
+  }, [targetSettings]);
 
   return (
     <OrthographicCamera
       ref={cameraRef}
       makeDefault
-      position={startPosition}
-      zoom={startZoom}
     />
   );
 };
@@ -522,51 +550,10 @@ export default function SapienzaUMobile() {
         finalZoom = 500;
     }
 
-    const duration = 1.5;
-
-    const ease = "power4.inOut";
-
-    // Animate position
-    gsap.to(tempPosition, {
-      x: finalPosition[0],
-      y: finalPosition[1],
-      z: finalPosition[2],
-      duration: duration,
-      ease: ease,
-      onUpdate: () => {
-        setCameraSettings((prev) => ({
-          ...prev,
-          position: [tempPosition.x, tempPosition.y, tempPosition.z],
-        }));
-      },
-    });
-
-    // Animate target
-    gsap.to(tempTarget, {
-      x: finalTarget[0],
-      y: finalTarget[1],
-      z: finalTarget[2],
-      duration: duration,
-      ease: ease,
-      onUpdate: () => {
-        setCameraSettings((prev) => ({
-          ...prev,
-          target: [tempTarget.x, tempTarget.y, tempTarget.z],
-        }));
-      },
-    });
-
-    // Animate zoom
-    gsap.to(cameraSettings, {
+    setCameraSettings({
+      position: finalPosition,
+      target: finalTarget,
       zoom: finalZoom,
-      duration: duration,
-      ease: ease,
-      onUpdate: () => {
-        setCameraSettings((prev) => ({
-          ...prev,
-          zoom: cameraSettings.zoom,
-        }));
-      },
     });
   }, [cameraState]);
 
@@ -655,14 +642,7 @@ export default function SapienzaUMobile() {
         {/* OrbitControls allows to move freely in the scene using the mouse clicks*/}
         {/* <axesHelper args={[10]} /> */}
         {/* AxesHelper shows the lines of the axes x, y, z in the scene*/}
-        <CustomCamera
-          startPosition={cameraSettings.position}
-          startTarget={cameraSettings.target}
-          startZoom={cameraSettings.zoom}
-          onUpdate={(camera) => {
-            if (camera) camera.lookAt(...cameraSettings.target);
-          }}
-        />
+        <CustomCamera targetSettings={cameraSettings} />
         <Lights />
         <Suspense fallback={null}>
           <ObjModel
@@ -821,7 +801,7 @@ export default function SapienzaUMobile() {
           Cosa facciamo
         </h1>
         <p>
-            Il nostro obiettivo è organizzare eventi formativi e culturali che arricchiscano l’esperienza universitaria. Ispirata ai principi TED, SapienzaU offre contenuti di valore, organizzando iniziative che promuovono attivismo civico, diversità e dialogo.
+          Il nostro obiettivo è organizzare eventi formativi e culturali che arricchiscano l’esperienza universitaria. Ispirata ai principi TED, SapienzaU offre contenuti di valore, organizzando iniziative che promuovono attivismo civico, diversità e dialogo.
         </p>
         <h1
           style={{
