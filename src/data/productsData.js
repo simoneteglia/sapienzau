@@ -33,13 +33,13 @@ export const productsData = [
   },
   {
     id: 4,
-    imageUrl2: "https://d29gv5mnjp8nf8.cloudfront.net/showimaged/Back/00572250/maglietta-unisex/white/100/",
+    
     imageUrl: "https://d29gv5mnjp8nf8.cloudfront.net/showimaged/Front/00572250/maglietta-unisex/white/500/",
     title: "Logo Pattern T-Shirt",
     description: "T-shirt Unisex",
     price: "17.00",
     link: "https://sapienzau-shop.hoplix.shop/1263706-maglietta-unisex-logo-pattern-t-shirt--62900.htm",
-    color: ["#000","#fff"]
+    color: "#fff"
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ export const productsData = [
     description: "Baseball cap premium",
     price: "13.00",
     link: "https://sapienzau-shop.hoplix.shop/1263754-caps-pre-ideas-change-everything-baseball-hat-62900.htm",
-    color: "#191919"
+    color: "#000"
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const productsData = [
     description: "Baseball cap premium",
     price: "13.00",
     link: "https://sapienzau-shop.hoplix.shop/1263765-caps-pre-ideas-change-everything-baseball-hat-62900-76.htm",
-    color: "#191919"
+    
   },
   {
     id: 8,
@@ -76,7 +76,7 @@ export const productsData = [
     description: "Baseball Cap premium",
     price: "13.00",
     link: "https://sapienzau-shop.hoplix.shop/1263777-caps-pre-logo-pattern-baseball-hat-62900.htm",
-    color: "#fff"
+    
   },
   {
     id: 9,
@@ -85,16 +85,16 @@ export const productsData = [
     description: "Mug two color",
     price: "13.00",
     link: "https://sapienzau-shop.hoplix.shop/1263782-mug-twotone-tazza-logo-pattern--62900.htm",
-    color: "#fff"
+  
   },
   {
     id: 10,
-    imageUrl: "https://teetalyimmages.blob.core.windows.net/thumbs/1259800_IMG_19-34-52-3452134212736923798003_600.png",
+    imageUrl: "https://d29gv5mnjp8nf8.cloudfront.net/showimaged/Front/00573358/drink-bottle/white/500/",
     title: "Borraccia 800ml",
     description: "Borraccia in alluminio, capacità 800ml",
-    price: "15.00",
-    link: "https://sapienzaushop.teetaly.com/IT/borraccia-800ml-2",
-    color: "#fff"
+    price: "24.90",
+    link: "https://sapienzau-shop.hoplix.shop/1265190-drink-bottle-borraccia-sapienzau-750ml-62900.htm",
+   
   },
   {
     id: 11,
@@ -103,7 +103,7 @@ export const productsData = [
     description: "Shopping bag in cotone canvas",
     price: "17.50",
     link: "https://sapienzau-shop.hoplix.shop/1263790-borsa-logo-pattern-tote-bag--62900.htm",
-    color: "#fff"
+    
   },
 
   {
@@ -111,9 +111,9 @@ export const productsData = [
     imageUrl: "https://d29gv5mnjp8nf8.cloudfront.net/showimaged/Front/00572319/borsa/black/500/",
     title: "Tote Bag TEDxSapienzaU",
     description: "Shopping bag in cotone canvas",
-    price: "13.0",
+    price: "13.00",
     link: "https://sapienzau-shop.hoplix.shop/1263794-borsa-team-logos-tote-bag-62900.htm",
-    color: "#fff"
+   
   },
 
   {
@@ -124,7 +124,7 @@ export const productsData = [
     description: "Spille",
     price: "13.00",
     link: "https://sapienzau-shop.hoplix.shop/1263802-pins-logo-pattern-pin-62900.htm",
-    colors: ["#5f605a", "#7e6363", "#bfb6af", "#000"]
+    
   },
   {
     id: 13,
@@ -133,7 +133,7 @@ export const productsData = [
     description: "Spille",
     price: "13.00",
     link: "https://sapienzau-shop.hoplix.shop/1263803-pins-team-logos-pin-62900.htm",
-    color: "#fff"
+  
   },
 
  {
@@ -143,7 +143,7 @@ export const productsData = [
     description: "Quaderno",
     price: "14.90",
     link: "https://sapienzau-shop.hoplix.shop/1265232-note-quaderno-sapienzau-teams-62900.htm",
-    color: "#fff"
+    
   },
 
    {
@@ -153,7 +153,7 @@ export const productsData = [
     description: "Portachiavi",
     price: "12.90",
     link: "https://sapienzau-shop.hoplix.shop/1265231-kchain-sq-portachiavi-tedxsapienzau-62900.htm",
-    color: "#fff"
+    
   },
 
    {
@@ -163,7 +163,7 @@ export const productsData = [
     description: "Portachiavi",
     price: "12.90",
     link: "https://sapienzau-shop.hoplix.shop/1265230-kchain-sq-portachiavi-team-logos-62900.htm",
-    color: "#fff"
+   
   },
 
   {
@@ -173,7 +173,7 @@ export const productsData = [
     description: "Portachiavi",
     price: "12.90",
     link: "https://sapienzau-shop.hoplix.shop/1265198-kchain-sq-portachiavi-ideas-change-everything-62900.htm",
-    color: "#fff"
+    
   },
 
   {
@@ -183,18 +183,9 @@ export const productsData = [
     description: "Portachiavi",
     price: "12.90",
     link: "https://sapienzau-shop.hoplix.shop/1265195-kchain-sq-portachiavi-logo-pattern-62900.htm",
-    color: "#fff"
+    
   },
 
-  {
-    id: 20,
-    imageUrl: "https://d29gv5mnjp8nf8.cloudfront.net/showimaged/Front/00573361/sticker-ro-10-kit6/nd/500/",
-    title: "Adesivi ideas change everything",
-    description: "Adesivi x 6",
-    price: "18.90",
-    link: "https://sapienzau-shop.hoplix.shop/1265193-sticker-ro-10-kit6-adesivi-ideas-change-everything-62900.htm",
-    color: "#fff"
-  },
 
 {
     id: 20,
@@ -203,7 +194,7 @@ export const productsData = [
     description: "Adesivi x 6",
     price: "18.90",
     link: "https://sapienzau-shop.hoplix.shop/1265193-sticker-ro-10-kit6-adesivi-ideas-change-everything-62900.htm",
-    color: "#fff"
+    
   },
 
  
@@ -214,7 +205,7 @@ export const productsData = [
     description: "Adesivi x 6",
     price: "18.90",
     link: "https://sapienzau-shop.hoplix.shop/1265191-sticker-ro-10-kit6-adesivi-logo-pattern-62900.htm",
-    color: "#fff"
+    
   },
 
 
@@ -225,7 +216,7 @@ export const productsData = [
     description: "Poster",
     price: "12.50",
     link: "https://sapienzau-shop.hoplix.shop/1265241-poster-30x45-poster-logo-pattern-62900.htm",
-    color: "#fff"
+    
   },
 
    {
@@ -235,7 +226,7 @@ export const productsData = [
     description: "Poster",
     price: "12.50",
     link: "https://sapienzau-shop.hoplix.shop/1265245-poster-30x45-poster-teams-62900.htm",
-    color: "#fff"
+    
   },
 
 ];
