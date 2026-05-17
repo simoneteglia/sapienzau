@@ -45,13 +45,13 @@ export default function Shop() {
         <div className="absolute inset-0 flex items-center justify-center text-black px-4 text-center">
           <div>
             <h2 className="text-7xl font-extrabold mb-4 tracking-tight">
-              SupporTED Kit 
+              SupporTED Kit
             </h2>
           </div>
         </div>
       </div>
 
-      {/* GRID */}
+      {/* OTB SECTION */}
       <section className="container mx-auto px-16 py-16 pt-32">
         <div className="relative mb-4 md:mb-6">
           <img
@@ -60,7 +60,7 @@ export default function Shop() {
             className="absolute top-[-40px] md:top-[-40px] left-0 w-[80px] md:w-[130px] h-auto -rotate-5 z-0 scale-90"
           />
           <h2 className="relative z-10 text-[30px] sm:text-[35px] md:text-[40px] lg:text-[45px] leading-[1.1] font-gotham-bold text-white">
-            Prodotti
+            Collezione "On the Brink"
           </h2>
           <img
             src={team_la}
@@ -71,16 +71,43 @@ export default function Shop() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
-          {productsData.map((product) => (
-            <ItemDetails
-              key={product.id}
-              id={product.id}
-              imageUrl={product.imageUrl}
-              title={product.title}
-              description={product.description}
-              price={product.price}
-            />
-          ))}
+          {productsData
+            .filter((product) => product.collection === "OTB")
+            .map((product, index) => (
+              <ItemDetails
+                key={`otb-${product.id}-${index}`}
+                id={product.id}
+                imageUrl={product.imageUrl}
+                title={product.title}
+                description={product.description}
+                price={product.price}
+              />
+            ))}
+        </div>
+      </section>
+
+      {/* REGULAR PRODUCTS */}
+      <section className="container mx-auto px-16 py-16 pt-8 relative">
+        <div className="relative mb-4 md:mb-6">
+          <h2 className="relative z-10 text-[30px] sm:text-[35px] md:text-[40px] lg:text-[45px] leading-[1.1] font-gotham-bold text-white">
+            Tutti i Prodotti
+          </h2>
+          <hr className="border-t relative border-gray-200 mb-10 w-full z-10" />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
+          {productsData
+            .filter((product) => product.collection !== "OTB")
+            .map((product, index) => (
+              <ItemDetails
+                key={`regular-${product.id}-${index}`}
+                id={product.id}
+                imageUrl={product.imageUrl}
+                title={product.title}
+                description={product.description}
+                price={product.price}
+              />
+            ))}
         </div>
         <img
           src={team_dex}

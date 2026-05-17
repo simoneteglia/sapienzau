@@ -3,7 +3,10 @@ import CustomButton from "../components/CustomButton";
 
 const ItemDetails = ({ id, imageUrl, title, description, price }) => {
   return (
-    <div className="z-10 bg-white p-1 pb-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full max-w-[300px] mx-auto flex flex-col">
+    <div
+      className="z-10 bg-white p-1 pb-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full max-w-[300px] mx-auto flex flex-col cursor-pointer"
+      onClick={() => (window.location.href = `/shop/item?id=${id}`)}
+    >
       <img
         src={imageUrl}
         alt={title}
