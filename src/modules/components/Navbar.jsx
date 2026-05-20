@@ -157,7 +157,7 @@ export default function Navbar() {
                   </div>
                   <Link
                     key="join-us"
-                    to="/"
+                    to="/join-us"
                     className={classNames(
                       "lg:text-[18px] md:text-[15px] bg-white text-[#262626] hover:bg-gray-200 rounded-3xl px-5 py-1 font-gotham-bold uppercase transition-colors duration-300",
                     )}

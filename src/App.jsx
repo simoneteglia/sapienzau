@@ -10,6 +10,8 @@ import ScrollToTop from "./modules/components/ScrollToTop";
 import WIP from "./modules/pages/WIP";
 import Shop from "./modules/pages/Shop";
 import Team from "./modules/pages/Team";
+import Events from "./modules/pages/Events";
+import Contact from "./modules/pages/Contact";
 import AssociazioneSapienzaU from "./modules/components/AssociazioneSapienzaU";
 
 import "./App.css";
@@ -43,9 +45,10 @@ const router = createBrowserRouter([
         path: "/shop/:item",
         element: <ShopItem />,
       },
-      { path: "/events", element: <WIP /> },
+      { path: "/events", element: <Events /> },
       { path: "/team", element: <Team /> },
       { path: "/contact", element: <AssociazioneSapienzaU />, },
+      { path: "/join-us", element: <Contact /> },
     ],
   },
 ]);
