@@ -156,17 +156,17 @@ export const productsData = [
     color: "#fff",
     collection: "OTB",
   },
-  {
-    id: 35,
-    imageUrl:
-      "https://d29gv5mnjp8nf8.cloudfront.net/showimaged/Front/00574098/poster-30x45/glossy/1000/",
-    title: "Poster On the Brink - Rosa",
-    description: "Poster",
-    price: "12.99",
-    link: "https://sapienzau-shop.hoplix.shop/1267452-poster-30x45-poster-30x45-on-the-brink---rosa-62900.htm",
-    color: "#fff",
-    collection: "OTB",
-  },
+  // {
+  //   id: 35,
+  //   imageUrl:
+  //     "https://d29gv5mnjp8nf8.cloudfront.net/showimaged/Front/00574098/poster-30x45/glossy/1000/",
+  //   title: "Poster On the Brink - Rosa",
+  //   description: "Poster",
+  //   price: "12.99",
+  //   link: "https://sapienzau-shop.hoplix.shop/1267452-poster-30x45-poster-30x45-on-the-brink---rosa-62900.htm",
+  //   color: "#fff",
+  //   collection: "OTB",
+  // },
   {
     id: 36,
     imageUrl:
